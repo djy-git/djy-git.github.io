@@ -19,4 +19,13 @@ Epoch에 따른 error 그래프를 그려보면 일반적으로 다음과 같은
 
 {% highlight python linenos %}
 
+poly_scaler = Pipeline([
+    ('poly_features', PolynomialFeatures(degree=10, include_bias=False)),
+    ('std_scaler', StandardScaler())
+])
+X_poly_scaled = poly_scaler.fit_transform(X)
+
+sgd_reg = SGDRegressor(max_iter=1000, penalty=None, learning_rate='constant', eta0=0.0005, early_stopping=True)
+sgd_reg.fit(X_poly_scaled, y)
+
 {% end highlight %}
