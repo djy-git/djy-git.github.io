@@ -16,20 +16,14 @@ sidebar:
 
 ---
 
-1. 다음과 같은 linear regression model을 생각해보겠습니다.
-$$
-Y = X \beta + \epsilon \\
-\epsilon \sim N(0, \sigma^2)
-$$
+1. 데이터 X와 Y가 어떠한 target function (true function) $f(X)$와 noise $\epsilon$에 대하여, $Y = f(X) + \epsilon$ 의 관계를 가진다고 가정합니다. <br>
+$f(X): \text{target function} \\
+\hat{f}(X): \text{estimate of target function} \\
+\bar{f}(X): \text{expectation of } \hat{f}(X)$ <br>
 
-2. 구하고자 하는 true parameter $\beta$를 알지 못하기 때문에 sample들로부터 $\beta$를 추정해야합니다.
+2. Target function을 구하기 위해 알고 있는 sample들(train data)로부터 target function를 추정해야합니다. <br>
 
-3. Ordinary Least Squares (OLS) approach를 사용하면, <br>
-
-$L_{OLS}(\hat{\beta}) = ||\mathbf{y} - X\hat{\beta}||^2$
-$\hat{\beta_{OLS}} = (X'X)^{-1}X'Y$
-
-4. Estimator에 대해서 고려해야할 2가지 중요한 성질로 **bias**와 **variance**가 있습니다. <br>
+3. Estimator에 대해서 고려해야할 2가지 중요한 성질로 **bias**와 **variance**가 있습니다. <br>
 
 - **Bias**
 Difference between the true population parameter and the expected Estimator. <br>
