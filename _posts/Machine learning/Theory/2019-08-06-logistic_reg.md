@@ -30,19 +30,17 @@ $ \hat{\theta} = (X^TX + \alpha I')^{-1}X^Ty \quad \text{(} I' \text{ is } I^{(n
 
 {% highlight python linenos %}
 
-# Normal equation
 from sklearn.linear_model import Ridge
 
 ridge_reg = Ridge(alpha=1, solver='cholesky')  # solver='saga': improved stochastic average gradient
-ridge_reg.fit(X, y)
+ridge_reg.fit(X, y)  # Normal equation
 ridge_reg.predict(X_test)
 
 
-# Stochastic Gradient Descent
 from sklearn.linear_model import SGDRegressor
 
 sgd_reg = SGDRegressor(max_iter=1000, penalty='l2')
-sgd_reg.fit(X, y.ravel())
+sgd_reg.fit(X, y.ravel())  # Stochastic Gradient Descent
 sgd_reg.predict(X_test)
 
 {% end highlight %}
@@ -64,19 +62,17 @@ Ridge와 달리 lasso는 덜 중요한 feature의 가중치를 완전히 제거�
 
 {% highlight python linenos %}
 
-# Coordinate descent
 from sklearn.linear_model import Lasso
 
 ridge_reg = Lasso(alpha=1)
-ridge_reg.fit(X, y)
+ridge_reg.fit(X, y)  # Coordinate descent
 ridge_reg.predict(X_test)
 
 
-# Stochastic Gradient Descent
 from sklearn.linear_model import SGDRegressor
 
 sgd_reg = SGDRegressor(max_iter=1000, penalty='l1')
-sgd_reg.fit(X, y.ravel())
+sgd_reg.fit(X, y.ravel())  # Stochastic Gradient Descent
 sgd_reg.predict(X_test)
 
 {% end highlight %}
@@ -96,3 +92,13 @@ $$
 2. 실사용 feature의 개수가 적다: lasso / elastic net
 3. # features > # samples: elastic net
 4. 몇 개의 feature가 강하게 연관되어 있다: elastic net
+
+## 3) API function
+
+{% highlight python linenos %}
+from sklearn.linear_model import ElasticNet
+
+elastic_net = ElasticNet(alpha=0.1, l1_ratio=0.5)
+elastic_net.fit(X, y)  # Coordinate descent
+elastic_net.predict(X_test)
+{% end highlight %}
