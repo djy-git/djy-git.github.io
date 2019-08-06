@@ -7,7 +7,7 @@ sidebar:
 ---
 
 # Remarks
-[https://scikit-learn.org/stable/glossary.html#term-warm-start](https://scikit-learn.org/stable/glossary.html#term-warm-start)를 참고하였습니다.
+본 포스팅은 **[https://scikit-learn.org/stable/glossary.html#term-warm-start](https://scikit-learn.org/stable/glossary.html#term-warm-start)** 를 기반으로 작성되었습니다.
 
 <!--more-->
 
