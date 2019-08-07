@@ -18,11 +18,11 @@ sidebar:
 
 1. 데이터 X와 Y가 어떠한 target function (true function) $f(X)$와 noise $\epsilon$에 대하여, $Y = f(X) + \epsilon$ 의 관계를 가진다고 가정합니다. <br>
 $$
-\begin{align*}
+\begin{align}
 f(X) &: \text{target function} \\
 \hat{f}(X) &: \text{estimator} \\
 \bar{f}(X) &: \text{expectation of } \hat{f}(X)
-\end{align*}
+\end{align}
 $$
 2. Target function을 구하기 위해 알고 있는 sample들(train data)로부터 target function를 추정해야합니다.
 3. Estimator에 대해 고려해야할 2가지 중요한 성질로 **bias**와 **variance**가 있습니다.
