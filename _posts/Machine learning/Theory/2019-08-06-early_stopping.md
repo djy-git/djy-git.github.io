@@ -31,4 +31,4 @@ X_poly_scaled = poly_scaler.fit_transform(X)
 sgd_reg = SGDRegressor(max_iter=1000, penalty=None, learning_rate='constant', eta0=0.0005, early_stopping=True)
 sgd_reg.fit(X_poly_scaled, y)
 
-{% end highlight %}
+{% endhighlight %}
