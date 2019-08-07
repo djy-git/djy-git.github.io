@@ -19,11 +19,11 @@ sidebar:
 1. 데이터 X와 Y가 어떠한 target function (true function) $f(X)$와 noise $\epsilon$에 대하여, $Y = f(X) + \epsilon$ 의 관계를 가진다고 가정합니다. <br>
 
 $$
-\begin{aligned}
+\begin{align}
 f(X): \text{target function} \\
 \hat{f}(X): \text{estimator} \\
 \bar{f}(X): \text{expectation of } \hat{f}(X)
-\end{aligned}
+\end{align}
 $$
 2. Target function을 구하기 위해 알고 있는 sample들(train data)로부터 target function를 추정해야합니다.
 3. Estimator에 대해 고려해야할 2가지 중요한 성질로 **bias**와 **variance**가 있습니다.
@@ -39,12 +39,12 @@ Estimator의 분산을 의미합니다. <br>
 4. 다음은 4개의 다른 성질을 가진 estimator들로부터 나온 estimates를 파란색 shot으로 나타낸 그림입니다. <br>
 과녁 가운데 bull's eye는 true population parameter를 나타냅니다. <br>
 
-![Image](https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1543418451/bias_vs_variance_swxhxx.jpg){:.border}
+![Image](https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1543418451/bias_vs_variance_swxhxx.jpg){:.border.center}
 
 5. **모델의 오차 (pcolor{red}iction error)**는 이전에 살펴본 Bias, variance, noise의 3가지로 나누어집니다. <br>
 
 $$
-\begin{aligned}
+\begin{align*}
 E(e) = E[(Y - \hat{Y})^2] \\
 = E[(f(X) + \epsilon - \hat{f}(X))^2] \\
 = E[(f(X) - \hat{f}(X))^2 + \color{purple}{\epsilon^2} + \color{green}{2\epsilon(f(X) - \hat{f}(X))]} \\
@@ -53,7 +53,7 @@ E(e) = E[(Y - \hat{Y})^2] \\
 = E[(f(X) - \bar{f}(X))^2] + E[(\hat{f}(X) - \bar{f}(X))^2] + E[2(f(X) - \bar{f}(X)) \color{green}{(\bar{f}(X) - \hat{f}(X))}] + \color{purple}{\sigma^2} \\
 = \color{blue}{(f(X) - \bar{f}(X))^2} + \color{red}{E[(\hat{f}(X) - \bar{f}(X))^2]} + \color{purple}{\sigma^2} \\
 = \color{blue}{Bias^2} \ + \ \color{red}{Variance} \ + \ \color{red}{irreducible \ error}
-\end{aligned}
+\end{align*}
 $$
 
 <br>
@@ -63,4 +63,4 @@ $$
 모델의 복잡도가 커지면 일반적으로 variance가 증가하고 bias가 줄어듭니다. 특히, feature들이 서로 많이 연관되어 있거나, feature의 개수가 sample의 개수와 비슷할 정도로 많으면 variance는 거의 무한대에 다다를 수 있습니다. <br>
 이를 해결하기 위해 약간의 bias를 추가하여 variance를 낮추는 방법을 사용할 수 있는데, 이러한 방법을 **regularization**이라고 합니다. 실제로 bias와 variance의 구체적인 값을 계산하여 확인할 수는 없지만, bias와 variance를 적절히 조절하여 total error가 가장 낮은 *Optimum Model Complexity*에 도달할 수 있도록 염두하고 있어야 합니다.
 
-![Image](https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1543418451/tradeoff_sevifm.png){: width="80%" height="80%"}{:.border}
+![Image](https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1543418451/tradeoff_sevifm.png){: width="80%" height="80%"}{:.border.center}
