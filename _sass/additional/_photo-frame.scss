@@ -7,6 +7,11 @@
     border: 1px solid $border-color-l;
   }
 
+  img.center, .center > img {
+    display: block;
+    margin: auto;
+  }
+
   img.rounded, .rounded > img {
     border-radius: map-get($base, border-radius);
   }
