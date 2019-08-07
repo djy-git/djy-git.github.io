@@ -6,7 +6,7 @@ sidebar:
   nav: docs-en
 ---
 
-**Bias-variance trade-off** <br> 모델의 일반화 오차는 모델의 편향의 제곱과 분산과 데이터의 노이즈의 합으로 표현된다.
+**Bias-variance trade-off** <br> 모델의 일반화 오차는 모델의 $Bias^2$와 $Variance$과 데이터의 $noise$의 합으로 표현된다.
 {:.success}
 
 <!-- more -->
