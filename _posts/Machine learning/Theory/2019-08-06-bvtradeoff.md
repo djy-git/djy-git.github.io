@@ -41,17 +41,17 @@ Estimator의 분산을 의미합니다.
 
 ![Image](https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1543418451/bias_vs_variance_swxhxx.jpg){:.border}
 
-6. **모델의 오차 (prediction error)**는 이전에 살펴본 Bias, variance, noise의 3가지로 나누어집니다. <br>
+6. **모델의 오차 (ptextcolor{red}iction error)**는 이전에 살펴본 Bias, variance, noise의 3가지로 나누어집니다. <br>
 
 $$
 E(e) = E[(Y - \hat{Y})^2] \\
 = E[(f(X) + \epsilon - \hat{f}(X))^2] \\
-= E[(f(X) - \hat{f}(X))^2 + \purple{\epsilon^2} + \green{2\epsilon(f(X) - \hat{f}(X))]} \\
-= E[(f(X) - \hat{f}(X))^2] + \purple{\sigma^2} + \green{0} \\
-= E[(f(X) - \bar{f}(X) + \bar{f}(X) - \hat{f}(X))^2] + \purple{\sigma^2} \quad \cdots \quad \text{let } \bar{f}(X) = E[\hat{f}(X)]\\
-= E[(f(X) - \bar{f}(X))^2] + E[(\hat{f}(X) - \bar{f}(X))^2] + E[2(f(X) - \bar{f}(X))\green{(\bar{f}(X) - \hat{f}(X))}] + \purple{\sigma^2}\\
-= \blue{(f(X) - \bar{f}(X))^2} + \red{E[(\hat{f}(X) - \bar{f}(X))^2]} + \purple{\sigma^2} \\
-= \blue{Bias^2} \ + \ \red{Variance} \ + \ \purple{irreducible \ error}
+= E[(f(X) - \hat{f}(X))^2 + \textcolor{purple}{\epsilon^2} + \textcolor{green}{2\epsilon(f(X) - \hat{f}(X))]} \\
+= E[(f(X) - \hat{f}(X))^2] + \textcolor{purple}{\sigma^2} + \textcolor{green}{0} \\
+= E[(f(X) - \bar{f}(X) + \bar{f}(X) - \hat{f}(X))^2] + \textcolor{purple}{\sigma^2} \quad \cdots \quad \text{let } \bar{f}(X) = E[\hat{f}(X)]\\
+= E[(f(X) - \bar{f}(X))^2] + E[(\hat{f}(X) - \bar{f}(X))^2] + E[2(f(X) - \bar{f}(X)) \textcolor{green}{(\bar{f}(X) - \hat{f}(X))}] + \purple{\sigma^2} \\
+= \textcolor{blue}{(f(X) - \bar{f}(X))^2} + \textcolor{red}{E[(\hat{f}(X) - \bar{f}(X))^2]} + \textcolor{purple}{\sigma^2} \\
+= \textcolor{blue}{Bias^2} \ + \ \textcolor{red}{Variance} \ + \ \textcolor{red}{irreducible \ error}
 $$
 
 <br>
@@ -61,4 +61,4 @@ $$
 모델의 복잡도가 커지면 일반적으로 variance가 증가하고 bias가 줄어듭니다. 특히, feature들이 서로 많이 연관되어 있거나, feature의 개수가 sample의 개수와 비슷할 정도로 많으면 variance는 거의 무한대에 다다를 수 있습니다. <br>
 이를 해결하기 위해 약간의 bias를 추가하여 variance를 낮추는 방법을 사용할 수 있는데, 이러한 방법을 **regularization**이라고 합니다. 실제로 bias와 variance의 구체적인 값을 계산하여 확인할 수는 없지만, bias와 variance를 적절히 조절하여 total error가 가장 낮은 *Optimum Model Complexity*에 도달할 수 있도록 염두하고 있어야 합니다.
 
-![Image](https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1543418451/tradeoff_sevifm.png){:.border}
+![Image](https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1543418451/tradeoff_sevifm.png){: width="80" height="80"}{:.border}
