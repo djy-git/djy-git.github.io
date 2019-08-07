@@ -9,7 +9,7 @@ sidebar:
 **Bias-variance trade-off** <br> 모델의 일반화 오차는 모델의 $Bias^2$와 $Variance$과 데이터의 $noise$의 합으로 표현된다.
 {:.success}
 
-<!-- more -->
+<!--more-->
 
 # Remarks
 본 포스팅은 **[https://www.datacamp.com/community/tutorials/tutorial-ridge-lasso-elastic-net](https://www.datacamp.com/community/tutorials/tutorial-ridge-lasso-elastic-net)** 을 참고하여 작성되었습니다.

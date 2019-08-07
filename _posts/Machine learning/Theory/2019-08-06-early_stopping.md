@@ -9,7 +9,7 @@ sidebar:
 **Early stopping**은 iterative algorithm에서 사용할 수 있는 regularization 방법으로 validation error가 최솟값에 도달하였다고 판단되면 바로 학습을 중지하는 방법입니다.
 {:.success}
 
-<!-- more -->
+<!--more-->
 
 # Remarks
 본 포스팅은 **Hands-On Machine Learning with Scikit-Learn & TensorFlow ([Auérlien Géron](https://github.com/ageron/handson-ml), [박해선(역)](https://github.com/rickiepark/handson-ml), 한빛미디어)** 를 기반으로 작성되었습니다.
