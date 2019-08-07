@@ -52,11 +52,11 @@ $$
 \begin{split}
 E(e) & = E[(Y - \hat{Y})^2] \\
  & = E[(f(X) + \epsilon - \hat{f}(X))^2] \\
- & = E[(f(X) - \hat{f}(X))^2 + \color{purple}{\epsilon^2} + \color{green}{2\epsilon(f(X) - \hat{f}(X))]} \\
- & = E[(f(X) - \hat{f}(X))^2] + \color{purple}{\sigma^2} + \color{green}{0} \\
- & = E[(f(X) - \bar{f}(X) + \bar{f}(X) - \hat{f}(X))^2] + \color{purple}{\sigma^2} \quad \cdots \quad \text{let } \bar{f}(X) = E[\hat{f}(X)] \\
- & = E[(f(X) - \bar{f}(X))^2] + E[(\hat{f}(X) - \bar{f}(X))^2] + E[2(f(X) - \bar{f}(X)) \color{green}{(\bar{f}(X) - \hat{f}(X))}] + \color{purple}{\sigma^2} \\
- & = \color{blue}{(f(X) - \bar{f}(X))^2} + \color{red}{E[(\hat{f}(X) - \bar{f}(X))^2]} + \color{purple}{\sigma^2} \\
+ & = E[(f(X) - \hat{f}(X))^2 + \color{magenta}{\epsilon^2} + \color{olivegreen}{2\epsilon(f(X) - \hat{f}(X))]} \\
+ & = E[(f(X) - \hat{f}(X))^2] + \color{magenta}{\sigma^2} + \color{olivegreen}{0} \\
+ & = E[(f(X) - \bar{f}(X) + \bar{f}(X) - \hat{f}(X))^2] + \color{magenta}{\sigma^2} \quad \cdots \quad \text{let } \bar{f}(X) = E[\hat{f}(X)] \\
+ & = E[(f(X) - \bar{f}(X))^2] + E[(\hat{f}(X) - \bar{f}(X))^2] + E[2(f(X) - \bar{f}(X)) \color{olivegreen}{(\bar{f}(X) - \hat{f}(X))}] + \color{magenta}{\sigma^2} \\
+ & = \color{blue}{(f(X) - \bar{f}(X))^2} + \color{red}{E[(\hat{f}(X) - \bar{f}(X))^2]} + \color{magenta}{\sigma^2} \\
  & = \color{blue}{Bias^2} \ + \ \color{red}{Variance} \ + \ \color{red}{irreducible \ error}
 \end{split}
 \end{equation}
