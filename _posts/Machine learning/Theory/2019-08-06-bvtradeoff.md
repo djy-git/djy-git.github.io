@@ -25,16 +25,12 @@ f(X): \text{target function} \\
 \bar{f}(X): \text{expectation of } \hat{f}(X)
 \end{aligned}
 $$
-
-2. Target function을 구하기 위해 알고 있는 sample들(train data)로부터 target function를 추정해야합니다. <br>
-
-3. Estimator에 대해 고려해야할 2가지 중요한 성질로 **bias**와 **variance**가 있습니다. <br>
-
+2. Target function을 구하기 위해 알고 있는 sample들(train data)로부터 target function를 추정해야합니다.
+3. Estimator에 대해 고려해야할 2가지 중요한 성질로 **bias**와 **variance**가 있습니다.
 - **Bias** <br>
 Target function과 estimator의 차이를 의미합니다. <br>
 단순화된(잘못된) 가정으로 인해 생긴 것으로, **Estimate들의 accuracy**를 나타냅니다. <br>
 예를 들어, 데이터가 실제로는 2차인데 선형으로 가정하는 경우 큰 bias를 가지게 되며 underfitting하기 쉽습니다. <br>
-
 - **Variance** <br>
 Estimator의 분산을 의미합니다. <br>
 학습 데이터에 있는 작은 변동에 모델이 과도하게 민감하기 때문에 발생하는 것으로, **estimate들의 spread 혹은 uncertainty**를 측정합니다. <br>
@@ -54,7 +50,7 @@ E(e) = E[(Y - \hat{Y})^2] \\
 = E[(f(X) - \hat{f}(X))^2 + \color{purple}{\epsilon^2} + \color{green}{2\epsilon(f(X) - \hat{f}(X))]} \\
 = E[(f(X) - \hat{f}(X))^2] + \color{purple}{\sigma^2} + \color{green}{0} \\
 = E[(f(X) - \bar{f}(X) + \bar{f}(X) - \hat{f}(X))^2] + \color{purple}{\sigma^2} \quad \cdots \quad \text{let } \bar{f}(X) = E[\hat{f}(X)]\\
-= E[(f(X) - \bar{f}(X))^2] + E[(\hat{f}(X) - \bar{f}(X))^2] + E[2(f(X) - \bar{f}(X)) \color{green}{(\bar{f}(X) - \hat{f}(X))}] + \purple{\sigma^2} \\
+= E[(f(X) - \bar{f}(X))^2] + E[(\hat{f}(X) - \bar{f}(X))^2] + E[2(f(X) - \bar{f}(X)) \color{green}{(\bar{f}(X) - \hat{f}(X))}] + \color{purple}{\sigma^2} \\
 = \color{blue}{(f(X) - \bar{f}(X))^2} + \color{red}{E[(\hat{f}(X) - \bar{f}(X))^2]} + \color{purple}{\sigma^2} \\
 = \color{blue}{Bias^2} \ + \ \color{red}{Variance} \ + \ \color{red}{irreducible \ error}
 \end{aligned}
