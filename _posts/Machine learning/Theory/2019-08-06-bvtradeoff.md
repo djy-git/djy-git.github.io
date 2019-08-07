@@ -43,17 +43,17 @@ Estimator의 분산을 의미합니다. <br>
 
 ![Image](https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1543418451/bias_vs_variance_swxhxx.jpg){:.border}
 
-5. **모델의 오차 (ptextcolor{red}iction error)**는 이전에 살펴본 Bias, variance, noise의 3가지로 나누어집니다. <br>
+5. **모델의 오차 (pcolor{red}iction error)**는 이전에 살펴본 Bias, variance, noise의 3가지로 나누어집니다. <br>
 
 $$
 E(e) = E[(Y - \hat{Y})^2] \\
 = E[(f(X) + \epsilon - \hat{f}(X))^2] \\
-= E[(f(X) - \hat{f}(X))^2 + \textcolor{purple}{\epsilon^2} + \textcolor{green}{2\epsilon(f(X) - \hat{f}(X))]} \\
-= E[(f(X) - \hat{f}(X))^2] + \textcolor{purple}{\sigma^2} + \textcolor{green}{0} \\
-= E[(f(X) - \bar{f}(X) + \bar{f}(X) - \hat{f}(X))^2] + \textcolor{purple}{\sigma^2} \quad \cdots \quad \text{let } \bar{f}(X) = E[\hat{f}(X)]\\
-= E[(f(X) - \bar{f}(X))^2] + E[(\hat{f}(X) - \bar{f}(X))^2] + E[2(f(X) - \bar{f}(X)) \textcolor{green}{(\bar{f}(X) - \hat{f}(X))}] + \purple{\sigma^2} \\
-= \textcolor{blue}{(f(X) - \bar{f}(X))^2} + \textcolor{red}{E[(\hat{f}(X) - \bar{f}(X))^2]} + \textcolor{purple}{\sigma^2} \\
-= \textcolor{blue}{Bias^2} \ + \ \textcolor{red}{Variance} \ + \ \textcolor{red}{irreducible \ error}
+= E[(f(X) - \hat{f}(X))^2 + \color{purple}{\epsilon^2} + \color{green}{2\epsilon(f(X) - \hat{f}(X))]} \\
+= E[(f(X) - \hat{f}(X))^2] + \color{purple}{\sigma^2} + \color{green}{0} \\
+= E[(f(X) - \bar{f}(X) + \bar{f}(X) - \hat{f}(X))^2] + \color{purple}{\sigma^2} \quad \cdots \quad \text{let } \bar{f}(X) = E[\hat{f}(X)]\\
+= E[(f(X) - \bar{f}(X))^2] + E[(\hat{f}(X) - \bar{f}(X))^2] + E[2(f(X) - \bar{f}(X)) \color{green}{(\bar{f}(X) - \hat{f}(X))}] + \purple{\sigma^2} \\
+= \color{blue}{(f(X) - \bar{f}(X))^2} + \color{red}{E[(\hat{f}(X) - \bar{f}(X))^2]} + \color{purple}{\sigma^2} \\
+= \color{blue}{Bias^2} \ + \ \color{red}{Variance} \ + \ \color{red}{irreducible \ error}
 $$
 
 <br>
