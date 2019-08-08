@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Error analysis
-tags: Python
+tags: Theory
 sidebar:
   nav: docs-en
 aside:
