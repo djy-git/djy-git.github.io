@@ -24,7 +24,7 @@ Square matrix (정방행렬) 중에서 역행렬이 존재하는 행렬을 **reg
 2) $\mathbf{x_1, x_2} \in X , \ \mathbf{y} \in Y$
 
 ### 1. $A^{-1}$가 존재한다.
-1) $A$는 bijective mapping (전단사 사상)으로 모든 $\mathbf{y}$에 대하여
+1) $A$는 bijective mapping (전단사 사상)으로 모든 $\mathbf{y} \in \mathbb{R^n}$에 대하여 $A\mathbf{x} = \mathbf{y}$가 되는 $\mathbf{x}$가 존재한다.
 
 ### 2. $A$는 injective mapping (단사 사상)이다.
 1) 서로 다른 $\mathbf{x_1}$과 $\mathbf{x_2}$가 동일한 $\mathbf{y}$에 mapping되지 않는다. <br>
