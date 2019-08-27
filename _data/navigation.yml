@@ -62,6 +62,8 @@ docs-en:
         url: /archive.html?tag=C/C++
       - title:  Visualization
         url: /archive.html?tag=Visualization
+      - title:  Linux
+        url: /archive.html?tag=Linux
       - title:  Etc
         url: /archive.html?tag=Etc_prog
   - title:      Machine learning
