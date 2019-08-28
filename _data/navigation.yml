@@ -64,6 +64,8 @@ docs-en:
         url: /archive.html?tag=Visualization
       - title:  Linux
         url: /archive.html?tag=Linux
+      - title:  Parallel programming
+        url: /archive.html?tag=Parallel
       - title:  Etc
         url: /archive.html?tag=Etc_prog
   - title:      Machine learning
