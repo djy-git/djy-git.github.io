@@ -18,7 +18,7 @@ sidebar:
 ---
 
 # 1. CUDA 10.0 Toolkit 설치파일 다운로드
-[https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal](https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal) 에서 자신의 설정에 잘 맞추어 파일을 다운로드합니다. <br>
+[https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal](https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal) 에서 자신의 설정에 잘 맞추어 파일을 다운로드합니다. <br> <br>
 
 `cuda_10.0.130_410.48_linux.run`: 410.38 version graphic driver가 포함된 cuda 10.0 설치파일 <br>
 다운받은 설치파일의 실행권한을 얻습니다.
@@ -46,7 +46,7 @@ Ubuntu에서 기본적으로 깔려있는 **Nouveau** driver와 설치하려는 
 
 
 # 3. NVIDIA Graphic Driver 설치
-NVIDIA graphic driver를 설치하기 위해선 먼저, linux에서 graphic display와 input device들을 관리하는 X server를 끄고 GUI 관련 서비스들을 종료시켜야 합니다. <br>
+NVIDIA graphic driver를 설치하기 위해선 먼저 linux에서 graphic display와 input device들을 관리하는 X server를 끄고 GUI 관련 서비스들을 종료시켜야 합니다. <br>
 
     Ctrl + Alt + F1 을 눌러 console창으로 변경 후 로그인합니다
 
@@ -78,8 +78,8 @@ CUDA 설치 시 sample을 포함했다면 sample code를 빌드하여 검증해�
 [https://developer.nvidia.com/rdp/form/cudnn-download-survey](https://developer.nvidia.com/rdp/form/cudnn-download-survey)에서 로그인 후 약관에 동의하고 자신의 CUDA version과 환경에 맞는 cuDNN library를 다운로드 합니다. 다운받은 압축파일을 풀고 안에 있는 파일들을 설치한 CUDA 폴더로 옮기면 됩니다.
 
     $ tar -zxvf cudnn-10.0-linux-x64-v7.6.3.30.tgz
-    $ sudo cp -r cuda/include/cudnn.h /usr/local/cuda-10.0/include
-    $ sudo cp -r cuda/lib64/libcudnn* /usr/local/cuda-10.0/lib64
+    $ sudo cp cuda/include/cudnn.h /usr/local/cuda-10.0/include
+    $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda-10.0/lib64
 
 # 7. Tensorflow-gpu 설치
 [https://www.tensorflow.org/install/source#tested_build_configurations](https://www.tensorflow.org/install/source#tested_build_configurations)에서 자신의 CUDA, cuDNN 버전을 확인하고 설치합니다.
