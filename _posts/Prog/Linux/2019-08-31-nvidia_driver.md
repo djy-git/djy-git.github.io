@@ -95,6 +95,5 @@ CUDA 설치 시 sample을 포함했다면 sample code를 빌드하여 검증해�
 
 ---
 
-**References**
-[http://www.kwangsiklee.com/2017/07/%ec%9a%b0%eb%b6%84%ed%88%ac-16-04%ec%97%90%ec%84%9c-cuda-%ec%84%b1%ea%b3%b5%ec%a0%81%ec%9c%bc%eb%a1%9c-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0/](http://www.kwangsiklee.com/2017/07/%ec%9a%b0%eb%b6%84%ed%88%ac-16-04%ec%97%90%ec%84%9c-cuda-%ec%84%b1%ea%b3%b5%ec%a0%81%ec%9c%bc%eb%a1%9c-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0/
-  )
+**References** <br>
+[http://www.kwangsiklee.com/2017/07/%ec%9a%b0%eb%b6%84%ed%88%ac-16-04%ec%97%90%ec%84%9c-cuda-%ec%84%b1%ea%b3%b5%ec%a0%81%ec%9c%bc%eb%a1%9c-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0/](http://www.kwangsiklee.com/2017/07/%ec%9a%b0%eb%b6%84%ed%88%ac-16-04%ec%97%90%ec%84%9c-cuda-%ec%84%b1%ea%b3%b5%ec%a0%81%ec%9c%bc%eb%a1%9c-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0/)
