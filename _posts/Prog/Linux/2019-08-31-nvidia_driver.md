@@ -8,7 +8,7 @@ sidebar:
 
 # Remarks
 **설치환경**: Linux Ubuntu 16.04 (x86_64) <br>
-**GPU**: NVIDIA GTX 1080 ti
+**GPU**: NVIDIA GTX 1080 ti <br>
 **NVIDIA Graphic Driver version**: 410.38 <br>
 **CUDA Toolkit version**: 10.0 <br>
 **설치파일 다운로드 page**: [https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal](https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal)
@@ -19,6 +19,7 @@ sidebar:
 
 # 1. CUDA 10.0 Toolkit 설치파일 다운로드
 [https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal](https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal) 에서 자신의 설정에 잘 맞추어 파일을 다운로드합니다. <br>
+
 `cuda_10.0.130_410.48_linux.run`: 410.38 version graphic driver가 포함된 cuda 10.0 설치파일 <br>
 다운받은 설치파일의 실행권한을 얻습니다.
 
