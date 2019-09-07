@@ -66,6 +66,8 @@ docs-en:
         url: /archive.html?tag=Linux
       - title:  Parallel programming
         url: /archive.html?tag=Parallel
+      - title:  LeetCode
+        url: /archive.html?tag=LeetCode
       - title:  Etc
         url: /archive.html?tag=Etc_prog
   - title:      Machine learning
