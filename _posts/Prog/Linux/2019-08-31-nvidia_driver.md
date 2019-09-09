@@ -11,7 +11,11 @@ sidebar:
 **GPU**: NVIDIA GTX 1080 ti <br>
 **NVIDIA Graphic Driver version**: 410.38 <br>
 **CUDA Toolkit version**: 10.0 <br>
+**Python version**: 3.6.7 <br>
+**Tensorflow-gpu version**: 1.14.0 <br>
 **설치파일 다운로드 page**: [https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal](https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal)
+
+각각의 version이 호환되지 않으면 제대로 실행되지 않기 때문에 설치 전 먼저 설치하려고 하는 version을 확실히 알아야합니다.
 
 <!--more-->
 
