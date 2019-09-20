@@ -1,10 +1,12 @@
 ---
 layout: article
-title: Tensorboard in remote server
+title: Tensorboard using remote server
 tags: Python
 sidebar:
   nav: docs-en
 ---
+
+<!--more-->
 
 ### Notation
 - IP: Server IP
