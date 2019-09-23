@@ -16,14 +16,14 @@ sidebar:
 
 
 ### Linux server에 접속하여 tensorboard를 실행시킨 결과를 Windows에서 보기
-1. Windows cmd
+1. CMD in Windows
 
         > ssh -L PORT:localhost:6006 ID@IP
 
-2. Server ssh
+2. ssh server
 
         $ tensorboard --logdir=LOG
 
-3. Windows internet browser
+3. Internet browser in Windows
 
         http://localhost:PORT
