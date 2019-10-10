@@ -9,7 +9,7 @@ sidebar:
 # Remarks
 **설치환경**: Linux Ubuntu 16.04 (x86_64) <br>
 **GPU**: NVIDIA GTX 1080 ti <br>
-**NVIDIA Graphic Driver version**: 410.38 <br>
+**NVIDIA Graphic Driver version**: 410.38 (418.56도 가능) <br>
 **CUDA Toolkit version**: 10.0 <br>
 **Python version**: 3.6.7 <br>
 **Tensorflow-gpu version**: 1.14.0 <br>
