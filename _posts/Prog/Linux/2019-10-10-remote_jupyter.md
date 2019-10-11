@@ -53,3 +53,12 @@ sidebar:
     $ source activate [env]
     $ pip install ipykernel
     $ python -m ipykernel install --user --name [env] --display-name "[displayKernelName]"
+
+<br>
+### 6. Kernel 및 Env 제거 방법
+
+    // Kernel 제거
+    $ jupyter kernelspec uninstall [env]
+
+    // Env 제거
+    $ conda env remove --name [env]
