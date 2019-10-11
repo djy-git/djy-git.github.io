@@ -40,6 +40,7 @@ sidebar:
           c.NotebookApp.password = u'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
           c.NotebookApp.open_browser = False
           c.NotebookApp.allow_origin = '*'  // 추가 설정2
+
 <br>
 ### 4. Unblocking port
 
