@@ -35,11 +35,12 @@ sidebar:
         $ vi ~/.jupyter/jupyter_notebook_config
 
           // jupyter_notebook_config
-          c = get_config()  // 추가 설정1
-          c.NotebookApp.ip = '*'  // '0.0.0.0'
-          c.NotebookApp.password = u'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
+          // c = get_config()  // 안 될 경우 추가
+          c.NotebookApp.ip = '*'
+          c.NotebookApp.password = u'sha1:~'
           c.NotebookApp.open_browser = False
-          c.NotebookApp.allow_origin = '*'  // 추가 설정2
+          c.NotebookApp.allow_origin = '*'
+          c.NotebookApp.notebook_dir = '/workspace'  // 시작 directory
 
 <br>
 ### 4. Unblocking port
