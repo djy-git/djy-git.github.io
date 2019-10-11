@@ -21,6 +21,11 @@ def warn(*args, **kwargs):
 # warn = lambda *args, **kwargs: None
 
 warnings.warn = warn
+
+# 혹은
+
+import warnings
+warnings.filterwarnings(action='ignore')
 {% endhighlight %}[^1]
 
 <br>
