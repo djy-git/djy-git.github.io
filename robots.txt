@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://ydj-git.github.io/sitemap.xml
