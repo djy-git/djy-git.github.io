@@ -82,12 +82,12 @@ docs-en:
     children:
       - title:  Examples
         url: /archive.html?tag=Examples
-      - title:  kaggle
-        url: /archive.html?tag=kaggle
+      - title:  Kaggle
+        url: /archive.html?tag=Kaggle
   - title:      Papers
     children:
-      - title:  Base
-        url: /archive.html?tag=Base_paper
+      - title:  Papers
+        url: /archive.html?tag=Papers
       - title:  Finance
         url: /archive.html?tag=Finance
   - title:      Etc
