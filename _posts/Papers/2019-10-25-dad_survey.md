@@ -11,11 +11,12 @@ sidebar:
 <!--more-->
 
 **Authors** <br>
-Raghavendra Chalapathy (University of Sydney and Capital Markets Cooperative Research Centre (CMCRC)), Sanjay Chawla (Qatar Computing Research Institute (QCRI), HBKU) <br>
+Raghavendra Chalapathy (University of Sydney and Capital Markets Cooperative Research Centre (CMCRC)) <br>
+Sanjay Chawla (Qatar Computing Research Institute (QCRI), HBKU) <br>
 
 <br>
 **First Submission Date** <br>
-2019. 1. 10 <br>
+<text> 2019. 1. 10 </text> <br>
 From arxiv with 30 citations (until 2019. 10. 25) <br>
 
 <br>
