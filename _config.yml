@@ -208,6 +208,7 @@ defaults:
     values:
       layout: article
       sharing: true
+      comments: true
       license: true
       aside:
         toc: false
