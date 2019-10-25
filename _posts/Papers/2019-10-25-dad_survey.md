@@ -8,10 +8,9 @@ aside:
   toc: true
 ---
 
-### Deep Learning For Anomaly Detection: A Survey
-
 <!--more-->
 
+### Deep Learning For Anomaly Detection: A Survey
 #### Authors
 Raghavendra Chalapathy (University of Sydney and Capital Markets Cooperative Research Centre (CMCRC)) <br>
 Sanjay Chawla (Qatar Computing Research Institute (QCRI), HBKU) <br>
