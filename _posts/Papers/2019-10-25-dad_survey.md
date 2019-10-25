@@ -4,8 +4,8 @@ title: 'Deep Learning For Anomaly Detection: A Survey'
 tags: Papers
 sidebar:
   nav: docs-en
-toc:
-  aside: true
+aside:
+  toc: true
 ---
 
 ### Deep Learning For Anomaly Detection: A Survey
