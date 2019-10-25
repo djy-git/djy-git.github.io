@@ -18,8 +18,8 @@ Sanjay Chawla (Qatar Computing Research Institute (QCRI), HBKU) <br>
 
 <br>
 #### First Submission Date
-<text> 2019. 1. 10 </text>
-From arxiv with 30 citations (until 2019. 10. 25) <br>
+<p> 2019. 1. 10 <br>
+From arxiv with 30 citations (until 2019. 10. 25) </p>
 
 <br>
 [Original paper](https://arxiv.org/abs/1901.03407) <br>
