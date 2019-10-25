@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 3차 중간고사
-tags: Diary
+tags: Papers
 sidebar:
   nav: docs-en
 ---
