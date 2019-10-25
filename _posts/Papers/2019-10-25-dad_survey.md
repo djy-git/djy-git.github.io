@@ -7,6 +7,9 @@ sidebar:
 ---
 
 ### Deep Learning For Anomaly Detection: A Survey
+
+<!--more-->
+
 **Authors** <br>
 Raghavendra Chalapathy (University of Sydney and Capital Markets Cooperative Research Centre (CMCRC)), Sanjay Chawla (Qatar Computing Research Institute (QCRI), HBKU) <br>
 
@@ -16,8 +19,6 @@ Raghavendra Chalapathy (University of Sydney and Capital Markets Cooperative Res
 From arxiv with 30 citations (until 2019. 10. 25) <br>
 
 <br>
-
 [Original paper](https://arxiv.org/abs/1901.03407) <br>
 
-<!--more-->
 ---
