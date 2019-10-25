@@ -1,7 +1,17 @@
 ---
 layout: article
-title: Dimension and rank of a matrix
+title: Deep Learning For Anomaly Detection: A Survey
 tags: Papers
 sidebar:
   nav: docs-en
 ---
+
+### Name: Deep Learning For Anomaly Detection: A Survey
+Author: Raghavendra Chalapathy, Sanjay Chawla <br>
+Date: 2019. 1. 10 <br>
+From arxiv with citation 30 (19. 10. 25 기준) <br>
+[Original paper](https://arxiv.org/abs/1901.03407) <br>
+
+---
+
+asd
