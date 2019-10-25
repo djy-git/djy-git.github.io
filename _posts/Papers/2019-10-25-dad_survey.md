@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Deep Learning For Anomaly Detection: A Survey
+title: 'Deep Learning For Anomaly Detection: A Survey'
 tags: Papers
 sidebar:
   nav: docs-en
