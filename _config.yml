@@ -208,7 +208,7 @@ defaults:
     values:
       layout: article
       sharing: true
-      comments: true
+      comment: true
       license: true
       aside:
         toc: false
