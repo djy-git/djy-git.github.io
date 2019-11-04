@@ -125,7 +125,7 @@ $$
 
     \begin{equation}
     \begin{aligned}
-        p(x_k | Y_k) &= p(x_k | Y_{k-1}, y_k) \\
+        p(x_k | Y_k) &= p(x_k | y_k, Y_{k-1}) \\
         &∝ p(y_k | Y_{k-1}, x_k) p(x_k | Y_{k-1}) \\
         &= p(y_k | x_k) p(x_k | Y_{k-1})u
     \end{aligned}
