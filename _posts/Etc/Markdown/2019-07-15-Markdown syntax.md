@@ -110,3 +110,23 @@ $$
     <img src="https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/threshold.png" width="100" height="100">
     ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/prcurve.png){: width="300" height="300"}{:.border}
     ![png](/images/vis_files/vis_3_0.png)
+
+<br>
+# 6. Equation aligned
+$$
+\begin{equation}
+\begin{aligned}
+    p(x_k | Y_k) &= p(x_k | Y_{k-1}, y_k) \\
+    &∝ p(y_k | Y_{k-1}, x_k) p(x_k | Y_{k-1}) \\
+    &= p(y_k | x_k) p(x_k | Y_{k-1})u
+\end{aligned}
+\end{equation}
+$$
+
+    \begin{equation}
+    \begin{aligned}
+        p(x_k | Y_k) &= p(x_k | Y_{k-1}, y_k) \\
+        &∝ p(y_k | Y_{k-1}, x_k) p(x_k | Y_{k-1}) \\
+        &= p(y_k | x_k) p(x_k | Y_{k-1})u
+    \end{aligned}
+    \end{equation}
