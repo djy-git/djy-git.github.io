@@ -17,9 +17,9 @@ Given $ \mathbf{X_t}, \mathbf{Y_t} $ is independent to every state
 $$
 \begin{equation}
 \begin{aligned}
-    T&=1,2,3,\ldots,n-2,n-1,n\\
-    &=\sum^n_{i=1}i\\
-    &=\frac{n(n+1)}{2}
+    p(x_k | Y_k) &= p(x_k | Y_{k-1}, y_k) \\
+    &∝ p(y_k | x_k, Y_{k-1}) p(x_k, Y_{k-1}) \\
+    &= p(y_k | x_k) p(x_k | Y_{k-1})
 \end{aligned}
 \end{equation}
 $$
