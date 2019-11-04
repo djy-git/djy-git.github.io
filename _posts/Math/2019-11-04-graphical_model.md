@@ -16,6 +16,10 @@ Given $ \mathbf{X_t}, \mathbf{Y_t} $ is independent to every state
 ## Measurement update
 $$
 \begin{equation}
-    C^i_j = {\textstyle \sum_k} A^i_k B^k_j
+\begin{aligned}
+    T&=1,2,3,\ldots,n-2,n-1,n\\
+    &=\sum^n_{i=1}i\\
+    &=\frac{n(n+1)}{2}
+\end{aligned}
 \end{equation}
 $$
