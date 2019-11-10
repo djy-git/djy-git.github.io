@@ -9,6 +9,9 @@ sidebar:
 ex) Discrete Markov-Chain
 ![png](/images/graphical_files/1.jpg)
 
+<!--more-->
+
+
 ## Data Dependency
 Given $ \mathbf{X_t}, \mathbf{Y_t} $ is independent to every state
 <br>
