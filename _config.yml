@@ -215,7 +215,8 @@ defaults:
       show_edit_on_github: true
       show_subscribe: false
       pageview: true
-
+      sidebar:
+        nav: docs-en
 
 ## => Plugins
 ##############################
