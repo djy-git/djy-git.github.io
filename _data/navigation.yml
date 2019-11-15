@@ -78,6 +78,10 @@ docs-en:
     children:
       - title:  Base
         url: /archive.html?tag=Math
+  - title:      Study
+    children:
+      - title:  ESLR
+        url: /archive.html?tag=ESLR
   - title:      Projects
     children:
       - title:  Examples
