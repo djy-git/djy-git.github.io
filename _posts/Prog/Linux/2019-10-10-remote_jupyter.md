@@ -1,11 +1,3 @@
----
-layout: article
-title: Access remote jupyter-notebook
-tags: Linux
-sidebar:
-  nav: docs-en
----
-
 # Remarks
 이 글은 [https://jupyter-notebook.readthedocs.io/en/stable/public_server.html](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html)을 참고하여 작성되었습니다.
 
