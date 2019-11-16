@@ -69,7 +69,7 @@ docs-en:
       - title:  LeetCode
         url: /archive.html?tag=LeetCode
       - title:  Etc
-        url: /archive.html?tag=Etc_prog
+        url: /archive.html?tag=Prog_Etc
   - title:      Machine learning
     children:
       - title:  Theory
@@ -84,10 +84,12 @@ docs-en:
         url: /archive.html?tag=ESLR
   - title:      Projects
     children:
-      - title:  Examples
-        url: /archive.html?tag=Examples
       - title:  Kaggle
         url: /archive.html?tag=Kaggle
+      - title:  Anomaly detection
+        url: /archive.html?tag=Anomaly
+      - title:  Etc
+        url: /archive.html?tag=Project_Etc
   - title:      Papers
     children:
       - title:  Papers
