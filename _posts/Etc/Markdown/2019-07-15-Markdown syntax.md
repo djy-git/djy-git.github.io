@@ -35,8 +35,9 @@ aside:
 
     \bf{\underline{\color{red}}}
 
-- Some Tex
-$ \stackrel{i.i.d.}{\sim} \overset{above}{main} $
+- Some Tex <br>
+$ \stackrel{i.i.d.}{\sim} \\
+\overset{above}{main} $
 
 **Latex**
 
