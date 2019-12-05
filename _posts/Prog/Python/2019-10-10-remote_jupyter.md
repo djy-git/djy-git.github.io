@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Access remote jupyter-notebook
-tags: Linux
+tags: Python
 sidebar:
   nav: docs-en
 ---
