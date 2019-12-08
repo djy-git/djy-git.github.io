@@ -64,6 +64,8 @@ docs-en:
         url: /archive.html?tag=Visualization
       - title:  Linux
         url: /archive.html?tag=Linux
+      - title:  Docker
+        url: /archive.html?tag=Docker
       - title:  Parallel programming
         url: /archive.html?tag=Parallel
       - title:  LeetCode
