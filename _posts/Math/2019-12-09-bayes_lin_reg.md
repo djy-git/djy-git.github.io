@@ -111,12 +111,10 @@ $$
 Example in 4-dimensional case <br>
 
 $$
-\begin{flalign}
   k = (1, 0, 0, 1) \\
   |k| = 2 \\
   \beta_k = (\beta_1, \beta_4) \\
   X_k = [n, |k|]
-\end{flalign}
 $$
 
 2. Marginal posterior <br>
