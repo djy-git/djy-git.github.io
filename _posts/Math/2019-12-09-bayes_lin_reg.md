@@ -68,8 +68,11 @@ $ f(y) = \int f(y \mid g) \pi(g) \ dg $
 
 ## 2. Spike and slab priors
 데이터의 개수 $n$보다 차원 $p$가 더 큰 경우, spike and slab prior를 사용할 수 있습니다. <br>
-**High-dimensional setting**: $ p \equiv p_n \to \infty \quad \text{as} \quad n \to \infty $ ($p \gg n$ 인 상황을 잘 근사해서 표현) <br>
-**Sparse assumption in LR**: $ \beta $ is sparse vector s.t. $ \Sigma_{j=1}^p I(\beta_j \neq 0) \leq s_0 = o(p) $ (대부분의 회귀계수가 0에 가깝다) <br>
+**High-dimensional setting** <br>
+$ p \equiv p_n \to \infty \quad \text{as} \quad n \to \infty $ ($p \gg n$ 인 상황을 잘 근사해서 표현) <br>
+
+**Sparse assumption in LR** <br>
+$ \beta $ is sparse vector s.t. $ \Sigma_{j=1}^p I(\beta_j \neq 0) \leq s_0 = o(p) $ (대부분의 회귀계수가 0에 가깝다) <br>
 
 ### 1) Prior
 $ \beta_j \stackrel{iid}{\sim} (1 - \pi_0)\delta_0 + \pi_0 g(\cdot) \quad\quad \cdots \quad\quad \delta_0: \text{spike, } g(\cdot): \text{slab}(N(\cdot)), \pi_0: \text{ratio of non-zero coefficient} $ <br>
