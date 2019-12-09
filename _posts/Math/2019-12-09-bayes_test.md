@@ -48,6 +48,6 @@ $ \frac{\pi_0}{\pi_1} $
 $ \frac{\pi(H_0 \mid x)}{\pi(H_1 \mid x)} $
 
 3. Bayes factor <br>
-$ B_{01}(x) = \frac{\pi(H_0 \mid x)}{\pi(H_1 \mid x)} \times \frac{\pi_1}{\pi_0} = \frac{f(x \mid H_0)}{f(x \mid H_1)} \\
-B_{10}(x) = \frac{1}{B_{01}(x)} \quad\quad \text{(symmetric)}$ <br>
+$ B_{01}(x) = \frac{\pi(H_0 \mid x)}{\pi(H_1 \mid x)} \times \frac{\pi_1}{\pi_0} = \frac{f(x \mid H_0)}{f(x \mid H_1)} $
+$ B_{10}(x) = \frac{1}{B_{01}(x)} \quad\quad \text{(symmetric)} $ <br>
 $ f(x \mid H_i) $ : the amount of evidence that the data $x$ supports hypothesis $H_i$
