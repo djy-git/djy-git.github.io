@@ -31,6 +31,6 @@ $$
 $$
 2. Compare posterior prob. <br>
 $$
-P_0 \equiv \pi(H_0 \mid x) = \frac{f(x, H_0)}{f(x, H_0) + f(x, H_1) = \frac{\int_{\theta \in \Theta_0} f(x | \theta) g_0(\theta) d\theta}{\int_{\theta \in \Theta_0} f(x | \theta) g_0(\theta) d\theta + \int_{\theta \in \Theta_1} f(x | \theta) g_1(\theta) d\theta}}
-P_1 \equiv \pi(H_1 \mid x) = \frac{f(x, H_1)}{f(x, H_0) + f(x, H_1) = \frac{\int_{\theta \in \Theta_1} f(x | \theta) g_1(\theta) d\theta}{\int_{\theta \in \Theta_0} f(x | \theta) g_0(\theta) d\theta + \int_{\theta \in \Theta_1} f(x | \theta) g_1(\theta) d\theta}}
+P_0 \equiv \pi(H_0 \mid x) = \frac{f(x, H_0)}{f(x, H_0) + f(x, H_1)} = \frac{\int_{\theta \in \Theta_0} f(x | \theta) g_0(\theta) d\theta}{\int_{\theta \in \Theta_0} f(x | \theta) g_0(\theta) d\theta + \int_{\theta \in \Theta_1} f(x | \theta) g_1(\theta) d\theta}}
+P_1 \equiv \pi(H_1 \mid x) = \frac{f(x, H_1)}{f(x, H_0) + f(x, H_1)} = \frac{\int_{\theta \in \Theta_1} f(x | \theta) g_1(\theta) d\theta}{\int_{\theta \in \Theta_0} f(x | \theta) g_0(\theta) d\theta + \int_{\theta \in \Theta_1} f(x | \theta) g_1(\theta) d\theta}}
 $$
