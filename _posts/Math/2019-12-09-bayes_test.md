@@ -49,5 +49,5 @@ $ \frac{\pi(H_0 \mid x)}{\pi(H_1 \mid x)} $
 
 3. Bayes factor <br>
 $ B_{01}(x) = \frac{\pi(H_0 \mid x)}{\pi(H_1 \mid x)} \times \frac{\pi_1}{\pi_0} = \frac{f(x \mid H_0)}{f(x \mid H_1)} \\
-B_{10}(x) = \frac{1}{B_{01}(x)} \quad \text{(symmetric)}$
-$ f(x \mid H_i) : $ Data $x$가 $H_i$를 지지하는 증거의 양으로 생각할 수 있다.
+B_{10}(x) = \frac{1}{B_{01}(x)} \quad \text{(symmetric)}$ <br>
+$ f(x \mid H_i) $ : the amount of evidence that the data $x$ supports hypothesis $H_i$
