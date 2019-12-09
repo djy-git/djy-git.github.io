@@ -1,5 +1,5 @@
 ---
-title: Bayesian linear regression
+title: Prior selection in Bayesian linear regression
 tags: Math
 aside:
   toc: true
@@ -50,18 +50,18 @@ $R_\gamma^2$이 1에 가까워질수록 Bayes factor가 발산하는 것이 아�
 ⇒ **Information paradox**: $R_\gamma^2$이 1에 수렴한다는 정보가 있음에도 Bayes factor가 계속 증가하지 않는 현상
 
 <br>
-따라서, 이러한 문제가 발생하지 않도록 $g$를 data에 의존하는 fully Bayesian approach를 통해 정할 수 있습니다. <br>
+이러한 문제가 발생하지 않도록 data에 의존하는 fully Bayesian approach로 $g$를 정할 수 있습니다. <br>
 즉, hyp. $g$에 다시 prior(hyper prior)를 주는 방법입니다.
 <br>
 
 1. Information paradox를 막기 위해, 수렴값의 평균이 발산하도록 $g$의 분포를 정할 수 있습니다. <br>
 $ \pi(g) = IG(\frac{1}{2}, \frac{n}{2}) \quad\quad \cdots \quad\quad \text{Zellner-Siow prior} $ <br>
-$ \int (1+g)^\frac{n-p_\gamma-1}{2} \pi(g) dg = \infty $
+$ \int (1+g)^\frac{n-p_\gamma-1}{2} \pi(g) \ dg = \infty $
 <br><br>
 2. 결과적으로 $\beta$의 분포는 Cauchy dist.를 따르게 되지만, 계산적인 이득을 고려하여 간단한 분포에서 계층적으로 sampling($IG → N$)하는 방법을 사용합니다. <br>
-$ \pi(\beta) = \int \pi(\beta \mid g) \pi(g) dg = \text{Cauchy dist.}$
+$ \pi(\beta) = \int \pi(\beta \mid g) \pi(g) \ dg = \text{Cauchy dist.}$
 <br><br>
 3. Marginal likelihood를 계산하기 위해 Laplace approx.가 필요하지만 unvariate($g$) case이기 때문에 큰 오차가 발생하지 않습니다. <br>
-$ f(y) = \int f(y \mid g) \pi(g) dg $
+$ f(y) = \int f(y \mid g) \pi(g) \ dg $
 <br><br>
-4. 결과, 위의 3가지 문제에 모두 해당하지 않게됩니다. 
+4. 그 결과, 위의 3가지 문제에 모두 해당하지 않게됩니다.
