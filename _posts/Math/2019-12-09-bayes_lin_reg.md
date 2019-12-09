@@ -117,7 +117,7 @@ k = (1, 0, 0, 1) \\
 X_k = [n, |k|]
 $$
 
-2. Marginal posterior
+2. Marginal posterior <br>
 $$
 \begin{equation}
 \begin{aligned}
