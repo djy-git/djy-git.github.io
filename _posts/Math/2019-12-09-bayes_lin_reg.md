@@ -5,6 +5,9 @@ aside:
   toc: true
 ---
 
+<!--more-->
+
+
 # 1. Notations
 $$
 Y = (Y_1, \cdots, Y_n)^T \in \mathbb{R}^n \\
