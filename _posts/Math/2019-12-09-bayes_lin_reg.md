@@ -20,7 +20,8 @@ $ Y \mid \beta, \sigma^2 \sim N_n(X\beta, \sigma^2 I_n) $
 ## 1) Zellner's g-prior
 1. Prior
 $$
-\beta \mid \sigma^2 \sim N_p(\beta_0, \color{blue}{g} \sigma^2 (X^T X)^{-1}) \quad\quad \cdots \quad\quad g \in \mathbb{R}^+
+\beta \mid \sigma^2 \sim N_p(\beta_0, \color{blue}{g} \sigma^2 (X^T X)^{-1}) \quad\quad \cdots \quad\quad g \in \mathbb{R}^+ \\
+\sigma^2 \sim \pi(\sigma^2) = \frac{1}{\sigma^2} \quad\quad \cdots \quad\quad \text{Jeffreys' prior}
 $$
 
 2. Posterior
