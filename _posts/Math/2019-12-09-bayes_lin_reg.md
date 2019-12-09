@@ -124,6 +124,7 @@ $$
   \pi(Z=k \mid y)
   &... \\
   &\propto det(\tau^2 X_k^TX_k + I_{|k})^{-\frac{1}{2}} (\frac{\pi_0}{1-\pi_0})^{|k|} (\frac{1}{2} \tilde{R}_k + \gamma_2)^{-\frac{n}{2} + \gamma_1} \\
+  \tilde{R}_k &= y^T \{ I_n - X_k (X_k^T X_k + \tau^{-2} I_{|k|})^{-1} X_k^T \} y
 \end{aligned}
 \end{equation}
 $$
