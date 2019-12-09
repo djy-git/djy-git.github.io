@@ -8,7 +8,7 @@ aside:
 <!--more-->
 
 # 1. Hypothesis testing problem
-$ H_0 : \theta \in \Theta_0 \quad \text{vs} \quad H_1: \theta \in \Theta_1 \quad (\Theta_0 ∪ \Theta_1 = \Theta = \text{whole parameter space})$
+$ H_0 : \theta \in \Theta_0 \quad\quad \text{vs} \quad\quad H_1: \theta \in \Theta_1 \quad\quad (\Theta_0 ∪ \Theta_1 = \Theta = \text{whole parameter space})$
 
 # 2. Bayesian approach
 1. Calculate the posterior prob. for each model ($\Theta_0, \Theta_1$): $ \pi(H_0 \mid x), \pi(H_1 \mid x) $
@@ -21,11 +21,11 @@ $$
 \begin{aligned}
   \pi(H_i | x)
   &\propto p(H_i) \color{red}{f(x | H_i)} \\
-  &= \color{blue}{\pi_i} f(x | H_i) \quad \cdots \quad \color{blue}{\pi_i} \equiv p(H_i) \\
+  &= \color{blue}{\pi_i} f(x | H_i) \quad\quad \cdots \quad\quad \color{blue}{\pi_i} \equiv p(H_i) \\
   \color{red}{f(x | H_i)}
   &= \int_{\theta \in \Theta_i} f(x | \theta, H_i) \pi(\theta | H_i) d\theta \\
-  &= \int_{\theta \in \Theta_i} f(x | \theta) \pi(\theta | H_i) d\theta \quad \cdots \quad \text{Assume} f(x | \theta) = f(x | \theta, H_i) \\
-  &= \int_{\theta \in \Theta_i} f(x | \theta) \color{blue}{g_i(\theta)} d\theta \quad \cdots \quad \color{blue}{g_i(\theta)} \equiv \pi(\theta | H_i) \\
+  &= \int_{\theta \in \Theta_i} f(x | \theta) \pi(\theta | H_i) d\theta \quad\quad \cdots \quad\quad \text{Assume} f(x | \theta) = f(x | \theta, H_i) \\
+  &= \int_{\theta \in \Theta_i} f(x | \theta) \color{blue}{g_i(\theta)} d\theta \quad\quad \cdots \quad\quad \color{blue}{g_i(\theta)} \equiv \pi(\theta | H_i) \\
 \end{aligned}
 \end{equation}
 $$
@@ -49,5 +49,5 @@ $ \frac{\pi(H_0 \mid x)}{\pi(H_1 \mid x)} $
 
 3. Bayes factor <br>
 $ B_{01}(x) = \frac{\pi(H_0 \mid x)}{\pi(H_1 \mid x)} \times \frac{\pi_1}{\pi_0} = \frac{f(x \mid H_0)}{f(x \mid H_1)} \\
-B_{10}(x) = \frac{1}{B_{01}(x)} \quad \text{(symmetric)}$ <br>
+B_{10}(x) = \frac{1}{B_{01}(x)} \quad\quad \text{(symmetric)}$ <br>
 $ f(x \mid H_i) $ : the amount of evidence that the data $x$ supports hypothesis $H_i$
