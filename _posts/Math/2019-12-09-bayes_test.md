@@ -15,7 +15,7 @@ $ H_0 : \theta \in \Theta_0 \quad \text{vs} \quad H_1: \theta \in \Theta_1 \quad
 2. Support the hypothesis that has larger posterior prob.
 
 # 3. Calculate posterior
-1. Posterior $ \pi(H_i | x) $
+1. Posterior $ \pi(H_i | x) $ <br>
 $$
 \begin{equation}
 \begin{aligned}
