@@ -21,9 +21,11 @@ $$
 \begin{aligned}
   \pi(H_i | x)
   &\propto p(H_i) f(x | H_i) \\
-  &= p(H_i) \int_{\theta \in \Theta_i} f(x | \theta, H_i) \pi(\theta | H_i) d\theta \\
-  &= p(H_i) \int_{\theta \in \Theta_i} f(x | \theta) \pi(\theta | H_i) d\theta \quad \text{Assume f(x | \theta) = f(x | \theta, H_i)} \\
-  &= \color{blue}{\pi_i} \int_{\theta \in \Theta_i} f(x | \theta) \color{blue}{g_i(\theta)} d\theta \quad \color{blue}{\pi_i} = p(H_i), \color{blue}{g_i(\theta)} = \pi(\theta | H_i) \\
+  &= \color{blue}{\pi_i} f(x | H_i) \quad \cdots \quad \color{blue}{\pi_i} = p(H_i) \\
+  f(x | H_i)
+  &= \int_{\theta \in \Theta_i} f(x | \theta, H_i) \pi(\theta | H_i) d\theta \\
+  &= \int_{\theta \in \Theta_i} f(x | \theta) \pi(\theta | H_i) d\theta \quad \cdots \quad \text{Assume f(x | \theta) = f(x | \theta, H_i)} \\
+  &= \int_{\theta \in \Theta_i} f(x | \theta) \color{blue}{g_i(\theta)} d\theta \quad \cdots \quad \color{blue}{g_i(\theta)} = \pi(\theta | H_i) \\
 \end{aligned}
 \end{equation}
 $$
