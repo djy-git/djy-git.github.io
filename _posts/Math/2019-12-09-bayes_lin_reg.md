@@ -36,8 +36,14 @@ Posterior 계산이 용이하기에 Bayesian linear regression에서 가장 많�
 
 $ B(M_\gamma, M_{null}) = \frac{(1 + g)^{\frac{n - p_\gamma - 1}{2}}}{(1 + g(1 - R_\gamma^2))^{\frac{n - 1}{2}}} = (\frac{1 + g}{1 + g[1 - R_\gamma^2]})^{\frac{n-1}{2}} (1+g)^{\frac{-p_\gamma}{2}}$
 
-1. $ B(M_\gamma, M_{null}) \rarr 0 \quad \text{as} \quad g \rarr \infty \quad \text{with a fixed } g $ <br>
-즉, $g$가 커질수록 $ M_\gamma $와 무관하게 $ M_{null} $을 선호하는 문제가 발생합니다. <br>
+1. $ B(M_\gamma, M_{null}) \rarr 0 \quad \text{as} \quad g \rarr \infty $ <br>
+$g$가 커질수록 $ M_\gamma $와 무관하게 $ M_{null} $을 선호하는 문제가 발생할 수 있습니다. <br>
 ⇒ **Lindley's paradox**: $H_1$ 하에서의 prior balance($g$)를 너무 크게 만들어버리면 항상 $H_0$를 지지하게 되는 현상
 <br>
-2.
+2. $ B(M_\gamma, M_{null}) \rarr \infty \quad \text{as} \quad n \rarr \infty \quad \text{with a fixed } g $ <br>
+$n$이 커질수록 $M_\gamma$와 무관하게 $M_\gamma$를 선호하는 문제가 발생할 수 있습니다. <br>
+⇒ **Model selection consistency**: If $M_*$ is the true model, $ B(M_*, M_{null}) \rarr \infty \quad \text{as} \quad n \rarr \infty $ for any other $M_\gamma$
+<br>
+3. $ B(M_\gamma, M_{null}) \rarr (1+g)^\frac{n-p_\gamma-1}{2} \quad \text{as} \quad R_\gamma^2 \rarr 1 \quad \text{with a fixed } g $ <br>
+$R_\gamma^2$이 1에 가까워질수록 Bayes factor가 발산하는 것이 아니라 특정값으로 수렴하는 문제가 발생할 수 있습니다. <br>
+⇒ **Information paradox**: $R_\gamma^2$이 1에 수렴한다는 정보가 있음에도 Bayes factor가 계속 증가하지 않는 현상
