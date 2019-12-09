@@ -84,8 +84,8 @@ $$
 \begin{aligned}
   \beta_j \mid Z_j = 0 &\stackrel{ind}{\sim} \delta_0 \\
   \beta_j \mid Z_j = 1 &\stackrel{ind}{\sim} g(\beta_j \mid \sigma^2) \\
-  Z_j &\stackrel{iid}{\sim} Ber(\pi_0) \\
   g(\beta_j \mid \sigma^2) &= N(\beta_j \mid 0, \sigma^2 \tau^2) \\
+  Z_j &\stackrel{iid}{\sim} Ber(\pi_0) \\
   \sigma^2 &\sim IG(\gamma_1, \gamma_2)
 \end{aligned}
 \end{equation}
