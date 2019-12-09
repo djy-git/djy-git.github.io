@@ -74,7 +74,7 @@ $ f(y) = \int f(y \mid g) \pi(g) \ dg $
 ### 1) Prior
 $ \beta_j \stackrel{iid}{\sim} (1 - \pi_0)\delta_0 + \pi_0 g(\cdot) \quad\quad \cdots \quad\quad \delta_0: \text{spike, } g(\cdot): \text{slab} $ <br>
 
-Posterior 계산을 용이하게 하기 위해 다음과 같이 hierarchical prior로 구성한다. <br>
+Posterior 계산을 용이하게 하기 위해 다음과 같이 hierarchical prior로 구성합니다. <br>
 
 $$
 \begin{equation}
