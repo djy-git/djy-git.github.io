@@ -78,7 +78,8 @@ $ \beta $ is sparse vector s.t. $ \Sigma_{j=1}^p I(\beta_j \neq 0) \leq s_0 = o(
 ### 1) Prior
 $ \beta_j \stackrel{iid}{\sim} (1 - \pi_0)\delta_0 + \pi_0 g(\cdot) \quad\quad \cdots \quad\quad \delta_0: \text{spike, } g(\cdot): \text{slab, } \pi_0: \text{ratio of non-zero coefficient} $ <br>
 
-$g$의 분포로 일반적으로 Normal dist.를 사용하거나 non-local prior를 사용할 수 있습니다. Posterior 계산을 용이하게 하기 위해 다음과 같이 hierarchical prior로 구성합니다. <br>
+$g$의 분포로 일반적으로 Normal dist.를 사용하거나 non-local prior를 사용할 수 있습니다. <br>
+Posterior 계산을 용이하게 하기 위해 다음과 같이 hierarchical prior로 구성합니다. <br>
 
 $$
 \begin{equation}
@@ -110,14 +111,12 @@ $$
 ### 3) Model selection
 1. Notations <br>
 Example in 4-dimensional case <br>
-
 $$
   k = (1, 0, 0, 1) \\
   |k| = 2 \\
   \beta_k = (\beta_1, \beta_4) \\
   X_k = [n, |k|]
 $$
-
 2. Marginal posterior <br>
 $$
 \begin{equation}
@@ -130,6 +129,23 @@ $$
 \end{aligned}
 \end{equation}
 $$
+<br>
+실제로는 계산량 때문에 이러한 계산을 거쳐서 sampling하기가 어렵습니다. MH algorithm을 사용할 수도 있지만 모수공간이 너무 넓기 때문에 적당히 탐험하기가 어렵습니다. <br>
+따라서, 이러한 방법들 대신 근사적으로 posterior를 구하여 가장 많이 나온 값을 사용하거나(MAP), 중간값(Median)을 사용하는 방법을 주로 사용합니다.
+3. Select the final model <br>
+3.1 MAP <br>
+**Shotgun Stochastic Search (SSS) algorithm** <br>
+$$
+k \subseteq {1, \cdots , p} \\
+\begin{equation}
+\begin{aligned}
+  \text{Let }
+  \Gamma_k^+ &= \{k \cup {l} &: l \in k^c \} \\
+  \Gamma_k^- &= \{k \\ 
+\end{aligned}
+\end{equation}
+$$
+
 
 ---
 
