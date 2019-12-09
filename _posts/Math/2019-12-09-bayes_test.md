@@ -20,13 +20,17 @@ $$
 \begin{equation}
 \begin{aligned}
   \pi(H_i | x)
-  &\propto p(H_i) f(x | H_i) \\
+  &\propto p(H_i) \color{red}{f(x | H_i)} \\
   &= \color{blue}{\pi_i} f(x | H_i) \quad \cdots \quad \color{blue}{\pi_i} = p(H_i) \\
-  f(x | H_i)
+  \color{red}{f(x | H_i)}
   &= \int_{\theta \in \Theta_i} f(x | \theta, H_i) \pi(\theta | H_i) d\theta \\
   &= \int_{\theta \in \Theta_i} f(x | \theta) \pi(\theta | H_i) d\theta \quad \cdots \quad \text{Assume f(x | \theta) = f(x | \theta, H_i)} \\
   &= \int_{\theta \in \Theta_i} f(x | \theta) \color{blue}{g_i(\theta)} d\theta \quad \cdots \quad \color{blue}{g_i(\theta)} = \pi(\theta | H_i) \\
 \end{aligned}
 \end{equation}
 $$
-2.
+2. Compare posterior prob. <br>
+$$
+P_0 \equiv \pi(H_0 \mid x) = \frac{f(x, H_0)}{f(x, H_0) + f(x, H_1) = \frac{\int_{\theta \in \Theta_0} f(x | \theta) g_0(\theta) d\theta}{\int_{\theta \in \Theta_0} f(x | \theta) g_0(\theta) d\theta + \int_{\theta \in \Theta_1} f(x | \theta) g_1(\theta) d\theta}}
+P_1 \equiv \pi(H_1 \mid x) = \frac{f(x, H_1)}{f(x, H_0) + f(x, H_1) = \frac{\int_{\theta \in \Theta_1} f(x | \theta) g_1(\theta) d\theta}{\int_{\theta \in \Theta_0} f(x | \theta) g_0(\theta) d\theta + \int_{\theta \in \Theta_1} f(x | \theta) g_1(\theta) d\theta}}
+$$
