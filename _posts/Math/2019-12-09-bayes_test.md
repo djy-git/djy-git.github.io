@@ -5,6 +5,8 @@ aside:
   toc: true
 ---
 
+<!--more-->
+
 # 1. Hypothesis testing problem
 $ H_0 : \theta \in \Theta_0 \quad \text{vs} \quad H_1: \theta \in \Theta_1 \quad (\Theta_0 ∪ \Theta_1 = \Theta = \text{whole parameter space})$
 
@@ -13,8 +15,8 @@ $ H_0 : \theta \in \Theta_0 \quad \text{vs} \quad H_1: \theta \in \Theta_1 \quad
 2. Support the hypothesis that has larger posterior prob.
 
 # 3. Calculate posterior
-
-1. $$
+1. Posterior $ \pi(H_i | x) $
+$$
 \begin{equation}
 \begin{aligned}
   \pi(H_i | x)
@@ -25,3 +27,4 @@ $ H_0 : \theta \in \Theta_0 \quad \text{vs} \quad H_1: \theta \in \Theta_1 \quad
 \end{aligned}
 \end{equation}
 $$
+2. 
