@@ -142,10 +142,11 @@ k \subseteq {1, \cdots , p} \\
   \text{Let }
   \Gamma_k^+ &= \{k \cup \{l\} &: l \in k^c \} \\
   \Gamma_k^- &= \{k \\ \{j\} &: j \in k \} \\
-  \Gamma_k^0 &= \{[k \\ \{j\}] \cup \{l\} &: j \in k, \ l \in k^c \}
+  \Gamma_k^0 &= \{[k \\ \{j\}] \cup \{l\} &: j \in k, \ l \in k^c \} \\
 \end{aligned}
 \end{equation}
 $$
+1. Compute $  $
 
 
 ---
