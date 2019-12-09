@@ -8,7 +8,7 @@ aside:
 <!--more-->
 
 # 1. Hypothesis testing problem
-$ H_0 : \theta \in \Theta_0 \quad\quad \text{vs} \quad\quad H_1: \theta \in \Theta_1 \quad\quad (\Theta_0 ∪ \Theta_1 = \Theta = \text{whole parameter space})$
+$ H_0 : \theta \in \Theta_0 \quad\quad \text{vs} \quad\quad H_1: \theta \in \Theta_1 \quad\quad (\Theta_0 \uplus \Theta_1 = \Theta = \text{whole parameter space})$
 
 # 2. Bayesian approach
 1. Calculate the posterior prob. for each model ($\Theta_0, \Theta_1$): $ \pi(H_0 \mid x), \pi(H_1 \mid x) $
