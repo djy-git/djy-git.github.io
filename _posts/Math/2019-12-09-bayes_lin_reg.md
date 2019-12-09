@@ -18,3 +18,12 @@ $ Y \mid \beta, \sigma^2 \sim N_n(X\beta, \sigma^2 I_n) $
 
 # 3. Priors
 ## 1) Zellner's g-prior
+1. Prior
+$$
+\beta \mid \sigma^2 \sim N_p(\beta_0, \color{blue}{g} \sigma^2 (X^T X)^{-1}) \quad\quad \cdots \quad\quad g \in \mathbb{R}^+
+$$
+
+2. Posterior
+$$
+\beta \mid \sigma^2, y \sim N_p(\frac{1}{g+1}\beta_0 + \frac{g}{g+1}\hat{\beta}, \frac{g}{g+1}\sigma^2 (X^T X)^{-1}) \\
+$$
