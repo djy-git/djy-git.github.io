@@ -67,7 +67,8 @@ $ f(y) = \int f(y \mid g) \pi(g) \ dg $
 4. 그 결과, 위의 3가지 문제에 모두 해당하지 않게됩니다.
 
 ## 2. Spike and slab priors
-데이터의 개수 $n$보다 차원 $p$가 더 큰 경우, spike and slab prior가 가장 많이 사용됩니다. <br>
+데이터의 개수 $n$보다 차원 $p$가 더 큰 경우, spike and slab prior가 가장 많이 사용됩니다. <br><br>
+
 **High-dimensional setting** <br>
 $ p \equiv p_n \to \infty \quad \text{as} \quad n \to \infty $ ($p \gg n$ 인 상황을 잘 근사해서 표현) <br>
 
