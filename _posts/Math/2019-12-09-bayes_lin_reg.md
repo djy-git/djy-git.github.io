@@ -91,7 +91,7 @@ $$
 \end{equation}
 $$
 <br>
-특히, $\pi_0$에 prior를 걸고 posterior sample을 얻으면 각 회귀계수가 0일 확률을 말할 수 있다는 장점이 있습니다. $(1 - \pi_0)$
+추가적으로, $\pi_0$에 prior를 걸고 posterior sample을 얻으면 각 회귀계수가 0일 확률에 대해 말할 수 있습니다. $(1 - \pi_0)$
 
 ### 2) Posterior
 
