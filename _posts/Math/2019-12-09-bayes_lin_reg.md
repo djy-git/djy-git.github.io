@@ -101,7 +101,29 @@ $$
   &\propto f(y \mid \beta, Z, \sigma^2) \ \pi(\beta, Z, \sigma^2) \\
   &= f(y \mid \beta, Z, \sigma^2) \ \pi(\beta \mid Z, \sigma^2) \ \pi(Z, \sigma^2) \\
   &= f(y \mid \beta, Z, \sigma^2) \ \pi(\beta \mid Z, \sigma^2) \ \pi(Z) \ \pi(\sigma^2) \\
-  &= N_n(Y \mid X\beta, \sigma^2 I_n) \ \Pi_{j: Z_i=0}I(\beta_j = 0) \ \Pi_{j: Z_i=1}g(\beta_j \mid \sigma^2) \ \Pi_j Ber(Z_j \mid \pi_0) \ IG(\gamma_1, \gamma_2)
+  &= N_n(Y \mid X\beta, \sigma^2 I_n) \ \Pi_{j: Z_i=0}I(\beta_j = 0) \ \Pi_{j: Z_i=1}g(\beta_j \mid \sigma^2) \ \Pi_j Ber(Z_j \mid \pi_0) \ IG(\sigma^2 \mid \gamma_1, \gamma_2)
+\end{aligned}
+\end{equation}
+$$
+
+### 3) Model selection
+1. Notations <br>
+Example in 4-dimensional case <br>
+
+$$
+k = (1, 0, 0, 1) \\
+|k| = 2 \\
+\beta_k = (\beta_1, \beta_4) \\
+X_k = [n, |k|]
+$$
+
+2. Marginal posterior
+$$
+\begin{equation}
+\begin{aligned}
+  \pi(Z=k \mid y)
+  &... \\
+  &\propto det(\tau^2 X_k^TX_k + I_{|k})^{-\frac{1}{2}} (\frac{\pi_0}{1-\pi_0})^{|k|} (\frac{1}{2} \tilde{R}_k + \gamma_2)^{-\frac{n}{2} + \gamma_1} \\
 \end{aligned}
 \end{equation}
 $$
