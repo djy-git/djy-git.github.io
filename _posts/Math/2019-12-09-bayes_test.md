@@ -20,6 +20,8 @@ $ H_0 : \theta \in \Theta_0 \quad \text{vs} \quad H_1: \theta \in \Theta_1 \quad
   \pi(H_i | x)
   &\propto p(H_i) f(x | H_i) \\
   &\propto p(H_i) \int_{\theta \in \Theta_i} f(x | \theta, H_i) \pi(\theta | H_i) d\theta \\
+  &= p(H_i) \int_{\theta \in \Theta_i} f(x | \theta) \pi(\theta | H_i) d\theta \\
+  &= \color{blue}{\pi_i} \int_{\theta \in \Theta_i} f(x | \theta) \color{blue}{g_i(\theta)} d\theta \\
 \end{aligned}
 \end{equation}
 $$
