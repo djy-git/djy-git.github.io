@@ -96,5 +96,21 @@ $$
 ### 2) Posterior
 
 $$
+\pi(\beta, Z, \sigma^2 \mid y)
+\propto f(y \mid \beta, Z, \sigma^2) \ \pi(\beta, Z, \sigma^2) \\
+= f(y \mid \beta, Z, \sigma^2) \ \pi(\beta \mid Z, \sigma^2) \ \pi(Z, \sigma^2) \\
+= f(y \mid \beta, Z, \sigma^2) \ \pi(\beta \mid Z, \sigma^2) \ \pi(Z) \ \pi(\sigma^2) \\
+= N_n(Y \mid X\beta, \sigma^2 I_n) \ \Pi_{j: Z_i=0}I(\beta_j = 0) \ \Pi_{j: Z_i=1}g(\beta_j \mid \sigma^2) \ \Pi_j Ber(Z_j \mid \pi_0) \ IG(\gamma_1, \gamma_2)
+$$
 
+$$
+\begin{equation}
+\begin{aligned}
+  \pi(\beta, Z, \sigma^2 \mid y)
+  &\propto f(y \mid \beta, Z, \sigma^2) \ \pi(\beta, Z, \sigma^2) \\
+  &= f(y \mid \beta, Z, \sigma^2) \ \pi(\beta \mid Z, \sigma^2) \ \pi(Z, \sigma^2) \\
+  &= f(y \mid \beta, Z, \sigma^2) \ \pi(\beta \mid Z, \sigma^2) \ \pi(Z) \ \pi(\sigma^2) \\
+  &= N_n(Y \mid X\beta, \sigma^2 I_n) \ \Pi_{j: Z_i=0}I(\beta_j = 0) \ \Pi_{j: Z_i=1}g(\beta_j \mid \sigma^2) \ \Pi_j Ber(Z_j \mid \pi_0) \ IG(\gamma_1, \gamma_2)
+\end{aligned}
+\end{equation}
 $$
