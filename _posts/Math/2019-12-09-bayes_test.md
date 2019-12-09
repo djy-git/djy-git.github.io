@@ -24,7 +24,7 @@ $$
   &= \color{blue}{\pi_i} f(x | H_i) \quad\quad \cdots \quad\quad \color{blue}{\pi_i} \equiv p(H_i) \\
   \color{red}{f(x | H_i)}
   &= \int_{\theta \in \Theta_i} f(x | \theta, H_i) \pi(\theta | H_i) d\theta \\
-  &= \int_{\theta \in \Theta_i} f(x | \theta) \pi(\theta | H_i) d\theta \quad\quad \cdots \quad\quad \text{Assume} f(x | \theta) = f(x | \theta, H_i) \\
+  &= \int_{\theta \in \Theta_i} f(x | \theta) \pi(\theta | H_i) d\theta \quad\quad \cdots \quad\quad \text{Assume that } f(x | \theta) = f(x | \theta, H_i) \\
   &= \int_{\theta \in \Theta_i} f(x | \theta) \color{blue}{g_i(\theta)} d\theta \quad\quad \cdots \quad\quad \color{blue}{g_i(\theta)} \equiv \pi(\theta | H_i) \\
 \end{aligned}
 \end{equation}
