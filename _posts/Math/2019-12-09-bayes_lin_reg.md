@@ -33,7 +33,7 @@ $$
 이처럼 posterior가 closed form으로 나타나 계산이 용이하기에 Bayesian linear regression에서 가장 많이 사용됩니다.
 
 ### 3) Choice of $g$
-다음과 같은 3가지 문제가 발생하지 않도록 $g$를 선택해야 합니다. <br>
+다음과 같은 3가지 문제가 발생하지 않도록 $g$를 선택해야 합니다. [^1] <br>
 
 $ B(M_\gamma, M_{null}) = \frac{(1 + g)^{\frac{n - p_\gamma - 1}{2}}}{(1 + g[1 - R_\gamma^2])^{\frac{n - 1}{2}}} = (\frac{1 + g}{1 + g[1 - R_\gamma^2]})^{\frac{n-1}{2}} (1+g)^{\frac{-p_\gamma}{2}}$
 
@@ -122,10 +122,14 @@ $$
 \begin{equation}
 \begin{aligned}
   \pi(Z=k \mid y)
-  &\propto \int \int \pi(Z=k, \beta, \sigma^2 \mid y) d\beta d\sigma^2 \\
-  &\propto ... \\
+  &\propto \int \int \pi(Z=k, \beta, \sigma^2 \mid y) \ d\beta d\sigma^2 \\
+  &\propto \ ... \\
   &\propto det(\tau^2 X_k^TX_k + I_{|k})^{-\frac{1}{2}} (\frac{\pi_0}{1-\pi_0})^{|k|} (\frac{1}{2} \tilde{R}_k + \gamma_2)^{-\frac{n}{2} + \gamma_1} \\
   \tilde{R}_k &= y^T \{ I_n - X_k (X_k^T X_k + \tau^{-2} I_{|k|})^{-1} X_k^T \} y
 \end{aligned}
 \end{equation}
 $$
+
+---
+
+[^1]: Bayes factor에 대해선, [Bayesian hypothesis testing/Bayes factor](https://djy-git.github.io/2019/12/09/bayes_test.html#4-bayes-factor)를 참조
