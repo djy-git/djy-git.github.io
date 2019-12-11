@@ -82,8 +82,8 @@ docs-en:
         url: /archive.html?tag=Math
   - title:      Study
     children:
-      - title:  ESLR
-        url: /archive.html?tag=ESLR
+      - title:  ISLR
+        url: /archive.html?tag=ISLR
   - title:      Projects
     children:
       - title:  Kaggle
