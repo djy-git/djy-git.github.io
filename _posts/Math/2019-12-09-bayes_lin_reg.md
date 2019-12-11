@@ -148,7 +148,7 @@ $$
 \end{equation}
 $$ <br>
 $ \text{Iterate processes below} $ <br>
-$ \quad \text{1. Compute } \pi(k \mid y) \text{ for all } \k^{(i)} \in \{ \Gamma_k^+, \Gamma_k^-, \Gamma_k^0 \} $ <br>
+$ \quad \text{1. Compute } \pi(k \mid y) \text{ for all } k^{(i)} \in \{ \Gamma_k^+, \Gamma_k^-, \Gamma_k^0 \} $ <br>
 $ \quad \text{2. Sample } k^+, k^-, k^0 \text{ from } \Gamma_k^+, \Gamma_k^-, \Gamma_k^0 \text{ with prob. proportional to } \pi(k \mid y) $ <br>
 $ \quad \text{3. Sample } k^{(i+1)} \text{ from } \{ k^+, k^-, k^0 \} \text{ with prob. proportional to } \{ \pi(k^+ \mid y), \pi(k^- \mid y), \pi(k^0 \mid y) \} $ <br><br>
 3.2. Median probability model <br>
