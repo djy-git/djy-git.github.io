@@ -136,7 +136,7 @@ $$
 3.1 MAP <br>
 **Shotgun Stochastic Search (SSS) algorithm** <br>
 $$
-k \subseteq {1, \cdots , p} \\
+\text{1. } k \subseteq {1, \cdots , p} \\
 \begin{equation}
 \begin{aligned}
   \text{Let }
@@ -145,6 +145,10 @@ k \subseteq {1, \cdots , p} \\
   \Gamma_k^0 &= \{[k \setminus \{j\}] \cup \{l\} &: j \in k, \ l \in k^c \} \\
 \end{aligned}
 \end{equation}
+\text{Iterate processes below}
+\quad \text{2. Compute } \pi(k \mid y) \text{ for all } \k^{(i)} \in \{ \Gamma_k^+, \Gamma_k^-, \Gamma_k^0 \} \\
+\quad \text{3. Sample } k^+, k^-, k^0 \text{ from } \Gamma_k^+, \Gamma_k^-, \Gamma_k^0 \text{ with prob. proportional to } \pi(k \mid y) \\
+\quad \text{4. Sample } k^{(i+1)} \text{ from } \{ k^+, k^-, k^0 \} \text{ with prob. proportional to } \{ \pi(k^+ \mid y), \pi(k^- \mid y), \pi(k^0 \mid y) \}
 $$
 
 ---
