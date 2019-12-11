@@ -151,9 +151,8 @@ $ \text{Iterate processes below} $ <br>
 $ \quad \text{2. Compute } \pi(k \mid y) \text{ for all } \k^{(i)} \in \{ \Gamma_k^+, \Gamma_k^-, \Gamma_k^0 \} $ <br>
 $ \quad \text{3. Sample } k^+, k^-, k^0 \text{ from } \Gamma_k^+, \Gamma_k^-, \Gamma_k^0 \text{ with prob. proportional to } \pi(k \mid y) $ <br>
 $ \quad \text{4. Sample } k^{(i+1)} \text{ from } \{ k^+, k^-, k^0 \} \text{ with prob. proportional to } \{ \pi(k^+ \mid y), \pi(k^- \mid y), \pi(k^0 \mid y) \} $ <br>
-3.2 Median probability model
+3.2 Median probability model <br>
 Inclusion prob. $ p_j = \pi(Z_j = 1 \mid y) $에 집중하는 방법으로 optimal predictive model로 알려져있고 MAP보다 일반적으로 선호되는 방법입니다. <br>
-
 $ \hat{p_j} = \frac{1}{L} \Sigma_{l=1}^L Z_j^{(l)} $ : Sample mean (0 ~ 1) <br>
 $ \text{If } \hat{p_j} > \frac{1}{2} \text{ then, include } \beta_j $ <br>
 $ \text{If } \hat{p_j} ≤ \frac{1}{2} \text{ then, exclude } \beta_j $ <br>
