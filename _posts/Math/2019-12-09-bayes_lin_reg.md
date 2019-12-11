@@ -152,9 +152,11 @@ $$
 $$
 3.2 Median probability model
 Inclusion prob. $ p_j = \pi(Z_j = 1 \mid y) $에 집중하는 방법으로 optimal predictive model로 알려져있고 MAP보다 일반적으로 선호되는 방법입니다. <br>
-$ \hat{p_j} = \frac{1}{L} \Sigma_{l=1}^L Z_j^{(l)} $ : Sample mean (0 ~ 1)
+
+$ \hat{p_j} = \frac{1}{L} \Sigma_{l=1}^L Z_j^{(l)} $ : Sample mean (0 ~ 1) <br>
 $ \text{If } \hat{p_j} > \frac{1}{2}, \text{ include } \beta_j $ <br>
 $ \text{If } \hat{p_j} ≤ \frac{1}{2}, \text{ exclude } \beta_j $ <br>
+
 ---
 
 [^1]: Bayes factor에 대해선, [Bayesian hypothesis testing/Bayes factor](https://djy-git.github.io/2019/12/09/bayes_test.html#4-bayes-factor)를 참조
