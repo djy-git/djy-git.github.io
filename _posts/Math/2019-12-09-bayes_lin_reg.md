@@ -116,7 +116,7 @@ $$
   |k| = 2 \\
   \beta_k = (\beta_1, \beta_4) \\
   X_k = [n, |k|]
-$$
+$$ <br>
 2. Marginal posterior <br>
 $$
 \begin{equation}
@@ -129,9 +129,10 @@ $$
 \end{aligned}
 \end{equation}
 $$
-<br>
-실제로는 계산량 때문에 이러한 계산을 거쳐서 sampling하기가 어렵습니다. MH algorithm을 사용할 수도 있지만 모수공간이 너무 넓기 때문에 적당히 탐험하기가 어렵습니다. <br>
-따라서, 이러한 방법들 대신 근사적으로 posterior를 구하여 가장 많이 나온 값을 사용하거나(MAP), 중간값(Median)을 사용하는 방법을 주로 사용합니다.
+<br><br>
+나름대로 계산이 깔끔하게(?) 나오긴 하지만, 실제론 계산량 때문에 이러한 방법을 거쳐서 sampling하기가 어렵습니다. <br>
+MH algorithm을 사용할 수도 있지만 모수공간이 너무 넓기 때문에 적당히 탐험하기가 쉽지 않다는 문제점이 존재합니다. <br>
+따라서, 근사적으로 posterior를 구하여 가장 많이 나온 값을 사용하거나(MAP), 중간값(Median)을 사용하는 방법을 주로 사용합니다. <br>
 3. Select the final model <br>
 3.1 MAP <br>
 **Shotgun Stochastic Search (SSS) algorithm** <br>
