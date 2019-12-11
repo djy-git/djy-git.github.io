@@ -146,7 +146,7 @@ $$
   \Gamma_k^0 &= \{[k \setminus \{j\}] \cup \{l\} &: j \in k, \ l \in k^c \} \\
 \end{aligned}
 \end{equation}
-$$
+$$ <br>
 $ \text{Iterate processes below} $ <br>
 $ \quad \text{2. Compute } \pi(k \mid y) \text{ for all } \k^{(i)} \in \{ \Gamma_k^+, \Gamma_k^-, \Gamma_k^0 \} $ <br>
 $ \quad \text{3. Sample } k^+, k^-, k^0 \text{ from } \Gamma_k^+, \Gamma_k^-, \Gamma_k^0 \text{ with prob. proportional to } \pi(k \mid y) $ <br>
