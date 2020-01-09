@@ -57,8 +57,8 @@ Precision-recall graph를 말합니다. <br>
 
 # 7. ROC curve (Receiver Operating Characteristic curve)
 또다른 평가곡선으로 FPR-TPR graph를 **ROC curve**라 부릅니다. <br>
-**FPR (False Positive Ratio)** 은 true라고 예측$\color{green}{\textbf{(predictive true)}}$한 sample들 중 실제로 false$\color{red}{\textbf{(actual false)}}$인 것들의 비율을 의미하며, **TPR (True Positive Ratio)** 은 recall과 동일한 값을 나타냅니다. 여기서도 TPR(recall)이 높을수록 FPR이 증가하는 tradeoff가 발생합니다. <br>
-점선은 완전한 random 분류기를 의미하며 성능이 좋은 분류기는 이 점선으로부터 최대한 많이 떨어져 있는 (0, 1.0)에 근접한 모양이 됩니다. Curve 아래의 면적인 **AUC(Area Under the Curve)** 를 통해 분류기들을 비교할 수 있는데 완벽한 분류기는 AUC=1 이고, random 분류기의 AUC=0.5 가 됩니다.
+**FPR (False Positive Ratio, Type I error)** 은 실제로 false$\color{red}{\textbf{(actual false)}}$인 sample들 중 true라고 예측$\color{green}{\textbf{(predictive true)}}$한 비율을 의미하며, **TPR (True Positive Ratio, 1 - Type II error)** 은 recall과 동일한 값을 나타냅니다. 여기서도 TPR(recall)이 높을수록 FPR이 증가하는 tradeoff가 발생합니다. <br>
+점선은 완전한 random 분류기를 의미하며 성능이 좋은 분류기는 이 점선으로부터 최대한 많이 떨어져 있는 (0, 1)에 근접한 모양이 됩니다. Curve 아래의 면적인 **AUC(Area Under the Curve)** 를 통해 분류기들을 비교할 수 있는데 완벽한 분류기는 AUC=1 이고, random 분류기의 AUC=0.5 가 됩니다.
 
 ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/roccurve.png){:.border}
 
