@@ -32,7 +32,7 @@ sidebar:
 <br>
 ### 3. Adding hashed password to your notebook configuration file
 
-    $ vi ~/.jupyter/jupyter_notebook_config
+    $ vi ~/.jupyter/jupyter_notebook_config.py
 
       // jupyter_notebook_config
       // c = get_config()  // 안 될 경우 추가
