@@ -17,7 +17,7 @@ aside:
 - 정보 이론은 최적의 code를 디자인하고, message의 기대 길이를 계산하는데 도움이 된다.
 - ML에서는 확률분포의 특성을 알아내거나, 확률분포 간의 유사성을 정량화하는 데 사용된다.
 - **Claude Elwood Shannon (1916~2001)** 이라는 전설적인 분께서 처음 도입하였다. <br>
-![jpg](https://media.newyorker.com/photos/5909765cc14b3c606c1089f4/master/w_1023,c_limit/Roberts-Claude-Shannon.jpg){:width="100" height="100"}
+![jpg](https://media.newyorker.com/photos/5909765cc14b3c606c1089f4/master/w_1023,c_limit/Roberts-Claude-Shannon.jpg)
 
 ### 2) Key idea
 - 자주 발생하지 않는 사건은 자주 발생하는 사건보다 정보량이 많다. (informative)
@@ -38,4 +38,7 @@ $I(X=x) = log \frac{1}{P(x)} = -log P(x)$
 ### 2) Shannon entropy(Entropy)
 - 모든 사건에 대한 정보량의 기댓값을 의미한다.
 - **확률변수 X의 분포 P(X)에 대한 Shannon entropy H(P)** <br>
-$H(P) = H(X) = E_{X \sim P}[I(X)] = E_{X \sim P}[-log P(X)] = \Sigma_x P(x)(-log P(x)) = \int -log P(x) dx$
+$H(P) = H(X) = E_{X \sim P}[I(X)] = E_{X \sim P}[-log P(X)] = \Sigma_x P(x) (-log P(x)) = \int P(x) (-log P(x)) dx$
+- Shannon entropy는 전체 사건의 확률분포에 대한 불확실성을 정량화한 값으로 사용된다.
+- 서로 독립인 두 확률변수는 Shannon entropy는 각 확률변수의 entropy의 합과 같다.
+-
