@@ -5,7 +5,7 @@ aside:
   toc: true
 ---
 
-이 글은 [https://ratsgo.github.io/statistics/2017/09/22/information/](https://ratsgo.github.io/statistics/2017/09/22/information/), [https://reniew.github.io/17/](https://reniew.github.io/17/) 등을 참고하여 작성되었습니다.
+이 글은 [https://en.wikipedia.org/wiki/Information_theory](https://en.wikipedia.org/wiki/Information_theory), [https://ratsgo.github.io/statistics/2017/09/22/information/](https://ratsgo.github.io/statistics/2017/09/22/information/), [https://reniew.github.io/17/](https://reniew.github.io/17/) 등을 참고하여 작성되었습니다.
 
 <!--more-->
 
@@ -25,19 +25,22 @@ aside:
 <br>
 
 ## 2. Shannon Entropy
-### 1) Information
+### 1) Information content (self-information, surprisal)
 - 위의 idea를 만족시키면서 어떤 사건의 정보량을 나타낼 수 있는 함수이다.
-- **확률변수 X의 값이 x인 사건의 정보량 $I(X=x)$** <br>
-$I(X=x) = log \frac{1}{P(x)} = -log P(x)$
+- **$x$의 값을 가지는 확률변수 $X$(pmf: $p(X=x)$)의 information content $I_X(x)$** <br>
+$I(X=x) = I_X(x) \equiv log \frac{1}{p(x)} = -log \ p(x)$
+- **발생할 확률이 $P$인 사건 $E$에 대한 information content** <br>
+$I(E) \equiv log \frac{1}{P} = -log \ P$
 - 예를 들어, <br>
 동전을 던져 앞면이 나오는 사건의 정보량 $= -log \frac{1}{2} = 1$ <br>
 주사위를 던져 1이 나오는 사건의 정보량 $= -log \frac{1}{6} = 2.58$
-- 정보량 $I(X=x)$ 에서 $log$ 의 밑이 2인 경우, 단위를 shannon(혹은 bit)라고 부르고, 자연상수 $e$를 밑으로 하는 경우 nat(내트)라고 부른다.
+- $I_X(x)$에서 $log$의 밑이 2인 경우, 단위를 Shannon(Sh 혹은 bit)이라 부르고, 자연상수 $e$를 밑으로 하는 경우 nat(내트), 10인 경우 hartleys라고 부른다.
+
 
 ### 2) Shannon entropy(Entropy)
 - 모든 사건에 대한 정보량의 기댓값을 의미한다.
-- **확률변수 X의 분포 p(X)에 대한 Shannon entropy H(p)** <br>
-$H(p) = H(X) = E_{X \sim P}[I(X)] = E_{X \sim p}[-log \ p(X)] = \Sigma_x p(x) (-log \ p(x)) \textit{ or } \int p(x) (-log \ p(x)) dx$
+- **확률변수 $X$(pmf: $p(X)$, pdf: $f(X)$)에 대한 Shannon entropy $H(X)$** <br>
+$H(X) \equiv E[I(X)] = E[-log \ p(X)] = -\Sigma_x p(x) \ log \ p(x) \textit{ or } -\int f(x) \ log \ f(x) dx$
 - Shannon entropy는 전체 사건의 확률분포에 대한 불확실성을 정량화한 값으로 사용된다.
 - 서로 독립인 두 확률변수는 Shannon entropy는 각 확률변수의 entropy의 합과 같다.
 - 아래의 그래프는 동전을 한 번 던졌을 때 Shannon entropy의 값을 나타낸다. $Pr(X=1)=0.5$ 인 경우 가장 큰 entropy를 가지므로 최대 1bit 만으로도 동전 던지기의 결과값을 전송할 수 있다는 것을 알 수 있다. <br>
