@@ -59,7 +59,7 @@ $$
 - 아래의 그래프는 동전을 한 번 던졌을 때 Shannon entropy의 값을 나타낸다. $Pr(X=1)=0.5$ 인 경우 가장 큰 entropy를 가지므로 최대 1bit 만으로도 동전 던지기의 결과값을 전송할 수 있다는 것을 알 수 있다. <br>
 ![jpg](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Binary_entropy_plot.svg/450px-Binary_entropy_plot.svg.png){: width="300"}
 
-### 3) Kullbak-Leibler divergence(KL divergence, relative entropy, information divergence, information gain)
+### 3) Kullback-Leibler divergence(KL divergence, relative entropy, information divergence, information gain)
 - **Kullback-Leibler divergence(KLD)**: 두 확률분포의 차이를 계산하는 함수
 - KLD는 sampling 과정에서 임의의 확률분포 $q(X)$를 "true" 확률분포 $p(X)$ 대신 사용할 경우 나타나는 entropy의 차이로 해석할 수 있다.
 - **확률분포 $p(X)$에 대한 $q(X)$의 $D_{KL}(p(X) \parallel q(X))$(KL divergence of $q(X)$ w.r.t. $p(X)$)** <br>
