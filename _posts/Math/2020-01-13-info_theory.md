@@ -27,7 +27,7 @@ aside:
 
 ## 2. Shannon Entropy
 ### 1) Information content(self-information, surprisal)
-- 위의 idea를 만족시키면서 어떤 사건의 정보량을 나타낼 수 있는 함수이다.
+- 위의 idea를 만족시키면서 어떤 사건의 정보량을 나타낼 수 있는 함수
 - **$x$의 값을 가지는 확률변수 $X$(pmf: $p(X=x)$)의 information content $I_X(x)$** <br>
 $I(X=x) = I_X(x) \equiv log \frac{1}{p(x)} = -log \ p(x)$
 - **발생할 확률이 $P$인 사건 $E$에 대한 information content** <br>
@@ -35,7 +35,7 @@ $I(E) \equiv log \frac{1}{P} = -log \ P$
 - 예를 들어, <br>
 동전을 던져 앞면이 나오는 사건의 정보량 $= -log \frac{1}{2} = 1$ <br>
 주사위를 던져 1이 나오는 사건의 정보량 $= -log \frac{1}{6} = 2.58$
-- $I_X(x)$에서 $log$의 밑이 2인 경우, 단위를 Shannon(Sh 혹은 bit)이라 부르고, 자연상수 $e$를 밑으로 하는 경우 nat(내트), 10인 경우 hartleys(Hart, ban, dit)라고 부른다.
+- $I_X(x)$에서 $log$의 밑이 2인 경우의 단위를 Shannon(Sh 혹은 bit)이라 부르고, 자연상수 $e$를 밑으로 하는 경우 nat(내트), 10인 경우 hartleys(Hart, ban, dit)라고 부른다.
 
 
 ### 2) Entropy(information entropy, Shannon entropy)
