@@ -63,10 +63,10 @@ $$
 \begin{equation}
 \begin{aligned}
     D_{KL}(p(X) \parallel q(X)) &\equiv E[log \frac{p(X)}{q(X)}] \\
-    &= \sum_x p(x) \ log \frac{p(x)}{q(x)} \\
-    &= (-\sum_x p(x) \ log \ p(x)) - (-\sum_x p(x) \ log \ q(x)) \\
-    &= H(X) - (-E[log \ q(X)]) \\
-    &= H(p) - H(p, q)
+    &= - \sum_x p(x) \ log \frac{q(x)}{p(x)} \\
+    &= (-\sum_x p(x) \ log \ q(x)) - (-\sum_x p(x) \ log \ p(x)) \\
+    &= (-E[log \ q(X)]) - H(X) \\
+    &= H(p, q) - H(p)
 \end{aligned}
 \end{equation}
 $$
@@ -86,4 +86,8 @@ $$
 \end{aligned}
 \end{equation}
 $$
+- Cross entropy를 "true" 분포 $p(X)$를 따르는 데이터에 대하여 잘못된 분포 $q(X)$를 가정할 때 필요할 것으로 예상되는 message 길이로 해석할 수 있다. <br>
+예를 들어, <br>
+
+
 - 데이터 분포 $p(X)$를 고정시켰을 때, cross entropy를 최소화시키는 분포 $q(X)$를 찾는다는 것은 KLD를 최소화시키는 분포 $q(X)$를 찾는다는 것과 동일한 의미이다.
