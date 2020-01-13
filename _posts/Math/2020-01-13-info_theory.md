@@ -31,7 +31,7 @@ aside:
 
 ## 2. Shannon Entropy
 ### 1) Information content(self-information, surprisal)
-- 위의 idea를 만족시키면서 어떤 사건의 정보량을 나타낼 수 있는 함수
+- **Information content**: 위의 idea를 만족시키면서 어떤 사건의 정보량을 나타낼 수 있는 함수
 - **$x$의 값을 가지는 확률변수 $X$(pmf: $p(X=x)$)의 information content $I_X(x)$** <br>
 $I(X=x) = I_X(x) \equiv log \frac{1}{p(x)} = -log \ p(x)$
 - **발생할 확률이 $P$인 사건 $E$에 대한 information content** <br>
@@ -43,7 +43,7 @@ $I(E) \equiv log \frac{1}{P} = -log \ P$
 
 
 ### 2) Entropy(information entropy, Shannon entropy)
-- 모든 사건에 대한 정보량의 기댓값을 의미한다.
+- **Entropy**: 모든 사건에 대한 정보량(information content)의 기댓값
 - **확률변수 $X$(pmf: $p(X)$, pdf: $f(X)$)에 대한 entropy $H(X)$(*Eta*)** <br>
 $$
 \begin{equation}
