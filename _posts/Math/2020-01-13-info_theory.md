@@ -53,4 +53,5 @@ $D_{KL}(P \parallel Q) = E_{X \sim p}[log \frac{p(X)}{q(X)}] = E_{X \sim p}[log 
 ### 4) Cross entropy
 - **Cross entropy**: 두 확률분포 $p(X)$와 $q(X)$에 대하여, $p(X)$ 대신 $q(X)$를 사용하여 $p(X)$를 설명할 때 필요한 정보량
 - **Cross entropy H(p, q)** <br>
-$ H(p, q) = H(p)  $
+$H(p, q) = H(p) + D_{KL}(p \parallel q) = E_{X \sim p}[-log \ q(X)] = \Sigma_x p(x) (-log \ q(x)) \textit{ or } \int p(x) (-log \ q(x)) dx$
+- 
