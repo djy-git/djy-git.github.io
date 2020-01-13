@@ -5,7 +5,11 @@ aside:
   toc: true
 ---
 
-이 글은 [https://en.wikipedia.org/wiki/Information_theory](https://en.wikipedia.org/wiki/Information_theory), [https://ratsgo.github.io/statistics/2017/09/22/information/](https://ratsgo.github.io/statistics/2017/09/22/information/), [https://reniew.github.io/17/](https://reniew.github.io/17/) 등을 참고하여 작성되었습니다.
+이 글은 <br>
+[https://en.wikipedia.org/wiki/Information_theory](https://en.wikipedia.org/wiki/Information_theory) <br>
+[https://ratsgo.github.io/statistics/2017/09/22/information/](https://ratsgo.github.io/statistics/2017/09/22/information/) <br>
+[https://reniew.github.io/17/](https://reniew.github.io/17/) <br>
+등을 참고하여 작성되었습니다.
 
 <!--more-->
 
