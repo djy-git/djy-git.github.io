@@ -62,7 +62,7 @@ $$
 ### 3) Kullbak-Leibler divergence(KL divergence, relative entropy, information divergence, information gain)
 - **Kullback-Leibler divergence(KLD)**: 두 확률분포의 차이를 계산하는 함수
 - KLD는 sampling 과정에서 임의의 확률분포 $q(X)$를 "true" 확률분포 $p(X)$ 대신 사용할 경우 나타나는 entropy의 차이로 해석할 수 있다.
-- **확률분포 $p(X)$와 $q(X)$ 간의 차이 $D_{KL}(p(X) \parallel q(X))$(KL divergence of $q(X)$ w.r.t. $p(X)$)** <br>
+- **확률분포 $p(X)$에 대한 $q(X)$의 $D_{KL}(p(X) \parallel q(X))$(KL divergence of $q(X)$ w.r.t. $p(X)$)** <br>
 $$
 \begin{equation}
 \begin{aligned}
