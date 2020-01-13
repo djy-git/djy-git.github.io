@@ -18,6 +18,7 @@ aside:
 - ML에서는 확률분포의 특성을 알아내거나, 확률분포 간의 유사성을 정량화하는 데 사용된다.
 - **Claude Elwood Shannon (1916~2001)** 이라는 전설적인 분께서 처음 도입하였다. <br>
 ![jpg](https://media.newyorker.com/photos/5909765cc14b3c606c1089f4/master/w_1023,c_limit/Roberts-Claude-Shannon.jpg){: width="200"}
+
 ### 2) Key idea
 - 자주 발생하지 않는 사건은 자주 발생하는 사건보다 정보량이 많다. (informative)
 - 독립 사건은 추가적인 정보량 (additive information)을 가진다.
