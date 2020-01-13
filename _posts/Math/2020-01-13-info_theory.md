@@ -84,9 +84,8 @@ $$
 \begin{equation}
 \begin{aligned}
     H(p, q) &\equiv -E[log \ q(X)] \\
+    &= - \sum_x p(x) \ log \ q(x) \textit{ or } - \int p(x) \ log \ q(x) dx \\
     &= H(p) + D_{KL}(p \parallel q) \\
-    &= -E[log \ q(X)] \\
-    &= - \sum_x p(x) \ log \ q(x) \textit{ or } - \int p(x) \ log \ q(x) dx
 \end{aligned}
 \end{equation}
 $$
