@@ -86,8 +86,13 @@ $$
 \end{aligned}
 \end{equation}
 $$
-- Cross entropy를 "true" 분포 $p(X)$를 따르는 데이터에 대하여 잘못된 분포 $q(X)$를 가정할 때 필요할 것으로 예상되는 message 길이로 해석할 수 있다. <br>
-예를 들어, <br>
-
-
+- Cross entropy를 "true" 분포 $p(X)$를 따르는 데이터에 대하여 잘못된 분포 $q(X)$를 가정할 때 필요할 것으로 예상되는 message의 길이로 해석할 수 있다. <br>
+- 예를 들어 날씨예보의 경우, <br>
+"true" 분포 $p$: 맑음(60%), 구름(30%), 비(10%) <br>
+예측한 분포 $q$: 맑음(10%), 구름(30%), 비(60%) <br><br>
+"true" 분포 $p$에 따라 각각 $-log \ p(X)$ 만큼의 information content가 필요하다. <br>
+계산해보면, 각 날씨예보는 맑음: 0.7 Sh, 구름: 1.7 Sh, 비: 3.3 Sh 만큼의 정보량을 가지고 있다. <br>
+"true" 분포 $p$에 대한 entropy $H(p)$를 구해보면 1.3 Sh이 나온다. <br>
+예측한 분포 $q$에 대한 cross entropy $H(p, q)$를 구해보면 2.6 Sh 이 나온다. <br>
+즉, $D_{KL}(p \parallel q) = H(p, q) - H(p) = 1.3$ Sh만큼 "true" 분포와 예측한 분포 간의 차이가 있는 것을 확인할 수 있다.
 - 데이터 분포 $p(X)$를 고정시켰을 때, cross entropy를 최소화시키는 분포 $q(X)$를 찾는다는 것은 KLD를 최소화시키는 분포 $q(X)$를 찾는다는 것과 동일한 의미이다.
