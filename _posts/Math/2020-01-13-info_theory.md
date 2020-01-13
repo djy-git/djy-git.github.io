@@ -1,6 +1,8 @@
 ---
 title: Information theory
 tags: Math
+aside:
+  toc: true
 ---
 
 이 글은 [https://ratsgo.github.io/statistics/2017/09/22/information/](https://ratsgo.github.io/statistics/2017/09/22/information/), [https://reniew.github.io/17/](https://reniew.github.io/17/) 등을 참고하여 작성되었습니다.
