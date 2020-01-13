@@ -80,10 +80,6 @@ docs-en:
     children:
       - title:  Base
         url: /archive.html?tag=Math
-  - title:      Study
-    children:
-      - title:  ISLR
-        url: /archive.html?tag=ISLR
   - title:      Projects
     children:
       - title:  Kaggle
@@ -104,8 +100,8 @@ docs-en:
         url: /archive.html?tag=Diary
       - title:  Github
         url: /archive.html?tag=Github
-      - title:  Markdown
-        url: /archive.html?tag=Markdown
+      - title:  Markdown / Latex
+        url: /_posts/Etc/Markdown/2019-07-15-md_latex.md
       - title:  Music
         url: /archive.html?tag=Music
       - title:  Job
