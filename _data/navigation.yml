@@ -52,8 +52,6 @@ header:
 docs-en:
   - title:      Programming
     children:
-      - title: Hands-On ML
-        url: /archive.html?tag=Hands-On
       - title:  Python
         url: /archive.html?tag=Python
       - title:  R
@@ -76,6 +74,8 @@ docs-en:
     children:
       - title:  Theory
         url: /archive.html?tag=Theory
+      - title: Hands-On ML
+        url: /archive.html?tag=Hands-On
   - title:      Mathematics / Statistics
     children:
       - title:  Base
