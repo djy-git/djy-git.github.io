@@ -41,7 +41,7 @@ $I(E) \equiv log \frac{1}{P} = -log \ P$
 ### 2) Entropy(information entropy, Shannon entropy)
 - 모든 사건에 대한 정보량의 기댓값을 의미한다.
 - **확률변수 $X$(pmf: $p(X)$, pdf: $f(X)$)에 대한 entropy $H(X)$(*Eta*)** <br>
-$H(X) \equiv E[I(X)] = E[-log \ p(X)] = -\sum_x p(x) \ log \ p(x) \textit{ or } -\int f(x) \ log \ f(x) dx$
+$H(X) = H(p) \equiv E[I(X)] = E[-log \ p(X)] = -\sum_x p(x) \ log \ p(x) \textit{ or } -\int f(x) \ log \ f(x) dx$
 - Shannon entropy는 전체 사건의 확률분포에 대한 불확실성을 정량화한 값으로 사용된다.
 - 서로 독립인 두 확률변수는 Shannon entropy는 각 확률변수의 entropy의 합과 같다.
 - 아래의 그래프는 동전을 한 번 던졌을 때 Shannon entropy의 값을 나타낸다. $Pr(X=1)=0.5$ 인 경우 가장 큰 entropy를 가지므로 최대 1bit 만으로도 동전 던지기의 결과값을 전송할 수 있다는 것을 알 수 있다. <br>
