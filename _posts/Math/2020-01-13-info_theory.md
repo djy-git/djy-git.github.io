@@ -74,7 +74,7 @@ $$
 \end{aligned}
 \end{equation}
 $$
-- KLD는 항상 0 이상의 실수이며(Gibb's inequality) $p(X)$와 $q(X)$가 동일한 확률분포일 때 최솟값인 0이 된다.
+- $D_{KL}(p(X) \parallel q(X)) ≥ 0$ (Gibb's inequality, with equality iff $p(X) = q(X)$)
 - KLD는 symmetric 하지 않고($D_{KL}(p \parallel q) \neq D_{KL}(q \parallel p)$), triangle inequality를 만족시키지 않기 때문에 distance라고 하지 않고 divergence(discrimination information)라고 부른다.
 
 ### 4) Cross entropy
