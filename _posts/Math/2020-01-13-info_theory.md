@@ -41,7 +41,15 @@ $I(E) \equiv log \frac{1}{P} = -log \ P$
 ### 2) Entropy(information entropy, Shannon entropy)
 - 모든 사건에 대한 정보량의 기댓값을 의미한다.
 - **확률변수 $X$(pmf: $p(X)$, pdf: $f(X)$)에 대한 entropy $H(X)$(*Eta*)** <br>
-$H(X) = H(p) \equiv E[I(X)] = E[-log \ p(X)] = -\sum_x p(x) \ log \ p(x) \textit{ or } -\int f(x) \ log \ f(x) dx$
+$$
+\begin{equation}
+\begin{aligned}
+    H(X) = H(p) &\equiv E[I(X)] \\
+    &= -E[log \ p(X)] \\
+    &= -\sum_x p(x) \ log \ p(x) \textit{ or } - \int f(x) \ log \ f(x) dx
+\end{aligned}
+\end{equation}
+$$
 - Shannon entropy는 전체 사건의 확률분포에 대한 불확실성을 정량화한 값으로 사용된다.
 - 서로 독립인 두 확률변수는 Shannon entropy는 각 확률변수의 entropy의 합과 같다.
 - 아래의 그래프는 동전을 한 번 던졌을 때 Shannon entropy의 값을 나타낸다. $Pr(X=1)=0.5$ 인 경우 가장 큰 entropy를 가지므로 최대 1bit 만으로도 동전 던지기의 결과값을 전송할 수 있다는 것을 알 수 있다. <br>
@@ -54,9 +62,11 @@ $H(X) = H(p) \equiv E[I(X)] = E[-log \ p(X)] = -\sum_x p(x) \ log \ p(x) \textit
 $$
 \begin{equation}
 \begin{aligned}
-    D_{KL}(p(X) \parallel q(X)) &\equiv E_{X \sim p}[log \frac{p(X)}{q(X)}] \\
+    D_{KL}(p(X) \parallel q(X)) &\equiv E[log \frac{p(X)}{q(X)}] \\
     &= \sum_x p(x) \ log \frac{p(x)}{q(x)} \\
-    &= (-\sum_x p(x) \ log \ p(x)) - (-\sum_x p(x) \ log \ q(x))
+    &= (-\sum_x p(x) \ log \ p(x)) - (-\sum_x p(x) \ log \ q(x)) \\
+    &= H(X) - (-E[log \ q(X)]) \\
+    &= H(p) - H(p, q)
 \end{aligned}
 \end{equation}
 $$
@@ -65,14 +75,14 @@ $$
 
 ### 4) Cross entropy
 - **Cross entropy**: 두 확률분포 $p(X)$와 $q(X)$에 대하여, $p(X)$ 대신 $q(X)$를 사용하여 $p(X)$를 설명할 때 필요한 정보량
-- **확률분포 $p(X)$에 대한 분포 $q(X)$의 cross entropy $H(p, q)$** <br>
+- **확률분포 $p(X)$에 대한 분포 $q(X)$의 cross entropy $H(p, q)$(cross entropy of the $q$ relative to a $p$)** <br>
 $$
 \begin{equation}
 \begin{aligned}
-    H(p, q) &\equiv -E_{X \sim p}[log \ q(X)] \\
+    H(p, q) &\equiv -E[log \ q(X)] \\
     &= H(p) + D_{KL}(p \parallel q) \\
-    &= E_{X \sim p}[-log \ q(X)] \\
-    &= \sum_x p(x) (-log \ q(x)) \textit{ or } \int p(x) (-log \ q(x)) dx
+    &= -E[log \ q(X)] \\
+    &= - \sum_x p(x) \ log \ q(x) \textit{ or } - \int p(x) \ log \ q(x) dx
 \end{aligned}
 \end{equation}
 $$
