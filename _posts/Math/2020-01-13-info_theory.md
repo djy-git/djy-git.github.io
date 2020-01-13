@@ -54,4 +54,4 @@ $D_{KL}(P \parallel Q) = E_{X \sim p}[log \frac{p(X)}{q(X)}] = E_{X \sim p}[log 
 - **Cross entropy**: 두 확률분포 $p(X)$와 $q(X)$에 대하여, $p(X)$ 대신 $q(X)$를 사용하여 $p(X)$를 설명할 때 필요한 정보량
 - **Cross entropy H(p, q)** <br>
 $H(p, q) = H(p) + D_{KL}(p \parallel q) = E_{X \sim p}[-log \ q(X)] = \Sigma_x p(x) (-log \ q(x)) \textit{ or } \int p(x) (-log \ q(x)) dx$
--
+- 데이터 분포 $p(X)$를 고정시켰을 때, cross entropy를 최소화시키는 분포 $q(X)$를 찾는다는 것은 KLD를 최소화시키는 분포 $q(X)$를 찾는다는 것과 동일한 의미이다.
