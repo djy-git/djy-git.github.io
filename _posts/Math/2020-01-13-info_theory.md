@@ -51,25 +51,29 @@ $H(X) \equiv E[I(X)] = E[-log \ p(X)] = -\sum_x p(x) \ log \ p(x) \textit{ or } 
 - **Kullback-Leibler divergence(KLD)**: 두 확률분포의 차이를 계산하는 함수
 - KLD는 sampling 과정에서 임의의 확률분포 $q(X)$를 "true" 확률분포 $p(X)$ 대신 사용할 경우 나타나는 entropy의 차이로 해석할 수 있다.
 - **확률분포 $p(X)$와 $q(X)$ 간의 차이 $D_{KL}(p(X) \parallel q(X))$(KL divergence of $q(X)$ w.r.t. $p(X)$)** <br>
-$\begin{equation}
+$$
+\begin{equation}
 \begin{aligned}
     D_{KL}(p(X) \parallel q(X)) &\equiv E_{X \sim p}[log \frac{p(X)}{q(X)}] \\
     &= \sum_x p(x) \ log \frac{p(x)}{q(x)} \\
     &= (-\sum_x p(x) \ log \ p(x)) - (-\sum_x p(x) \ log \ q(x))
 \end{aligned}
-\end{equation}$
+\end{equation}
+$$
 - KLD는 항상 0 이상의 실수이며(Gibb's inequality) $p(X)$와 $q(X)$가 동일한 확률분포일 때 최솟값인 0이 된다.
 - KLD는 symmetric 하지 않고($D_{KL}(p \parallel q) \neq D_{KL}(q \parallel p)$), triangle inequality를 만족시키지 않기 때문에 distance라고 하지 않고 divergence(discrimination information)라고 부른다.
 
 ### 4) Cross entropy
 - **Cross entropy**: 두 확률분포 $p(X)$와 $q(X)$에 대하여, $p(X)$ 대신 $q(X)$를 사용하여 $p(X)$를 설명할 때 필요한 정보량
 - **확률분포 $p(X)$에 대한 분포 $q(X)$의 cross entropy $H(p, q)$** <br>
-$\begin{equation}
+$$
+\begin{equation}
 \begin{aligned}
     H(p, q) &\equiv -E_{X \sim p}[log \ q(X)] \\
     &= H(p) + D_{KL}(p \parallel q) \\
     &= E_{X \sim p}[-log \ q(X)] \\
     &= \sum_x p(x) (-log \ q(x)) \textit{ or } \int p(x) (-log \ q(x)) dx
 \end{aligned}
-\end{equation}$
+\end{equation}
+$$
 - 데이터 분포 $p(X)$를 고정시켰을 때, cross entropy를 최소화시키는 분포 $q(X)$를 찾는다는 것은 KLD를 최소화시키는 분포 $q(X)$를 찾는다는 것과 동일한 의미이다.
