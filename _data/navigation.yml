@@ -101,7 +101,7 @@ docs-en:
       - title:  Github
         url: /archive.html?tag=Github
       - title:  Markdown / Latex
-        url: /_posts/Etc/Markdown/2019-07-15-md_latex.md
+        url: /2019/07/15/md_latex.html
       - title:  Music
         url: /archive.html?tag=Music
       - title:  Job
