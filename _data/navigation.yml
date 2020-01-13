@@ -98,10 +98,10 @@ docs-en:
     children:
       - title:  Diary
         url: /archive.html?tag=Diary
-      - title:  Github
-        url: /archive.html?tag=Github
       - title:  Markdown / Latex
         url: /2019/07/15/md_latex.html
+      - title:  Github
+        url: /archive.html?tag=Github
       - title:  Music
         url: /archive.html?tag=Music
       - title:  Job
