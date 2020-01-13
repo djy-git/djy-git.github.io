@@ -17,7 +17,7 @@ aside:
 - 정보 이론은 최적의 code를 디자인하고, message의 기대 길이를 계산하는데 도움이 된다.
 - ML에서는 확률분포의 특성을 알아내거나, 확률분포 간의 유사성을 정량화하는 데 사용된다.
 - **Claude Elwood Shannon (1916~2001)** 이라는 전설적인 분께서 처음 도입하였다. <br>
-![jpg](https://media.newyorker.com/photos/5909765cc14b3c606c1089f4/master/w_1023,c_limit/Roberts-Claude-Shannon.jpg){: width="100"}
+![jpg](https://media.newyorker.com/photos/5909765cc14b3c606c1089f4/master/w_1023,c_limit/Roberts-Claude-Shannon.jpg){: width="200"}
 ### 2) Key idea
 - 자주 발생하지 않는 사건은 자주 발생하는 사건보다 정보량이 많다. (informative)
 - 독립 사건은 추가적인 정보량 (additive information)을 가진다.
@@ -41,11 +41,16 @@ $H(p) = H(X) = E_{X \sim P}[I(X)] = E_{X \sim p}[-log \ p(X)] = \Sigma_x p(x) (-
 - Shannon entropy는 전체 사건의 확률분포에 대한 불확실성을 정량화한 값으로 사용된다.
 - 서로 독립인 두 확률변수는 Shannon entropy는 각 확률변수의 entropy의 합과 같다.
 - 아래의 그래프는 동전을 한 번 던졌을 때 Shannon entropy의 값을 나타낸다. $Pr(X=1)=0.5$ 인 경우 가장 큰 entropy를 가지므로 최대 1bit 만으로도 동전 던지기의 결과값을 전송할 수 있다는 것을 알 수 있다. <br>
-![jpg](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Binary_entropy_plot.svg/450px-Binary_entropy_plot.svg.png){: width="150"}
+![jpg](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Binary_entropy_plot.svg/450px-Binary_entropy_plot.svg.png){: width="300"}
 
-### 3) KL Divergence
-- Kullback-Leibler Divergence(KLD): 두 확률분포의 차이를 계산하는 함수
+### 3) KL divergence
+- Kullback-Leibler divergence(KLD): 두 확률분포의 차이를 계산하는 함수
 - 어떤 데이터 분포 $P(X)$ 와 또다른 데이터 분포 $Q(X)$ 간의 차이를 KLD를 활용해 구할 수 있다. <br>
 $D_{KL}(P \parallel Q) = E_{X \sim p}[log \frac{p(X)}{q(X)}] = E_{X \sim p}[log \ p(X) - log \ Q(X)]$
 - $p(X)$와 $q(X)$가 동일한 확률분포라면 KLD는 0이 된다. $D_{KL}(p \parallel q) \neq D_{KL}(q \parallel p)$ 이기 때문에 distance 대신 divergence 라고 한다.
-- KLD는 어떤 확률분포 p(X)에 대하여, sampling 과정에서
+- KLD는 어떤 확률분포 $p(X)$에 대하여, sampling 과정에서 그 분포를 근사적으로 표현하는 확률분포 $q(X)$를 $p(X)$ 대신 사용할 경우 entropy의 변화를 의미한다.
+
+### 4) Cross entropy
+- **Cross entropy**: 두 확률분포 $p(X)$와 $q(X)$에 대하여, $p(X)$ 대신 $q(X)$를 사용하여 $p(X)$를 설명할 때 필요한 정보량
+- **Cross entropy H(p, q)** <br>
+$ H(p, q) = H(p)  $
