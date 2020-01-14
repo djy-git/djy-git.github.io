@@ -16,7 +16,8 @@ aside:
 ## 2. Choose the architecture
 
 ## 3. Double check that the loss is reasonable
-- Regularization을 사용하지 않고, loss가 생각대로 나오는지 확인한다. 그리고 regularization을 사용하여 loss가 증가하는지 체크한다.(sanity check)
+- Regularization을 사용하지 않고, loss가 생각대로 나오는지 확인한다. <br>
+그리고 regularization을 사용하여 loss가 증가하는지 체크한다.(sanity check)
 
 ## 4. Train
 ### 1) Simply train without regularization
