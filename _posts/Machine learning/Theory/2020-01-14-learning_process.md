@@ -31,8 +31,8 @@ aside:
 1. Coarse search(넓은 범위에 대해 조금씩 학습시켜 대략적인 범위를 찾는다)
 2. Finer search(선택한 범위에서 학습시간을 늘려 가장 적절한 값을 선택한다)
 - Random search(선호) vs Grid search
-- $\textit{param_scale} = \|W\|^2$ <br>
-$\textit{update_scale} = \| -\eta \cdot \nabla_WL \|^2$ <br>
+- $\textit{param_scale} = \Vert W \Vert^2$ <br>
+$\textit{update_scale} = \Vert -\eta \cdot \nabla_WL \Vert^2$ <br>
 $\frac{\textit{update_scale}}{\textit{param_scale}} \approx 0.001$ 이 되도록 $\eta$를 선택하는 것이 바람직하다.
 
 ## 5. Monitoring and visualize the loss curve
