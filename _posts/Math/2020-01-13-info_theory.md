@@ -67,6 +67,7 @@ $$
 \begin{equation}
 \begin{aligned}
     D_{KL}(p(X) \parallel q(X)) &\equiv E[log \frac{p(X)}{q(X)}] \\
+    &= -E[log \frac{q(X)}{p(X)}] \\
     &= - \sum_x p(x) \ log \frac{q(x)}{p(x)} \\
     &= (-\sum_x p(x) \ log \ q(x)) - (-\sum_x p(x) \ log \ p(x)) \\
     &= (-E[log \ q(X)]) - H(X) \\
