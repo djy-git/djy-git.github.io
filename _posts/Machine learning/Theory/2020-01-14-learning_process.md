@@ -1,6 +1,8 @@
 ---
 title: Learning process
 tags: Theory
+aside:
+  toc: true
 ---
 
 <!--more-->
