@@ -1,5 +1,5 @@
 ---
-title: Learning process
+title: Deep Learning process
 tags: Theory
 aside:
   toc: true
