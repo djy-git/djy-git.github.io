@@ -79,7 +79,7 @@ $$
 - KLD는 symmetric 하지 않고($D_{KL}(p \parallel q) \neq D_{KL}(q \parallel p)$), triangle inequality를 만족시키지 않기 때문에 distance라고 하지 않고 divergence(discrimination information)라고 부른다.
 
 ### 4) Cross entropy
-- **Cross entropy**: 두 확률분포 $p(X)$와 $q(X)$에 대하여, $p(X)$ 대신 $q(X)$를 사용하여 $p(X)$를 설명할 때 필요한 정보량
+- **Cross entropy**: "true" 확률분포 $p(X)$와 임의의 $q(X)$에 대하여, 분포 $q(X)$로 계산된 정보량의 기댓값
 - **확률분포 $p(X)$에 대한 분포 $q(X)$의 cross entropy $H(p, q)$(cross entropy of the $q$ relative to a $p$)** <br>
 $$
 \begin{equation}
@@ -90,7 +90,7 @@ $$
 \end{aligned}
 \end{equation}
 $$
-- Cross entropy를 "true" 분포 $p(X)$를 따르는 데이터에 대하여 잘못된 분포 $q(X)$를 가정할 때 필요할 것으로 예상되는 message의 길이로 해석할 수 있다. <br>
+- Cross entropy를 "true" 분포 $p(X)$를 따르는 데이터에 대하여 잘못된 분포 $q(X)$를 가정할 때 필요할 것으로 예상되는 message의 길이(정보량)로 해석할 수 있다. <br>
 - 예를 들어 날씨예보의 경우, <br>
 "true" 분포 $p$: 맑음(60%), 구름(30%), 비(10%) <br>
 예측한 분포 $q$: 맑음(10%), 구름(30%), 비(60%) <br>
