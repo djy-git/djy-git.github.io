@@ -76,10 +76,41 @@ while $N$ // $B$ iterations <br>
 &emsp; Sample mini-batch from data <br>
 &emsp; $v_{t+1} ← \rho v_t - \eta \ \nabla L(W_t + \rho v_t)$ <br>
 &emsp; $W_{t+1} ← W_t + v_{t+1}$ <br> <br>
-이 식을 다음과 같이 현재의 velocity와 과거의 velocity 간의 오류를 수정하는 항목과의 결합으로도 생각할 수 있다. <br><br>
+이 식을 다음과 같이 현재의 velocity와 과거의 velocity 간의 오류($v_{t+1} - v_t$: correction factor)를 수정하는 항목과의 결합으로도 생각할 수 있다. <br><br>
 Let $\tilde{W}_t = W_t + \rho v_t$ <br>
 while $N$ // $B$ iterations <br>
 &emsp; Sample mini-batch from data <br>
 &emsp; $v_{t+1} ← \rho v_t - \eta \ \nabla L(\tilde{W}_t)$ <br>
 &emsp; $\tilde{W}_{t+1} ← \tilde{W}_t - \rho v_t + (1 + \rho) v_{t+1}$ <br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; $\tilde{W}_t + v_{t+1} + \rho(v_{t+1} - v_t)$ <br>
+
+## 5. AdaGrad
+각각의 weight가 계산해온 gradient들에 대한 제곱합을 사용하는 방법이다.
+
+- Gradient가 큰 경우 큰 값을 나누고, gradient가 작은 경우 작은 값을 나누어 적당한 크기만큼 update되도록 하는 방법이다.
+- Convex function에 대해서는 효과적이지만 non-convex function에 대해서는 local minima / saddle point를 넘어갈 수 없다는 문제점이 있고 시간이 지날수록 gradient의 제곱합 $S$가 계속 증가하여 학습이 제대로 되지 않기 때문에 잘 사용하지 않는다.
+
+- **Algorithm (1 epoch)** <br>
+for each weight $w$ <br>
+&emsp; $S_0 ← 0$ <br>
+&emsp; while $N$ // $B$ iterations <br>
+&emsp;&emsp; Sample mini-batch from data <br>
+&emsp;&emsp; $dw_t ← \frac{\partial L(w_t)}{\partial w_t}$ <br>
+&emsp;&emsp; $S_{t+1} ← S_t + (dw_t)^2$ <br>
+&emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{dw_t}{\sqrt{S_{t+1}} + \epsilon}$ <br>
+
+## 6. RMSProp
+Gradient들의 제곱합을 사용하는 AdaGrad의 아이디어를 유지하면서 약간 변형된 알고리즘이다.
+
+- Gradient의 제곱합 $S$가 계속 쌓이는 것이 아니라 decay rate $\gamma$를 추가하여 적당히 감쇠시키고 이것은 momentum update와 유사한 수행을 하게된다.
+- Momentum의 경우 gradient가 overshooting되었다가 minima로 돌아오는 경향을 보이는 반면, RMSProp은 모든 feature에 대해 어느정도 균등한 수렴속도를 가지도록 조절한다.
+- Decay rate $\gamma$로 0.9, $\epsilon$으로 $10^{-7}$ 등의 값을 사용한다.
+
+- **Algorithm (1 epoch)** <br>
+for each weight $w$ <br>
+&emsp; $S_0 ← 0$ <br>
+&emsp; while $N$ // $B$ iterations <br>
+&emsp;&emsp; Sample mini-batch from data <br>
+&emsp;&emsp; $dw_t ← \frac{\partial L(w_t)}{\partial w_t}$ <br>
+&emsp;&emsp; $S_{t+1} ← \gamma S_t + (1 - \gamma) (dw_t)^2$ <br>
+&emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{dw_t}{\sqrt{S_{t+1}} + \epsilon}$ <br>
