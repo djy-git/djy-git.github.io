@@ -119,6 +119,8 @@ for each weight $w$ <br>
 ## 6. Adam
 Momentum과 gradient의 제곱합을 사용하는 아이디어를 조합한 알고리즘이다.
 
+- Momentum과 관련된 $m$과 gradient의 제곱합과 관련된 $v$ 두가지 moment를 사용하였고, bias를 제거하기 위해 $\hat{m}$과 $\hat{v}$로 만들어 최종적으로 update에 사용하였다.
+
 - **Algorithm (1 epoch)** <br>
 for each weight $w$ <br>
 &emsp; $m_0 ← 0$ <br>
