@@ -12,6 +12,8 @@ aside:
 ---
 
 ## 1. Preprocess data
+- Zero-center: 각 feature의 평균이 0가 되지 않으면 gradient의 부호가 자유롭게 정해지지 않기 때문에 zigzag path로 학습되어 비효율적이다.
+- Normalization: 모든 feature들이 동일한 범위 안에 있도록 하여 모두 동등하게 분포하지 않으면 마찬가지로 zigzag path로 학습되어 비효율적이다.
 
 ## 2. Choose the architecture
 
