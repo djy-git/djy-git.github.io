@@ -127,7 +127,7 @@ Momentum과 gradient의 제곱합을 사용하는 아이디어를 조합한 알�
 - 알고리즘은 크게 2가지 부분으로 나누어져있다. <br>
 **2개의 moment를 weighted sum(exponential moving average)으로 계산** <br>
 First moment $E[g_{t+1}]$에 대한 moment estimate $m_{t+1}$(exponential moving average)를 계산($E[g_{t+1}] ≈ m_{t+1}$) <br>
-Second moment $E[g_{t+1}^2]$에 대한 moment estimate $v_{t+1}$(exponential moving average)를 계산($E[g_{t+1}^2] ≈ v_{t+1}$) <br>
+Second moment $E[g_{t+1}^2]$에 대한 moment estimate $v_{t+1}$(exponential moving average)를 계산($E[g_{t+1}^2] ≈ v_{t+1}$) <br><br>
 **Bias를 보정** <br>
 $m_{t+1}$을 $1 - \beta_1^{t+1}$로 나누어 bias를 보정한다($E[g_{t+1}] = E[\hat{m}_{t+1}]$) <br>
 $v_{t+1}$을 $1 - \beta_2^{t+1}$로 나누어 bias를 보정한다($E[g_{t+1}^2] = E[\hat{v}_{t+1}]$) <br>
