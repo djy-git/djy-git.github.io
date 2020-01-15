@@ -123,8 +123,8 @@ Momentum과 gradient의 제곱합을 사용하는 아이디어를 조합한 알�
 
 - **Algorithm (1 epoch)** <br>
 for each weight $w$ <br>
-&emsp; $m_0 ← 0$ <br>
-&emsp; $v_0 ← 0$ <br>
+&emsp; $m_0 ← 0$ &emsp; (Initialize $1^{st}$ moment) <br>
+&emsp; $v_0 ← 0$ &emsp; (Initialize $2^{nd}$ moment) <br>
 &emsp; while $N$ // $B$ iterations <br>
 &emsp;&emsp; Sample mini-batch from data <br>
 &emsp;&emsp; $g_{t+1} ← \frac{\partial L(w_t)}{\partial w}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Get gradient w.r.t. stochastic objective at timestep t+1) <br>
@@ -132,4 +132,4 @@ for each weight $w$ <br>
 &emsp;&emsp; $v_{t+1} ← \beta_2 v_t + (1 - \beta_2) g_t^2$ &emsp;&emsp; (Update biased second raw moment estimate) <br>
 &emsp;&emsp; $\hat{m}_{t+1} ← \frac{m_{t+1}}{1 - \beta_1^{t+1}}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Compute bias-corrected first moment estimate) <br>
 &emsp;&emsp; $\hat{v}_{t+1} ← \frac{v_{t+1}}{1 - \beta_2^{t+1}}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Compute bias-corrected second raw moment estimate) <br>
-&emsp;&emsp; $W_{t+1} ← W_t - \eta \ \frac{\hat{m_t}}{\sqrt{\hat{v}_{t+1} + \epsilon}}$ &emsp;&emsp;&emsp; (Update parameter) <br>
+&emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{\hat{m_{t+1}}}{\sqrt{\hat{v}_{t+1}} + \epsilon}$ &emsp;&emsp;&emsp; (Update parameter) <br>
