@@ -80,7 +80,7 @@ while $N$ // $B$ iterations <br>
 &emsp; $v_{t+1} ← \rho v_t - \eta \ \nabla L(W_t + \rho v_t)$ <br>
 &emsp; $W_{t+1} ← W_t + v_{t+1}$ <br> <br>
 이 식을 다음과 같이 현재의 velocity와 과거의 velocity 간의 오류($v_{t+1} - v_t$: correction factor)를 수정하는 항목과의 결합으로도 생각할 수 있다. <br><br>
-Let $\tilde{W}_t = W_t + \rho v_t$ <br>
+Let $\tilde{W_t} = W_t + \rho v_t$ <br>
 while $N$ // $B$ iterations <br>
 &emsp; Sample mini-batch from data <br>
 &emsp; $v_{t+1} ← \rho v_t - \eta \ \nabla L(\tilde{W}_t)$ <br>
