@@ -18,7 +18,8 @@ aside:
 $W$: Weight vector <br>
 $L(W)$: Loss function with weight $W$ <br>
 $\eta$: Learning rate(step size) <br>
-$\rho$: Friction rate
+$\rho$: Friction rate <br>
+$\gamma, \beta_1, \beta_2$: Decay rate <br>
 $N$: number of data <br>
 $B$: batch size <br>
 
