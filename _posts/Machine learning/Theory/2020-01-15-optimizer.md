@@ -16,16 +16,8 @@ $W$: Weight vector <br>
 $L(W)$: Loss function with weight $W$ <br>
 $\eta$: Learning rate(step size) <br>
 $\rho$: Friction rate
-
-```
-# Pseudocode
-N: number of data
-B: batch size
-
-data: (X_train, y_train)
-W: weight vector
-loss: loss function of weight vector
-```
+$N$: number of data <br>
+$B$: batch size <br>
 
 ## 0. Before using Gradient Descent
 비효율적인 zigzag path(jittering)로 학습되는 것을 방지하기 위하여, 모든 feature의 scale을 동일하게 맞춰주어야한다.
@@ -33,11 +25,9 @@ loss: loss function of weight vector
 ## 1. (Batch) Gradient Descent (GD)
 전체 데이터에 대하여 gradient를 계산하고 gradient descent를 수행한다.
 
-```python
-# 1 epoch
-gradient ← compute_gradient(loss, data, W)
-W ← W - learning_rate * gradient
-```
+- **Algorithm (1 epoch)** <br>
+$W_{t+1} ← W_t - \eta \nabla L(W_t)$
+
 
 ## 2. Stochastic Gradient Descent (SGD)
 학습시킬 때마다 sample(mini-batch)을 뽑아 gradient를 계산하고 gradient descent를 수행한다.
@@ -53,13 +43,11 @@ Gradient = 0 인 지점에서 학습이 멈추는 문제점이 있다.
 - **Noise from sampling(mini-batch)** <br>
 Full gradient를 추정하는 과정에서 생기는 noise로 인해 최적의 학습을 하기 어렵다.
 
-```python
-# 1 epoch
-while N // B iterations
-    sample mini-batch from data
-    gradient ← compute_gradient(loss, mini-batch, W)
-    W ← W - learning_rate * gradient
-```
+- **Algorithm (1 epoch)** <br>
+while $N$ // $B$ iterations <br>
+&emsp; Sample mini-batch from data <br>
+&emsp; $W_{t+1} ← W_t - \eta \ \nabla L(W_t)$ <br>
+
 
 ## 3. SGD with Momentum (Momentum SGD)
 가속도(탄력)의 개념을 추가하여 속도에 gradient를 더한 값으로 gradient descent를 수행한다.
@@ -69,27 +57,29 @@ while N // B iterations
 ![jpg](/images/2020-01-15-optimizer/20200115_001.jpg)
 ![jpg](/images/2020-01-15-optimizer/20200115_002.jpg)
 
-- 일반적으로 $\rho$로 0.9 혹은 0.99를 사용하고, velocity의 초깃값으로 0를 사용한다.
+- 일반적으로 friction rate $\rho$를 0.9 혹은 0.99로 사용하고, velocity $v$의 초깃값으로 0를 사용한다.
 
+- **Algorithm (1 epoch)** <br>
+while $N$ // $B$ iterations <br>
+&emsp; Sample mini-batch from data <br>
+&emsp; $v_{t+1} ← \rho v_t + \nabla L(W_t)$ <br>
+&emsp; $W_{t+1} ← W_t - \eta \ v_{t+1}$ <br>
 
-```python
-while N // B iterations
-    sample mini-batch from data
-    gradient ← compute_gradient(loss, mini-batch, W)
-    velocity ← friction_rate * velocity + gradient
-    W ← W - learning_rate * velocity
-```
 
 ## 4. SGD with Nesterov Momentum
 현재 위치에서 gradient를 계산하는 momentum update와는 달리, velocity만으로 update한 지점에서 계산한 gradient를 사용하여 gradient descent를 수행한다.
 
 ![jpg](/images/2020-01-15-optimizer/2020011552.jpg)
 
-```python
-# 1 epoch
-while N // B iterations
-    sample mini-batch from data
-    velocity ← friction_rate * velocity + gradient
-    gradient ← compute_gradient(loss, mini-batch, W + velocity)
-    W ← W - learning_rate * velocity
-```
+- **Algorithm (1 epoch)** <br>
+while $N$ // $B$ iterations <br>
+&emsp; Sample mini-batch from data <br>
+&emsp; $v_{t+1} ← \rho v_t - \eta \ \nabla L(W_t + \rho v_t)$ <br>
+&emsp; $W_{t+1} ← W_t + v_{t+1}$ <br> <br>
+이 식을 다음과 같이 현재의 velocity와 과거의 velocity 간의 오류를 수정하는 항목과의 결합으로도 생각할 수 있다. <br><br>
+Let $\tilde{W}_t = W_t + \rho v_t$ <br>
+while $N$ // $B$ iterations <br>
+&emsp; Sample mini-batch from data <br>
+&emsp; $v_{t+1} ← \rho v_t - \eta \ \nabla L(\tilde{W}_t)$ <br>
+&emsp; $\tilde{W}_{t+1} ← \tilde{W}_t - \rho v_t + (1 + \rho) v_{t+1}$ <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; $\tilde{W}_t + v_{t+1} + \rho(v_{t+1} - v_t)$ <br>
