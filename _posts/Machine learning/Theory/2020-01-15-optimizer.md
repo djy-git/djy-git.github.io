@@ -7,7 +7,10 @@ aside:
 
 <!--more-->
 # Remarks
-이 글은 [CS231n](http://cs231n.github.io/) 강의를 기반으로 작성되었습니다.
+이 글은 <br>
+[CS231n](http://cs231n.github.io/) <br>
+[https://dalpo0814.tistory.com/29](https://dalpo0814.tistory.com/29) <br>
+등을 참고하여 작성되었습니다.
 
 ---
 
@@ -102,10 +105,10 @@ for each weight $w$ <br>
 ## 6. RMSProp
 Gradient들의 제곱합을 사용하는 AdaGrad의 아이디어를 유지하면서 약간 변형된 알고리즘이다.
 
-- Gradient의 제곱합 $S$가 계속 쌓이는 것이 아니라 decay rate $\gamma$를 추가하여 적당히 감쇠시키고 이것은 momentum update와 유사한 수행을 하게된다.
+- Gradient의 제곱합 $S$가 계속 쌓이는 것이 아니라 time step이 지날수록 weight가 decay rate $\gamma$ 만큼 감쇠되도록 합을 계산하는 exponential moving average를 사용한다. 이는 결국 momentum update와 유사한 수행을 하게된다.
 - Momentum의 경우 gradient가 overshooting되었다가 minima로 돌아오는 경향을 보이는 반면, RMSProp은 모든 feature에 대해 어느정도 균등한 수렴속도를 가지도록 조절한다.
 - 그러나 여전히 local minima / saddle point에 안착하면 벗어날 수 없는 문제점이 있다.
-- Decay rate $\gamma$로 0.9, $\epsilon$으로 $10^{-7}$ 등의 값을 사용한다.
+- Decay rate $\gamma$로 0.9, $\epsilon$으로 $10^{-7}$ 정도의 값을 사용한다.
 
 - **Algorithm (1 epoch)** <br>
 for each weight $w$ <br>
@@ -121,6 +124,17 @@ Momentum과 gradient의 제곱합을 사용하는 아이디어를 조합한 알�
 
 - Momentum과 관련된 $m$과 gradient의 제곱합과 관련된 $v$ 두가지 moment를 사용하였고, bias를 제거하기 위해 $\hat{m}$과 $\hat{v}$로 만들어 최종적으로 update에 사용하였다.
 
+- 알고리즘은 크게 2가지 부분으로 나누어져있다. <br>
+**1. 2개의 moment를 weighted sum(exponential moving average)으로 계산** <br>
+First moment $E[g_{t+1}]$에 대한 moment estimate $m_{t+1}$(exponential moving average)를 계산($E[g_{t+1}] ≈ m_{t+1}$) <br>
+Second moment $E[g_{t+1}^2]$에 대한 moment estimate $v_{t+1}$(exponential moving average)를 계산($E[g_{t+1}^2] ≈ v_{t+1}$) <br>
+**2. bias를 보정** <br>
+$m_{t+1}$을 $1 - \beta_1^{t+1}$로 나누어 bias를 보정한다($E[g_{t+1}] = E[\hat{m}_{t+1}]$) <br>
+$v_{t+1}$을 $1 - \beta_2^{t+1}$로 나누어 bias를 보정한다($E[g_{t+1}^2] = E[\hat{v}_{t+1}]$) <br>
+이 과정을 통해 첫 time step에서 $\frac{\hat{m_1}}{\sqrt{\hat{v}_1} + \epsilon} = \frac{1 - \beta_1}{\sqrt{1 - \beta_2} + \epsilon}$ 의 값이 매우 커져서 overshooting되는 현상을 방지할 수도 있다.
+
+- Decay rate $\beta_1$과 $\beta_2$는 각각 0.9, 0.999 정도의 값을 사용하고, learning rate $\eta$는 $10^{-3}, 5 \cdot 10^{-4}$ 정도의 값에서 잘 작동한다.
+
 - **Algorithm (1 epoch)** <br>
 for each weight $w$ <br>
 &emsp; $m_0 ← 0$ &emsp; (Initialize $1^{st}$ moment) <br>
@@ -128,8 +142,11 @@ for each weight $w$ <br>
 &emsp; while $N$ // $B$ iterations <br>
 &emsp;&emsp; Sample mini-batch from data <br>
 &emsp;&emsp; $g_{t+1} ← \frac{\partial L(w_t)}{\partial w}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Get gradient w.r.t. stochastic objective at timestep t+1) <br>
-&emsp;&emsp; $m_{t+1} ← \beta_1 m_t + (1 - \beta_1) g_t$ &emsp; (Update biased first moment estimate) <br>
-&emsp;&emsp; $v_{t+1} ← \beta_2 v_t + (1 - \beta_2) g_t^2$ &emsp;&emsp; (Update biased second raw moment estimate) <br>
+&emsp;&emsp; $m_{t+1} ← \beta_1 m_t + (1 - \beta_1) g_{t+1}$ &emsp; (Update biased first moment estimate) <br>
+&emsp;&emsp; $v_{t+1} ← \beta_2 v_t + (1 - \beta_2) g_{t+1}^2$ &emsp;&emsp; (Update biased second raw moment estimate) <br>
 &emsp;&emsp; $\hat{m}_{t+1} ← \frac{m_{t+1}}{1 - \beta_1^{t+1}}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Compute bias-corrected first moment estimate) <br>
 &emsp;&emsp; $\hat{v}_{t+1} ← \frac{v_{t+1}}{1 - \beta_2^{t+1}}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Compute bias-corrected second raw moment estimate) <br>
 &emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{\hat{m_{t+1}}}{\sqrt{\hat{v}_{t+1}} + \epsilon}$ &emsp;&emsp;&emsp; (Update parameter) <br>
+
+
+##
