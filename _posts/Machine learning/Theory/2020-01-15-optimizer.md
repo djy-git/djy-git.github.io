@@ -146,7 +146,7 @@ for each weight $w$ <br>
 &emsp;&emsp; $v_{t+1} ← \beta_2 v_t + (1 - \beta_2) g_{t+1}^2$ &emsp;&emsp; (Update biased second raw moment estimate) <br>
 &emsp;&emsp; $\hat{m_{t+1}} ← \frac{m_{t+1}}{1 - \beta_1^{t+1}}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Compute bias-corrected first moment estimate) <br>
 &emsp;&emsp; $\hat{v_{t+1}} ← \frac{v_{t+1}}{1 - \beta_2^{t+1}}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Compute bias-corrected second raw moment estimate) <br>
-&emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{\hat{m_{t+1}}{\sqrt{\hat{v_{t+1}}} + \epsilon}$ &emsp;&emsp;&emsp; (Update parameter) <br>
+&emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{\hat{m_{t+1}}}{\sqrt{\hat{v_{t+1}}} + \epsilon}$ &emsp;&emsp;&emsp; (Update parameter) <br>
 
 
 ## 8. Learning schedule
