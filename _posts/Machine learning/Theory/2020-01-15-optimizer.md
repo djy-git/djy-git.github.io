@@ -95,9 +95,9 @@ for each weight $w$ <br>
 &emsp; $S_0 ← 0$ <br>
 &emsp; while $N$ // $B$ iterations <br>
 &emsp;&emsp; Sample mini-batch from data <br>
-&emsp;&emsp; $dw_t ← \frac{\partial L(w_t)}{\partial w_t}$ <br>
-&emsp;&emsp; $S_{t+1} ← S_t + (dw_t)^2$ <br>
-&emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{dw_t}{\sqrt{S_{t+1}} + \epsilon}$ <br>
+&emsp;&emsp; $g_{t+1} ← \frac{\partial L(w_t)}{\partial w}$ <br>
+&emsp;&emsp; $S_{t+1} ← S_t + g_{t+1}^2$ <br>
+&emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{g_{t+1}}{\sqrt{S_{t+1}} + \epsilon}$ <br>
 
 ## 6. RMSProp
 Gradient들의 제곱합을 사용하는 AdaGrad의 아이디어를 유지하면서 약간 변형된 알고리즘이다.
@@ -112,6 +112,22 @@ for each weight $w$ <br>
 &emsp; $S_0 ← 0$ <br>
 &emsp; while $N$ // $B$ iterations <br>
 &emsp;&emsp; Sample mini-batch from data <br>
-&emsp;&emsp; $dw_t ← \frac{\partial L(w_t)}{\partial w_t}$ <br>
-&emsp;&emsp; $S_{t+1} ← \gamma S_t + (1 - \gamma) (dw_t)^2$ <br>
-&emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{dw_t}{\sqrt{S_{t+1}} + \epsilon}$ <br>
+&emsp;&emsp; $g_{t+1} ← \frac{\partial L(w_t)}{\partial w}$ <br>
+&emsp;&emsp; $S_{t+1} ← \gamma S_t + (1 - \gamma) g_{t+1}^2$ <br>
+&emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{g_{t+1}}{\sqrt{S_{t+1}} + \epsilon}$ <br>
+
+## 6. Adam
+Momentum과 gradient의 제곱합을 사용하는 아이디어를 조합한 알고리즘이다.
+
+- **Algorithm (1 epoch)** <br>
+for each weight $w$ <br>
+&emsp; $m_0 ← 0$ <br>
+&emsp; $v_0 ← 0$ <br>
+&emsp; while $N$ // $B$ iterations <br>
+&emsp;&emsp; Sample mini-batch from data <br>
+&emsp;&emsp; $g_{t+1} ← \frac{\partial L(w_t)}{\partial w}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Get gradient w.r.t. stochastic objective at timestep t+1) <br>
+&emsp;&emsp; $m_{t+1} ← \beta_1 m_t + (1 - \beta_1) g_t$ &emsp; (Update biased first moment estimate) <br>
+&emsp;&emsp; $v_{t+1} ← \beta_2 v_t + (1 - \beta_2) g_t^2$ &emsp;&emsp; (Update biased second raw moment estimate) <br>
+&emsp;&emsp; $\hat{m}_{t+1} ← \frac{m_{t+1}}{1 - \beta_1^{t+1}}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Compute bias-corrected first moment estimate) <br>
+&emsp;&emsp; $\hat{v}_{t+1} ← \frac{v_{t+1}}{1 - \beta_2^{t+1}}$ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (Compute bias-corrected second raw moment estimate) <br>
+&emsp;&emsp; $W_{t+1} ← W_t - \eta \ \frac{\hat{m_t}}{\sqrt{\hat{v}_{t+1} + \epsilon}}$ &emsp;&emsp;&emsp; (Update parameter) <br>
