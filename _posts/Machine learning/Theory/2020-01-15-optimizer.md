@@ -152,7 +152,7 @@ for each weight $w$ <br>
 ## 8. Learning schedule
 고정된 learning rate를 사용하는 대신, update 할수록 learning rate가 감소하는 방법을 사용할 수 있다.(learning rate 결정 후 decay rate 결정)
 
-- Step decay: Epoch 마다 절반으로 감소 <br>
+- Step decay: 몇 epoch 마다 절반으로 감소 <br>
 Exponential decay: $\eta = \eta_0 e^{-kt}$ <br>
 1/t decay: $\eta = \eta_0 / (1 + kt)$ <br>
 
