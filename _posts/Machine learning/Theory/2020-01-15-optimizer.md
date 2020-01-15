@@ -26,6 +26,9 @@ W: weight vector
 loss: loss function of weight vector
 ```
 
+## 0. Before using Gradient Descent
+비효율적인 zigzag path(jittering)로 학습되는 것을 방지하기 위하여, 모든 feature의 scale을 동일하게 맞춰주어야한다.
+
 ## 1. (Batch) Gradient Descent (GD)
 전체 데이터에 대하여 gradient를 계산하고 gradient descent를 수행한다.
 
@@ -40,10 +43,19 @@ W ← W - learning_rate * gradient
 ```
 
 ## 2. Stochastic Gradient Descent (SGD)
-학습시킬 때마다 sample(mini-batch)을 뽑아 gradient를 계산하고 gradient descent를 수행한다. \
-- 전체 데이터에 대한 gradient를 계산해야하나, 실제로 사용하기엔 너무 계산량이 크다. \
+학습시킬 때마다 sample(mini-batch)을 뽑아 gradient를 계산하고 gradient descent를 수행한다.
+
+- **Stochastic?** \
+전체 데이터에 대한 gradient를 계산해야하나, 실제로 사용하기엔 너무 계산량이 크다. \
 이에따라 적은 개수의 sample에 대한 sample gradient를 계산하여 full gradient를 추정하는 방식을 사용하게 되었는데, \
 Monte Carlo method와 유사하기 때문에 stochastic 이라는 이름이 붙여졌다.
+
+- **Stop in local minima / saddle point** \
+Gradient = 0 인 지점에서 학습이 멈추는 문제점이 있다.
+
+- **Noise from sampling(mini-batch)** \
+Full gradient를 추정하는 과정에서 생기는 noise로 인해 최적의 학습을 하기 어렵다.
+
 
 ```python
 # 1 epoch
@@ -53,4 +65,4 @@ while N // B iterations
     W ← W - learning_rate * gradient
 ```
 
-## 3.
+## 3. SGD with Momentum (Momentum SGD)
