@@ -119,7 +119,7 @@ for each weight $w$ <br>
 &emsp;&emsp; $S_{t+1} ← \gamma S_t + (1 - \gamma) g_{t+1}^2$ <br>
 &emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{g_{t+1}}{\sqrt{S_{t+1}} + \epsilon}$ <br>
 
-## 6. Adam
+## 7. Adam
 Momentum과 gradient의 제곱합을 사용하는 아이디어를 조합한 알고리즘이다.
 
 - Momentum과 관련된 $m$과 gradient의 제곱합과 관련된 $v$ 두가지 moment를 사용하였고, bias를 제거하기 위해 $\hat{m}$과 $\hat{v}$로 만들어 최종적으로 update에 사용하였다.
@@ -149,4 +149,11 @@ for each weight $w$ <br>
 &emsp;&emsp; $w_{t+1} ← w_t - \eta \ \frac{\hat{m_{t+1}}}{\sqrt{\hat{v}_{t+1}} + \epsilon}$ &emsp;&emsp;&emsp; (Update parameter) <br>
 
 
-##
+## 8. Learning schedule
+고정된 learning rate를 사용하는 대신, update 할수록 learning rate가 감소하는 방법을 사용할 수 있다.(learning rate 결정 후 decay rate 결정)
+
+- Step decay: Epoch 마다 절반으로 감소 <br>
+Exponential decay: $\eta = \eta_0 e^{-kt}$ <br>
+1/t decay: $\eta = \eta_0 / (1 + kt)$ <br>
+
+- Momentum method와 같이 사용하는 것이 일반적이고 Adam과는 잘 쓰이지 않는다.
