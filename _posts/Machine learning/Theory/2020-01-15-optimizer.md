@@ -83,9 +83,9 @@ while $N$ // $B$ iterations <br>
 Let $\tilde{W_t} = W_t + \rho v_t$ <br>
 while $N$ // $B$ iterations <br>
 &emsp; Sample mini-batch from data <br>
-&emsp; $v_{t+1} ← \rho v_t - \eta \ \nabla L(\tilde{W}_t)$ <br>
-&emsp; $\tilde{W}_{t+1} ← \tilde{W}_t - \rho v_t + (1 + \rho) v_{t+1}$ <br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; $\tilde{W}_t + v_{t+1} + \rho(v_{t+1} - v_t)$ <br>
+&emsp; $v_{t+1} ← \rho v_t - \eta \ \nabla L(\tilde{W_t})$ <br>
+&emsp; $\tilde{W_{t+1}} ← \tilde{W_t} - \rho v_t + (1 + \rho) v_{t+1}$ <br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; $\tilde{W_t} + v_{t+1} + \rho(v_{t+1} - v_t)$ <br>
 
 ## 5. AdaGrad
 각각의 weight가 계산해온 gradient들에 대한 제곱합을 사용하는 방법이다.
