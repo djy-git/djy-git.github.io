@@ -129,8 +129,8 @@ Momentum과 gradient의 제곱합을 사용하는 아이디어를 조합한 알�
 First moment $E[g_{t+1}]$에 대한 moment estimate $m_{t+1}$(exponential moving average)를 계산($E[g_{t+1}] ≈ m_{t+1}$) <br>
 Second moment $E[g_{t+1}^2]$에 대한 moment estimate $v_{t+1}$(exponential moving average)를 계산($E[g_{t+1}^2] ≈ v_{t+1}$) <br><br>
 **Bias를 보정** <br>
-$m_{t+1}$을 $1 - \beta_1^{t+1}$로 나누어 bias를 보정한다($E[g_{t+1}]=E[\hat{m}_{t+1}]$) <br>
-$v_{t+1}$을 $1 - \beta_2^{t+1}$로 나누어 bias를 보정한다($E[g_{t+1}^2]=E[\hat{v}_{t+1}]$) <br>
+$m_{t+1}$을 $1 - \beta_1^{t+1}$로 나누어 bias를 보정한다( $E[g_{t+1}]=E[\hat{m}_{t+1}]$ ) <br>
+$v_{t+1}$을 $1 - \beta_2^{t+1}$로 나누어 bias를 보정한다( $E[g_{t+1}^2]=E[\hat{v}_{t+1}]$ ) <br>
 이 과정을 통해 첫 time step에서 $\frac{\hat{m}_1}{\sqrt{\hat{v}_1} + \epsilon} = \frac{1 - \beta_1}{\sqrt{1 - \beta_2} + \epsilon}$ 의 값이 매우 커져서 overshooting되는 현상을 방지할 수도 있다.
 
 - Decay rate $\beta_1$과 $\beta_2$는 각각 0.9, 0.999 정도의 값을 사용하고, learning rate $\eta$는 $10^{-3}, 5 \cdot 10^{-4}$ 정도의 값에서 잘 작동한다.
