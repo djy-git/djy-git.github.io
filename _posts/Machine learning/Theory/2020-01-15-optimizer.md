@@ -104,6 +104,7 @@ Gradient들의 제곱합을 사용하는 AdaGrad의 아이디어를 유지하면
 
 - Gradient의 제곱합 $S$가 계속 쌓이는 것이 아니라 decay rate $\gamma$를 추가하여 적당히 감쇠시키고 이것은 momentum update와 유사한 수행을 하게된다.
 - Momentum의 경우 gradient가 overshooting되었다가 minima로 돌아오는 경향을 보이는 반면, RMSProp은 모든 feature에 대해 어느정도 균등한 수렴속도를 가지도록 조절한다.
+- 그러나 여전히 local minima / saddle point에 안착하면 벗어날 수 없는 문제점이 있다.
 - Decay rate $\gamma$로 0.9, $\epsilon$으로 $10^{-7}$ 등의 값을 사용한다.
 
 - **Algorithm (1 epoch)** <br>
