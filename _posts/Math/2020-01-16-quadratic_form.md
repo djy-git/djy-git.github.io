@@ -4,7 +4,11 @@ tags: Math
 ---
 
 # Remarks
-이 글은 [https://en.wikipedia.org/wiki/Quadratic_form#Introduction](https://en.wikipedia.org/wiki/Quadratic_form#Introduction) 등을 참고하여 작성되었습니다.
+이 글은 <br>
+[https://en.wikipedia.org/wiki/Quadratic_form#Introduction](https://en.wikipedia.org/wiki/Quadratic_form#Introduction) <br>
+[http://www.rmi.ge/~kade/LecturesT.Kadeishvili/MathEconomics/Term3/Week3QuadraticLEC.pdf](http://www.rmi.ge/~kade/LecturesT.Kadeishvili/MathEconomics/Term3/Week3QuadraticLEC.pdf) <br>
+[https://en.wikipedia.org/wiki/Covariance_matrix](https://en.wikipedia.org/wiki/Covariance_matrix) <br>
+등을 참고하여 작성되었습니다.
 
 <!--more-->
 
@@ -21,11 +25,11 @@ $q(x, y) = ax^2 + bxy + cy^2$ <br><br>
 **Ternary** <br>
 $q(x, y, z) = ax^2 + bxy + cy^2 + dyz + ez^2 + fzx$ <br>
 
-- 다음과 같은 notation을 사용하기도 한다. <br>
+- 다음과 같은 notation을 사용하기도 한다.(diagonal form) <br>
 $q(x) = \langle a_1, \cdots, a_n \rangle = a_1x_1^2 + \cdots + a_nx_n^2$
 
-## 2. Real quadratic forms
-임의의 $n \times n$ real symmetric matrix $A$는 $n$개의 변수를 가진 quadratic form $q_A$를 다음의 식으로 결정할 수 있다. <br>
+## 2. Matrix representation of quadratic form
+임의의 $n \times n$ real *symmetric* matrix $A$는 $n$개의 변수를 가진 quadratic form $q_A$를 아래의 식으로 결정할 수 있다. <br>
 $$
 \begin{equation}
 \begin{aligned}
@@ -48,3 +52,64 @@ $$
 \end{aligned}
 \end{equation}
 $$
+역으로 $n$개의 변수에 대한 quadratic form이 주어진 경우, 해당 coefficient들을 $n \times n$ *symmetric* matrix의 형태로 만드는 것도 가능하다. <br>
+
+- Quadratic form을 만족시키는 matrix $A$는 *symmetric* 하지 않는 경우를 포함하여 무수히 많다. 그러나, 대칭의 위치에 해당하는 off-diagonal element를 더하고 반으로 나누면 어떤 경우에도 *symmetric*한 matrix $A$를 만들어낼 수 있다.
+
+## 3. Definiteness
+With quadratic form $q(\mathbf{x}) = \mathbf{x}^T A \mathbf{x}$, a real *symmetric* matrix $A$ is
+$$
+\begin{equation}
+\begin{aligned}
+    \textbf{positive definite} \ (A \succ 0) \quad &\text{ if } q(\mathbf{x}) > 0 \text{ for all } \mathbf{x} \neq 0 \in \mathbb{R} ^n \\
+    \textbf{positive semi-definite} \ (A \succeq 0) \quad &\text{ if } q(\mathbf{x}) ≥ 0 \text{ for all } \mathbf{x} \neq 0 \in \mathbb{R} ^n \\
+    \textbf{negative definite} \ (A \prec 0) \quad &\text{ if } q(\mathbf{x}) < 0 \text{ for all } \mathbf{x} \neq 0 \in \mathbb{R} ^n \\
+    \textbf{negative semi-definite} \ (A \preceq 0) \quad &\text{ if } q(\mathbf{x}) ≤ 0 \text{ for all } \mathbf{x} \neq 0 \in \mathbb{R} ^n \\
+    \textbf{indefinite} \quad &\text{ if } A \text{ is neither positive semi-definite nor negative semi-definite}  \\
+\end{aligned}
+\end{equation}
+$$
+
+- **Matrix $A$의 difinitness에 따라 quadratic form의 optimality가 결정된다.** <br>
+$\text{If } A \succeq 0$ <br>
+&emsp; $q(\mathbf{x}) \text{ is convex and } x=0 \text{ is global minimum}$ <br>
+$\text{If } A \preceq 0$ <br>
+&emsp; $q(\mathbf{x}) \text{ is concave and } x=0 \text{ is global maximum}$
+
+- Matrix $A$의 **eigenvalue**의 부호를 통해 definiteness가 결정되기도 한다. <br>
+$\mathbf{x} = P\mathbf{y} \ \text{ s.t. } P \text{ is regular}$ <br>
+$\mathbf{x}^T A \mathbf{x} = (P\mathbf{y})^T A (Py) = \mathbf{y}^T P^T A P \mathbf{y} = \mathbf{y}^T (P^TAP)\mathbf{y} = \mathbf{y}^TD\mathbf{y} \quad \text{(Spectral decomposition)}$ <br>
+$\mathbf{y}^TD\mathbf{y} = \sum_i \lambda_i y_i^2$ <br>
+
+$$
+\begin{equation}
+\begin{aligned}
+    \textbf{positive definite} \ (A \succ 0) \quad &\text{ iff all eigenvalue } \lambda_i > 0 \\
+    \textbf{positive semi-definite} \ (A \succeq 0) \quad &\text{ iff all eigenvalue } \lambda_i ≥ 0 \\
+    \textbf{negative definite} \ (A \prec 0) \quad &\text{ iff all eigenvalue } \lambda_i < 0 \\
+    \textbf{negative semi-definite} \ (A \preceq 0) \quad &\text{ iff all eigenvalue } \lambda_i ≤ 0 \\
+    \textbf{indefinite} \quad &\text{ iff some eigenvalue > 0 and other eigenvalue < 0} \\
+\end{aligned}
+\end{equation}
+$$
+
+- Positive definite 혹은 negative definite matrix는 역행렬이 존재한다. <br>
+$det(A) = \Pi_i \lambda_i \neq 0$ <br>
+한편, 역행렬의 eigenvalue는 원래 행렬의 eigenvalue의 역수이기 때문에 definiteness는 변하지 않는다.
+
+- **Covariance matrix** <br>
+$X = (X_1, \cdots, X_n)^T$에 대한 covariance matrix $C$ <br>
+$C = E[(X - \mu_X)(X - \mu_X)^T] = E[XX^T] - \mu_X\mu_X^T$ <br>
+$C = \frac{1}{n} \sum_i (X_i - \bar{X})(X_i - \bar{X})^T$ <br><br>
+$$
+\begin{equation}
+\begin{aligned}
+    \mathbf{y}^T C \mathbf{y} &= \mathbf{y}^T (\frac{1}{n} \sum_i (X_i - \bar{X})(X_i - \bar{X})^T) \mathbf{y} \\
+    &= \frac{1}{n} \sum_i \mathbf{y}^T (X_i - \bar{X})(X_i - \bar{X})^T \mathbf{y} \\
+    &= \frac{1}{n} \sum_i ((X_i - \bar{X})^T \mathbf{y})^T((X_i - \bar{X})^T \mathbf{y}) \\
+    &= \frac{1}{n} \sum_i ((X_i - \bar{X})^T \mathbf{y})^2 ≥ 0 \\
+\end{aligned}
+\end{equation}
+$$
+
+Covariance matrix는 positive semi-definite이다. <br>
