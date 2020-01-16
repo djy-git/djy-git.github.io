@@ -111,4 +111,5 @@ $$
 \end{aligned}
 \end{equation}
 $$
+<br>
 따라서, covariance matrix는 positive semi-definite이다. <br>
