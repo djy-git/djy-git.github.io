@@ -8,6 +8,7 @@ tags: Math
 [https://en.wikipedia.org/wiki/Quadratic_form#Introduction](https://en.wikipedia.org/wiki/Quadratic_form#Introduction) <br>
 [http://www.rmi.ge/~kade/LecturesT.Kadeishvili/MathEconomics/Term3/Week3QuadraticLEC.pdf](http://www.rmi.ge/~kade/LecturesT.Kadeishvili/MathEconomics/Term3/Week3QuadraticLEC.pdf) <br>
 [https://en.wikipedia.org/wiki/Covariance_matrix](https://en.wikipedia.org/wiki/Covariance_matrix) <br>
+[http://elearning.kocw.net/contents4/document/lec/2013/Chungbuk/LeeGeonmyeong1/14.pdf](http://elearning.kocw.net/contents4/document/lec/2013/Chungbuk/LeeGeonmyeong1/14.pdf) <br>
 등을 참고하여 작성되었습니다.
 
 <!--more-->
