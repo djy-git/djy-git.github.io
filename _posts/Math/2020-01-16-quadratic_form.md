@@ -20,9 +20,9 @@ tags: Math
 
 - 다음과 같이 변수의 개수에 따라 이름이 붙여지기도 한다. <br>
 **Unary** <br>
-$q(x) = ax^2$ <br><br>
+$q(x) = ax^2$ <br>
 **Binary** <br>
-$q(x, y) = ax^2 + bxy + cy^2$ <br><br>
+$q(x, y) = ax^2 + bxy + cy^2$ <br>
 **Ternary** <br>
 $q(x, y, z) = ax^2 + bxy + cy^2 + dyz + ez^2 + fzx$ <br>
 
@@ -53,6 +53,7 @@ $$
 \end{aligned}
 \end{equation}
 $$
+
 역으로 $n$개의 변수에 대한 quadratic form이 주어진 경우, 해당 coefficient들을 $n \times n$ *symmetric* matrix의 형태로 만드는 것도 가능하다. <br>
 
 - Quadratic form을 만족시키는 matrix $A$는 *symmetric* 하지 않는 경우를 포함하여 무수히 많다. 그러나, 대칭의 위치에 해당하는 off-diagonal element를 더하고 반으로 나누면 어떤 경우에도 *symmetric*한 matrix $A$를 만들어낼 수 있다.
