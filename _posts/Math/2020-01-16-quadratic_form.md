@@ -74,10 +74,8 @@ $$
 $$
 
 - **Matrix $A$의 difinitness에 따라 quadratic form의 optimality가 결정된다.** <br>
-$\text{If } A \succeq 0$ <br>
-&emsp; $q(\mathbf{x}) \text{ is convex and } x=0 \text{ is global minimum}$ <br>
-$\text{If } A \preceq 0$ <br>
-&emsp; $q(\mathbf{x}) \text{ is concave and } x=0 \text{ is global maximum}$
+$\text{if } A \succeq 0, \ q(\mathbf{x}) \text{ is convex and } x=0 \text{ is global minimum}$ <br>
+$\text{if } A \preceq 0, \ q(\mathbf{x}) \text{ is concave and } x=0 \text{ is global maximum}$
 
 - Matrix $A$의 **eigenvalue**의 부호를 통해 definiteness가 결정되기도 한다. <br>
 $\mathbf{x} = P\mathbf{y} \ \text{ s.t. } P \text{ is regular}$ <br>
@@ -96,8 +94,7 @@ $$
 \end{equation}
 $$
 
-- Positive definite 혹은 negative definite matrix는 역행렬이 존재한다. <br>
-$det(A) = \Pi_i \lambda_i \neq 0$ <br>
+- Positive definite 혹은 negative definite matrix는 역행렬이 존재한다. $(\because \ det(A) = \Pi_i \lambda_i \neq 0)$ <br>
 한편, 역행렬의 eigenvalue는 원래 행렬의 eigenvalue의 역수이기 때문에 definiteness는 변하지 않는다.
 
 - **Covariance matrix** <br>
