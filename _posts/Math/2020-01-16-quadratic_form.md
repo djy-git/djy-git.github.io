@@ -41,7 +41,7 @@ $$
   x_1 & \cdots & x_n \\
   \end{pmatrix}
   \begin{pmatrix}
-  a_{11} & \cdots & a_{n1} \\
+  a_{11} & \cdots & a_{1n} \\
   \vdots & \ddots & \vdots \\
   a_{n1} & \cdots & a_{nn} \\
   \end{pmatrix}
