@@ -80,6 +80,10 @@ docs-en:
     children:
       - title:  Base
         url: /archive.html?tag=Math
+  - title:      Study
+    children:
+      - title:  Time Series Analysis
+        url: /archive.html?tag=Study_TimeSeriesAnalysis
   - title:      Projects
     children:
       - title:  Kaggle

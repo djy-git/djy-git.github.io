@@ -32,3 +32,7 @@ $a_t \sim WN(0, \sigma^2)$
 $X_t$ is stationary if its joint distribution does not change
 
 - **Strictly stationary time series** <br>
+$n$개의 variables에 대한 CDF $F_{t_1, \cdots, t_n}(x_1, \cdots, x_n) = P(X_{t_1} \leq x_1, \cdots, X_{t_n} \leq x_n)$ 에 대하여, <br>
+$F_{t_1, \cdots, t_n}(x_1, \cdots, x_n) = F_{t_1+h, \cdots, t_n+h}(x_1, \cdots, x_n)$ 를 만족시키면 $X_t$가 strictly stationary
+
+- 
