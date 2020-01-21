@@ -36,7 +36,7 @@ $X_t$ is stationary if its joint distribution does not change
 
 ![png](https://miro.medium.com/max/1419/1*tkx0_wwQ2JT7pSlTeg4yzg.png)[^1]
 
-### Strictly Stationary time series
+### - Strictly Stationary time series
 $X_t$ is strictly stationary time series if <br>
 for CDF $F_{t_1, \cdots, t_n}(x_1, \cdots, x_n) = P(X_{t_1} \leq x_1, \cdots, X_{t_n} \leq x_n)$, <br>
 $F_{t_1, \cdots, t_n}(x_1, \cdots, x_n) = F_{t_1+h, \cdots, t_n+h}(x_1, \cdots, x_n)$ for all $n$ and $h > 0$ <br>
@@ -44,7 +44,7 @@ $F_{t_1, \cdots, t_n}(x_1, \cdots, x_n) = F_{t_1+h, \cdots, t_n+h}(x_1, \cdots, 
 ex1) For $n=1, \ F_t(x) = P(X_t \leq x) = F_{t+h}(x)$ <br>
 ex2) For $n=2, \ Cov(X_t, X_s) = Cov(X_{t+h}, X_{s+h})$
 
-### (Weakly) Stationary time series
+### - (Weakly) Stationary time series
 Strictly stationary 조건은 실질적으로 사용하기 어렵기 때문에 일반적으로 조건이 완화된 weakly stationary 조건을 사용한다. <br>
 $X_t$ is weakly stationary time series if <br>
 1) $E[X_t]$ is constant, <br>
@@ -53,7 +53,7 @@ $X_t$ is weakly stationary time series if <br>
 <br>
 ex) White noise is stationary <br>
 1) $E[a_t] = 0$ <br>
-2) $Cov[a_t, a_s] = Cov[a_{t+h}, a_{s+h}] = 0$ <br>
+2) $Cov(a_t, a_s) = Cov(a_{t+h}, a_{s+h}) = 0$ <br>
 3) $Var(a_t) = Var(a_{t+h})$
 
 ---
