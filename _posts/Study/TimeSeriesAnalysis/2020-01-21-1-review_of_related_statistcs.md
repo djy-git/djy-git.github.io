@@ -59,7 +59,7 @@ $Cov(X_t, X_{t+h})$ only depends on $h$ (not $t$) <br>
 
 ### - Autocovariance function
 Autocovariance function of $X$: $\gamma_X(h) = Cov(X_t, X_{t+h})$ <br>
-- $\gamma_X(h)$ only depends on $h$
+- $\gamma_X(h)$ only depends on $h$(*lag*)
 
 
 
