@@ -31,7 +31,7 @@ $a_t \sim WN(0, \sigma^2)$
 - **Stationary** <br>
 $X_t$ is stationary if its joint distribution does not change
 
-![](https://miro.medium.com/max/1419/1*tkx0_wwQ2JT7pSlTeg4yzg.png)
+![png](https://miro.medium.com/max/1419/1*tkx0_wwQ2JT7pSlTeg4yzg.png)[^1]
 
 - **Strictly Stationary time series** <br>
 $X_t$ is strictly stationary time series if <br>
@@ -50,3 +50,7 @@ $Cov(X_t, X_s) = Cov(X_{t+h}, X_{s+h})$ for all $t, s$ <br>
 ex) White noise is stationary <br>
 1) $E[a_t] = 0$ <br>
 2) $Cov[a_t, a_s] = Cov[a_{t+h}, a_{s+h}]$
+
+---
+
+[^1]: [https://towardsdatascience.com/stationarity-in-time-series-analysis-90c94f27322](https://towardsdatascience.com/stationarity-in-time-series-analysis-90c94f27322)
