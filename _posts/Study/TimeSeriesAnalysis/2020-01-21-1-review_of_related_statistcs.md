@@ -12,32 +12,31 @@ aside:
 
 ---
 
-# Time Series and Statistics Necessary
-## 1. Time Series
-### 1) **Time Series**
+# 1. Time Series
+## 1) **Time Series**
 A time series is a realization of a sequence (time step) of random variables <br>
 Time series $\approx$ a stochastic process of $X_1, X_2, \cdots, X_t, \cdots$ <br>
 
 
-## 2. White Noise
-### 1) **White noise**
+# 2. White Noise
+## 1) **White noise**
 A stochastic process $a_0, a_1, \cdots$ is white noise if <br>
 the noise is $iid$ random variables with mean $0$ and constant variance $\sigma^2$ <br>
 ex) $a_t \stackrel{iid}{\sim} N(0, \sigma^2)$
 
-### 2) **Notation**
+## 2) **Notation**
 $a_t \sim WN(0, \sigma^2)$
 
 
-## 3. Stationary time Series
+# 3. Stationary time Series
 실제로는 2개 이상인 변수에 대한 결합분포를 분석하기도 어렵기 때문에, 문제를 간단하게 하기 위해 stationary time signal이라 가정하고 분석하는 것으로 시작한다. <br>
 
-### 1) **Stationary**
+## 1) **Stationary**
 $X_t$ is stationary if its joint distribution does not change
 
 ![png](https://miro.medium.com/max/1419/1*tkx0_wwQ2JT7pSlTeg4yzg.png)[^1]
 
-- **Strictly Stationary time series** <br>
+### Strictly Stationary time series
 $X_t$ is strictly stationary time series if <br>
 for CDF $F_{t_1, \cdots, t_n}(x_1, \cdots, x_n) = P(X_{t_1} \leq x_1, \cdots, X_{t_n} \leq x_n)$, <br>
 $F_{t_1, \cdots, t_n}(x_1, \cdots, x_n) = F_{t_1+h, \cdots, t_n+h}(x_1, \cdots, x_n)$ for all $n$ and $h > 0$ <br>
@@ -45,7 +44,7 @@ $F_{t_1, \cdots, t_n}(x_1, \cdots, x_n) = F_{t_1+h, \cdots, t_n+h}(x_1, \cdots, 
 ex1) For $n=1, \ F_t(x) = P(X_t \leq x) = F_{t+h}(x)$ <br>
 ex2) For $n=2, \ Cov(X_t, X_s) = Cov(X_{t+h}, X_{s+h})$
 
-- **(Weakly) Stationary time series** <br>
+### (Weakly) Stationary time series
 Strictly stationary 조건은 실질적으로 사용하기 어렵기 때문에 일반적으로 조건이 완화된 weakly stationary 조건을 사용한다. <br>
 $X_t$ is weakly stationary time series if <br>
 1) $E[X_t]$ is constant, <br>
