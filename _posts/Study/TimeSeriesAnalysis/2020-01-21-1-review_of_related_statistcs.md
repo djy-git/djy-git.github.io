@@ -45,11 +45,11 @@ ex1) For $n=1, \ F_t(x) = P(X_t \leq x) = F_{t+h}(x)$ <br>
 ex2) For $n=2, \ Cov(X_t, X_s) = Cov(X_{t+h}, X_{s+h})$
 
 ### - (Weakly) Stationary time series
-Strictly stationary 조건은 실질적으로 사용하기 어렵기 때문에 일반적으로 조건이 완화된 weakly stationary 조건을 사용한다. <br>
+Strictly stationary 조건은 실질적으로 사용하기 어렵기 때문에 일반적으로 완화된 weakly stationary 조건을 사용한다. <br>
 $X_t$ is weakly stationary time series if <br>
 1) $E[X_t]$ is constant, <br>
 2) $Cov(X_t, X_s) = Cov(X_{t+h}, X_{s+h})$ for all $t, s$ <br>
-$Cov(X_t, X_{t+h})$ only depends on $h$ (not $t$) <br>
+&nbsp; $Cov(X_t, X_{t+h})$ only depends on $h$ (not $t$) <br>
 3) $Var(X_t) = Var(X_{t+h})$ <br>
 <br>
 - ex) White noise is stationary <br>
