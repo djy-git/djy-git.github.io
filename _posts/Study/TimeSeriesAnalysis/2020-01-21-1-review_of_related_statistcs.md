@@ -14,25 +14,25 @@ aside:
 
 # Time Series and Statistics Necessary
 ## 1. Time Series
-### 1) **Time Series** <br>
+### 1) **Time Series**
 A time series is a realization of a sequence (time step) of random variables <br>
 Time series $\approx$ a stochastic process of $X_1, X_2, \cdots, X_t, \cdots$ <br>
 
 
 ## 2. White Noise
-### 1) **White noise** <br>
+### 1) **White noise**
 A stochastic process $a_0, a_1, \cdots$ is white noise if <br>
 the noise is $iid$ random variables with mean $0$ and constant variance $\sigma^2$ <br>
 ex) $a_t \stackrel{iid}{\sim} N(0, \sigma^2)$
 
-### 2) **Notation** <br>
+### 2) **Notation**
 $a_t \sim WN(0, \sigma^2)$
 
 
 ## 3. Stationary time Series
 실제로는 2개 이상인 변수에 대한 결합분포를 분석하기도 어렵기 때문에, 문제를 간단하게 하기 위해 stationary time signal이라 가정하고 분석하는 것으로 시작한다. <br>
 
-### 1) **Stationary** <br>
+### 1) **Stationary**
 $X_t$ is stationary if its joint distribution does not change
 
 ![png](https://miro.medium.com/max/1419/1*tkx0_wwQ2JT7pSlTeg4yzg.png)[^1]
