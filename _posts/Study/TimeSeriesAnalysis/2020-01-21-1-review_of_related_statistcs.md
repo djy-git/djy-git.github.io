@@ -49,7 +49,7 @@ Strictly stationary 조건은 실질적으로 사용하기 어렵기 때문에 �
 $X_t$ is weakly stationary time series if <br>
 1) $E[X_t]$ is constant, <br>
 2) $Cov(X_t, X_s) = Cov(X_{t+h}, X_{s+h})$ for all $t, s$ <br>
-$Cov(X_t, X_s)$ only depends on $h$ (not $t$)
+$Cov(X_t, X_{t+h})$ only depends on $h$ (not $t$)
 3) $Var(X_t) = Var(X_{t+h})$ <br>
 <br>
 ex) White noise is stationary <br>
