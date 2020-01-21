@@ -62,8 +62,6 @@ Autocovariance function of $X$: $\gamma_X(h) = Cov(X_t, X_{t+h})$ <br>
 - $\gamma_X(h)$ only depends on $h$(*lag*)
 
 
-
-
 ---
 
 [^1]: https://towardsdatascience.com/stationarity-in-time-series-analysis-90c94f27322
