@@ -65,8 +65,6 @@ ex) `speech` dataset and ACF(AutoCovariance Function)
 ![](/images/2020-01-21-1-review_of_related_statistcs/1.png)
 ![](/images/2020-01-21-1-review_of_related_statistcs/2.png)
 
-
-
 ---
 
 [^1]: https://towardsdatascience.com/stationarity-in-time-series-analysis-90c94f27322
