@@ -61,6 +61,11 @@ ex) White noise is stationary <br>
 Autocovariance function of $X$: $\gamma_X(h) = Cov(X_t, X_{t+h})$ <br>
 - $\gamma_X(h)$ only depends on $h$(*lag*)
 
+ex) `speech` dataset and ACF(AutoCovariance Function)
+![](/images/2020-01-21-1-review_of_related_statistcs/1.png)
+![](/images/2020-01-21-1-review_of_related_statistcs/2.png)
+
+
 
 ---
 
