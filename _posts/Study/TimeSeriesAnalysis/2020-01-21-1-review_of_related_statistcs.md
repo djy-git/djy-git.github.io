@@ -1,6 +1,8 @@
 ---
 title: 1. Review of Related Statistics
 tags: Study_TimeSeriesAnalysis
+aside:
+  toc: true
 ---
 
 # Remarks
@@ -10,29 +12,30 @@ tags: Study_TimeSeriesAnalysis
 
 ---
 
-## Time Series and Statistics Necessary
-### 1. Time Series
-- **Time Series** <br>
+# Time Series and Statistics Necessary
+## 1. Time Series
+### 1) **Time Series** <br>
 A time series is a realization of a sequence (time step) of random variables <br>
 Time series $\approx$ a stochastic process of $X_1, X_2, \cdots, X_t, \cdots$ <br>
 
-### 2. White Noise
-- **White noise** <br>
+
+## 2. White Noise
+### 1) **White noise** <br>
 A stochastic process $a_0, a_1, \cdots$ is white noise if <br>
 the noise is $iid$ random variables with mean $0$ and constant variance $\sigma^2$ <br>
 ex) $a_t \stackrel{iid}{\sim} N(0, \sigma^2)$
 
-- **Notation** <br>
+### 2) **Notation** <br>
 $a_t \sim WN(0, \sigma^2)$
 
-### 3. Stationary time Series
+
+## 3. Stationary time Series
 실제로는 2개 이상인 변수에 대한 결합분포를 분석하기도 어렵기 때문에, 문제를 간단하게 하기 위해 stationary time signal이라 가정하고 분석하는 것으로 시작한다. <br>
 
-- **Stationary** <br>
+### 1) **Stationary** <br>
 $X_t$ is stationary if its joint distribution does not change
 
-![png](https://miro.medium.com/max/1419/1*tkx0_wwQ2JT7pSlTeg4yzg.png)
-[^1]
+![png](https://miro.medium.com/max/1419/1*tkx0_wwQ2JT7pSlTeg4yzg.png)[^1]
 
 - **Strictly Stationary time series** <br>
 $X_t$ is strictly stationary time series if <br>
@@ -42,17 +45,17 @@ $F_{t_1, \cdots, t_n}(x_1, \cdots, x_n) = F_{t_1+h, \cdots, t_n+h}(x_1, \cdots, 
 ex1) For $n=1, \ F_t(x) = P(X_t \leq x) = F_{t+h}(x)$ <br>
 ex2) For $n=2, \ Cov(X_t, X_s) = Cov(X_{t+h}, X_{s+h})$
 
-- **Weakly Stationary time series** <br>
-Strictly stationary 조건은 실질적으로 사용하기 어렵기 때문에 조건이 완화된 weakly stationary 조건을 사용할 수 있다. <br>
+- **(Weakly) Stationary time series** <br>
+Strictly stationary 조건은 실질적으로 사용하기 어렵기 때문에 일반적으로 조건이 완화된 weakly stationary 조건을 사용한다. <br>
 $X_t$ is weakly stationary time series if <br>
-$E[X_t]$ is constant, <br>
-$Cov(X_t, X_s) = Cov(X_{t+h}, X_{s+h})$ for all $t, s$ <br>
+1) $E[X_t]$ is constant, <br>
+2) $Cov(X_t, X_s) = Cov(X_{t+h}, X_{s+h})$ for all $t, s$ <br>
+3) $Var(X_t) = Var(X_{t+h})$ <br>
 <br>
 ex) White noise is stationary <br>
 1) $E[a_t] = 0$ <br>
-2) $Cov[a_t, a_s] = Cov[a_{t+h}, a_{s+h}]$
-
-
+2) $Cov[a_t, a_s] = Cov[a_{t+h}, a_{s+h}] = 0$ <br>
+3) $Var(a_t) = Var(a_{t+h})$
 
 ---
 
