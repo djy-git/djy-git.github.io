@@ -52,7 +52,7 @@ $X_t$ is weakly stationary time series if <br>
 &nbsp; $Cov(X_t, X_{t+h})$ only depends on $h$ (not $t$) <br>
 3) $Var(X_t) = Var(X_{t+h})$ <br>
 <br>
-- ex) White noise is stationary <br>
+ex) White noise is stationary <br>
 1) $E[a_t] = 0$ <br>
 2) $Cov(a_t, a_s) = Cov(a_{t+h}, a_{s+h}) = 0$ <br>
 3) $Var(a_t) = Var(a_{t+h})$
