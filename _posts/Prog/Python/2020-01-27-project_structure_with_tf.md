@@ -112,15 +112,7 @@ base_model
 │   ├── after-epoch-10.data-00000-of-00001
 │   ├── after-epoch-10.index
 │   ├── after-epoch-10.meta
-│   ├── after-epoch-6.data-00000-of-00001
-│   ├── after-epoch-6.index
-│   ├── after-epoch-6.meta
-│   ├── after-epoch-7.data-00000-of-00001
-│   ├── after-epoch-7.index
-│   ├── after-epoch-7.meta
-│   ├── after-epoch-8.data-00000-of-00001
-│   ├── after-epoch-8.index
-│   ├── after-epoch-8.meta
+│   ├── ...
 │   ├── after-epoch-9.data-00000-of-00001
 │   ├── after-epoch-9.index
 │   ├── after-epoch-9.meta
