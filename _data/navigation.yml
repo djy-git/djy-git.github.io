@@ -48,6 +48,22 @@ header:
       ko      : &KO       Github
       ko-KR   : *KO
     url: https://github.com/djy-git/djy-git.github.io
+  - titles:
+      en      : &EN       Goal
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  Goal
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  Goal
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       Goal
+      ko-KR   : *KO
+    url: https://djy-git.github.io/2019/12/30/goal.html
 
 docs-en:
   - title:      Programming
