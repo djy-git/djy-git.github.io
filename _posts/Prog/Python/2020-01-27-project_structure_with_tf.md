@@ -77,7 +77,7 @@ After executing `build_dataset.py`, the `output_dir` is as follows <br>
 ```
 
 
-## 2. Storing hyperparameters during experiments
+## 2. Train and store hyperparameters
 ### 1) Train your experiment
 
 ```sh
@@ -145,13 +145,108 @@ python search_hyperparams.py --data_dir data/64x64_SIGNS --parent_dir experiment
 <br>
 After executing `search_hyperparams.py`, `parent_dir` is as follows <br>
 
-```java
+```json
+learning_rate
+├── learning_rate_0.0001
+│   ├── best_weights
+│   │   ├── after-epoch-10.data-00000-of-00001
+│   │   ├── after-epoch-10.index
+│   │   ├── after-epoch-10.meta
+│   │   └── checkpoint
+│   ├── eval_summaries
+│   │   └── events.out.tfevents.1580110599.server
+│   ├── last_weights
+│   │   ├── after-epoch-10.data-00000-of-00001
+│   │   ├── after-epoch-10.index
+│   │   ├── after-epoch-10.meta
+│   │   ├── ...
+│   │   ├── after-epoch-9.data-00000-of-00001
+│   │   ├── after-epoch-9.index
+│   │   ├── after-epoch-9.meta
+│   │   └── checkpoint
+│   ├── metrics_eval_best_weights.json
+│   ├── metrics_eval_last_weights.json
+│   ├── params.json
+│   ├── train.log
+│   └── train_summaries
+│       └── events.out.tfevents.1580110599.server
+├── learning_rate_0.001
+│   ├── best_weights
+│   │   ├── after-epoch-6.data-00000-of-00001
+│   │   ├── after-epoch-6.index
+│   │   ├── after-epoch-6.meta
+│   │   └── checkpoint
+│   ├── eval_summaries
+│   │   └── events.out.tfevents.1580110622.server
+│   ├── last_weights
+│   │   ├── after-epoch-10.data-00000-of-00001
+│   │   ├── after-epoch-10.index
+│   │   ├── after-epoch-10.meta
+│   │   ├── ...
+│   │   ├── after-epoch-9.data-00000-of-00001
+│   │   ├── after-epoch-9.index
+│   │   ├── after-epoch-9.meta
+│   │   └── checkpoint
+│   ├── metrics_eval_best_weights.json
+│   ├── metrics_eval_last_weights.json
+│   ├── params.json
+│   ├── train.log
+│   └── train_summaries
+│       └── events.out.tfevents.1580110622.server
+├── learning_rate_0.01
+│   ├── best_weights
+│   │   ├── after-epoch-10.data-00000-of-00001
+│   │   ├── after-epoch-10.index
+│   │   ├── after-epoch-10.meta
+│   │   └── checkpoint
+│   ├── eval_summaries
+│   │   └── events.out.tfevents.1580110645.server
+│   ├── last_weights
+│   │   ├── after-epoch-10.data-00000-of-00001
+│   │   ├── after-epoch-10.index
+│   │   ├── after-epoch-10.meta
+│   │   ├── ...
+│   │   ├── after-epoch-9.data-00000-of-00001
+│   │   ├── after-epoch-9.index
+│   │   ├── after-epoch-9.meta
+│   │   └── checkpoint
+│   ├── metrics_eval_best_weights.json
+│   ├── metrics_eval_last_weights.json
+│   ├── params.json
+│   ├── train.log
+│   └── train_summaries
+│       └── events.out.tfevents.1580110645.server
+└── params.json
 
+15 directories, 79 files
 ```
 
 ### 3) Display the results
+```sh
+python synthesize_results.py --parent_dir experiments/learning_rate
+
+|                                                |   accuracy |     loss |
+|:-----------------------------------------------|-----------:|---------:|
+| experiments/learning_rate/learning_rate_0.01   |   0.930556 | 0.195321 |
+| experiments/learning_rate/learning_rate_0.0001 |   0.893519 | 0.390281 |
+| experiments/learning_rate/learning_rate_0.001  |   0.953704 | 0.174108 |
+
+```
+
+Print `accuracy` and `loss` for different values of a hyperparameter
+
+### 4) Evaluation on the test set
+```sh
+python evaluate.py --data_dir data/64x64_SIGNS --model_dir experiments/base_model
+```
+
+We can get the final accuracy and loss on the test set
 
 
 ---
-===
-===
+
+여기까지 내용은 `Tensorflow 1.15` 로 구현된 코드이고, Eager Execution이 기본이 된 `Tensorflow 2`에서는 `tf.data`라는 API가 복잡한 input pipeline을 간단하고 재활용 가능하게 만들어준다. <br>
+<br>
+`tf.data` pipeline에 대한 introduction
+- [programmer's guide](https://www.tensorflow.org/programmers_guide/datasets)
+- [reading images](https://www.tensorflow.org/programmers_guide/datasets#decoding_image_data_and_resizing_it)
