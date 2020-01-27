@@ -84,7 +84,7 @@ After executing `build_dataset.py`, the `output_dir` is as follows <br>
 python train.py --data_dir data/64x64_SIGNS --model_dir experiments/base_model
 ```
 
-For experiments, store the hyperparameters in the `experiments` directory with `*.json` format. <br>
+For experiments, store the hyperparameters with `*.json` format and other log files and weights in the `experiments` directory. <br>
 `params.json` is as follows <br>
 
 ```json
@@ -96,7 +96,6 @@ For experiments, store the hyperparameters in the `experiments` directory with `
 }
 ```
 
-And store other log files and weights in the same directory. <br>
 <br>
 After executing `train.py`, the `model_dir` is as follows <br>
 
@@ -241,7 +240,6 @@ python evaluate.py --data_dir data/64x64_SIGNS --model_dir experiments/base_mode
 ```
 
 We can get the final accuracy and loss on the test set
-
 
 ---
 
