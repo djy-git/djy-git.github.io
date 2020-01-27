@@ -238,7 +238,8 @@ We can get the final accuracy and loss on the test set
 ---
 
 여기까지 내용은 `Tensorflow 1.15` 로 구현된 코드를 기반으로 작성되었습니다. <br>
-이제는 Eager Execution이 기본이 된 `Tensorflow 2`를 stable version으로 사용하고 있는데, `tf.data`라는 API가 복잡한 input pipeline을 간단하고 재사용 가능하게 만들어주는 역할을 하고 있습니다. 익숙하지 않기 때문에 배우는 것이 쉽지 않겠지만 실무 현장에서 개발을 하기 이전에 반드시 숙지하고 있어야 하겠습니다. <br>
+이제는 Eager Execution이 기본이 된 `Tensorflow 2`를 stable version으로 사용하고 있는데, `tf.data`라는 API가 복잡한 input pipeline을 간단하고 재사용 가능하게 만들어주는 역할을 하고 있습니다. <br>
+익숙하지 않기 때문에 배우는 것이 쉽지 않겠지만 구조화된 프로젝트를 위해 실무 현장에서 개발을 하기 이전에 반드시 숙지하고 있어야 하겠습니다. <br>
 <br>
 `tf.data` pipeline에 대한 introduction
 - [programmer's guide](https://www.tensorflow.org/programmers_guide/datasets)
