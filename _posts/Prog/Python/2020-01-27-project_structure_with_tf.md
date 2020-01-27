@@ -161,6 +161,7 @@ learning_rate
 │   ├── train.log
 │   └── train_summaries
 │       └── events.out.tfevents.1580110599.server
+│
 ├── learning_rate_0.001
 │   ├── best_weights
 │   │   ├── after-epoch-6.data-00000-of-00001
@@ -184,6 +185,7 @@ learning_rate
 │   ├── train.log
 │   └── train_summaries
 │       └── events.out.tfevents.1580110622.server
+│
 ├── learning_rate_0.01
 │   ├── best_weights
 │   │   ├── after-epoch-10.data-00000-of-00001
