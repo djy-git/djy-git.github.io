@@ -10,11 +10,42 @@ tags: Python
 
 ---
 
-└─
-┗━
+# I. Directory structure
 
-# 1. Directory structure
+```java
+.
+├── build_dataset.py            : resize the images
+├── data
+│   └── signs_dataset
+│       ├── test_signs
+│       │   ├── test_0001.jpg
+│       │   ├── ...
+│       │   └── test_0120.jpg
+│       └── train_signs
+│           ├── train_0001.jpg
+│           ├── ...
+│           └── train_1080.jpg
+├── evaluate.py
+├── experiments
+│   ├── base_model
+│   │   └── params.json
+│   └── learning_rate
+│       └── params.json
+├── model
+│   ├── evaluation.py
+│   ├── __init__.py
+│   ├── input_fn.py
+│   ├── model_fn.py
+│   ├── training.py
+│   └── utils.py
+├── README.md
+├── requirements.txt            : python modules dependency requirement
+├── search_hyperparams.py
+├── synthesize_results.py
+└── train.py
 
-    .
-    +-- _config.yml
-    +-- _drafts
+8 directories, 1215 files
+```
+
+# II. Files
+## 1. `build_dataset.py`
