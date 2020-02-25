@@ -14,7 +14,7 @@ tags: Python
     $ conda create -n {ENV_NAME} --clone {base}
 
     // Remove environment
-    $ conda env remove --name {ENV_NAME}
+    $ conda env remove -n {ENV_NAME}
 
 ## 2. Add / Remove kernel to jupyter notebook
 
