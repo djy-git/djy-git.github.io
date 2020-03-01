@@ -10,7 +10,7 @@ tags: ML_prog
 사용법은 간단합니다. <br>
 사용하고자 하는 callback들을 생성하고 list에 담아 `.fit()`의 `callbacks` argument에 넘겨주면 됩니다. <br>
 
-몇 가지 callback을 사용한 예제 코드입니다. <br>
+다음은 몇 가지 callback을 사용한 예제 코드입니다. <br>
 
 
 ```python
