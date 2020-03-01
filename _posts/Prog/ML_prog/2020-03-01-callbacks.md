@@ -30,7 +30,8 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 
 # 3. Generate callbacks
 callbacks = [
-    ModelCheckpoint('{CKPT_DIR}/epoch: {epoch:03d}, val_loss: {val_loss:.4f}.hdf5', monitor='val_loss', save_best_only=False),
+    ModelCheckpoint('{CKPT_DIR}/epoch: {epoch:03d}, val_loss: {val_loss:.4f}.hdf5',
+                    monitor='val_loss', save_best_only=False),
     CSVLogger('{CSV_DIR}/log.csv'),
     EarlyStopping(monitor='val_loss', patience=EARLY_STOPPING_PATIENCE, restore_best_weights=True, verbose=1),
     ReduceLROnPlateau(monitor='val_loss', factor=LR_REDUCE_FACTOR, patience=LR_REDUCE_PATIENCE, verbose=1),
