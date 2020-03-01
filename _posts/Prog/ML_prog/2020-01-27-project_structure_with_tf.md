@@ -15,15 +15,15 @@ aside:
 
 ```java
 ROOT_DIR
+├── env.py
+├── utils.py
+├── logger.py
+├── main.py
 ├── data
 │   └── original
 │       ├── sample_submission.csv
 │       ├── test.csv
 │       └── train.csv
-├── env.py
-├── utils.py
-├── logger.py
-├── main.py
 ├── models
 │   ├── NN
 │   │   ├── network.py
@@ -57,10 +57,7 @@ ROOT_DIR
 ```
 
 # 2. Description
-- `data`
-Directory which store train, test data and any other data.
-<br>
-
+## 2.1. `ROOT_DIR` directory
 - `env.py`
 Python script where general packages, constants, variables, settings are declared. <br>
 `env.py` includes importing `utils.py`
@@ -82,3 +79,16 @@ Python script where `Logger` class besides. `Logger` records all train, validati
 
 - `main.py`
 Python script where final evaluation takes place. Here, trained models are loaded and evaluated using test data.
+<br>
+
+## 2.2. `data` directory
+`data` stores train, test data and any other data.
+<br>
+
+## 2.3. `models` directory
+Directory where training models place. Each model has `train.py`, `tuning.py`, `processor.py`. <br>
+Neural Network(NN) model has `network.py` which defines network and other related functions.
+<br>
+
+- `models/MODEL/processor.py`
+Python script
