@@ -8,7 +8,7 @@ tags: ML_prog
 이때 학습을 하면서 `tensorboard`를 위한 log 파일을 생성한다던지 early stopping, learning schedule 등의 부가 기능들을 모듈별로 구현해놓은 것이 `Callbacks` package 입니다. 물론 자신만의 callback을 생성할 수도 있습니다.<br>
 
 사용법은 간단합니다. <br>
-사용하고자 하는 `Callbacks`들을 생성하고 list에 담아 `.fit()`의 `callbacks` argument에 넘겨주기만 하면됩니다. <br>
+사용하고자 하는 callback들을 생성하고 list에 담아 `.fit()`의 `callbacks` argument에 넘겨주면 됩니다. <br>
 
 몇 가지 callback을 사용한 예제 코드입니다. <br>
 
