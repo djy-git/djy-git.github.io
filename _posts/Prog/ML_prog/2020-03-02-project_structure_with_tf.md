@@ -60,8 +60,7 @@ ROOT_DIR
 ## 2.1. 'ROOT_DIR' directory
 ### `env.py`
 Python script where global(general) packages, constants, variables, settings are declared. <br>
-`env.py` includes importing `utils.py`
-Other python script files import `env.py` in first with
+`env.py` includes importing `utils.py`. Other python script files import `env.py` in first with
 ```
 import sys
 sys.path.append(ROOT_DIR)
