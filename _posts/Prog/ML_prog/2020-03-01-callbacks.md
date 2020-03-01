@@ -3,7 +3,7 @@ title: Callbacks
 tags: ML_prog
 ---
 
-`tensorflow2`로 넘어오면서 `tensorflow.keras.models`의 `Sequential` 등의 class를 사용하여 모델을 생성하는 것이 기본이 되었습니다. 이런 모델들을 학습하기 위해서 간단히 `.fit()`, `.fit_generator()` 와 같은 함수를 사용합니다. <br>
+`tensorflow2`로 넘어오면서 `tensorflow.keras.models`의 `Sequential` 등의 class를 사용하여 모델을 생성하는 것이 기본이 되었습니다. 이런 모델들을 학습하기 위해서 간단히 `.fit()`, `.fit_generator()` 와 같은 함수를 사용하는데요. <br>
 
 이때 학습을 하면서 `tensorboard`를 위한 log 파일을 생성한다던지 early stopping, learning schedule 등의 부가 기능들을 모듈별로 구현해놓은 것이 `Callbacks` package 입니다. 물론 자신만의 Callback을 생성할 수도 있습니다.<br>
 
