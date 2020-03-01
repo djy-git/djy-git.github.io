@@ -1,7 +1,7 @@
 ---
 layout: article
 title: NVIDIA Graphic Driver, CUDA, Tensorflow-gpu 설치
-tags: Python
+tags: ML_prog
 sidebar:
   nav: docs-en
 ---
