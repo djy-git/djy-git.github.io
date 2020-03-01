@@ -85,7 +85,7 @@ Directory which stores train, test data and any other data.
 
 ## 2.3. 'models' directory
 Directory where training models place. Each model has `train.py`, `tuning.py`, `processor.py`. <br>
-Neural Network(NN) model has `network.py` which defines network and other related functions.
+Neural Network(NN) model has `network.py` in addition which defines network and other related functions.
 
 ### `models/MODEL/processor.py`
 Python script where (pre)processing pipelines and functions for `MODEL` reside.
