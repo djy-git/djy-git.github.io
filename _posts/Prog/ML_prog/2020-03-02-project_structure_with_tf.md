@@ -13,7 +13,7 @@ aside:
 
 # 1. Structure
 
-```java
+```
 ROOT_DIR
 ├── env.py
 ├── utils.py
