@@ -13,7 +13,6 @@ tags: ML_prog
 몇 가지 callback을 사용한 예제 코드입니다. <br>
 
 
-
 ```python
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation
