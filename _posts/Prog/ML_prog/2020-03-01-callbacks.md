@@ -16,7 +16,8 @@ tags: ML_prog
 ```python
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation
-from tensorflow.keras.callbacks import Callback, ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, CSVLogger, TensorBoard
+from tensorflow.keras.callbacks import Callback
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, CSVLogger, TensorBoard
 import matplotlib.pyplot as plt
 
 
@@ -45,8 +46,10 @@ def generate_callbacks():
     best_ckpt = ModelCheckpoint('{CKPT_DIR}/epoch: {epoch:03d}, val_loss: {val_loss:.4f}.hdf5',
                                 monitor='val_loss', save_best_only=False)
     csv_logger = CSVLogger(f'{CSV_DIR}/log.csv')
-    early_stopping = EarlyStopping(monitor='val_loss', patience=EARLY_STOPPING_PATIENCE, restore_best_weights=True, verbose=1)
-    lr_scheduler = ReduceLROnPlateau(monitor='val_loss', factor=LR_REDUCE_FACTOR, patience=LR_REDUCE_PATIENCE, verbose=1)
+    early_stopping = EarlyStopping(monitor='val_loss', patience=EARLY_STOPPING_PATIENCE,
+                                   restore_best_weights=True, verbose=1)
+    lr_scheduler = ReduceLROnPlateau(monitor='val_loss', factor=LR_REDUCE_FACTOR,
+                                     patience=LR_REDUCE_PATIENCE, verbose=1)
     tensorboard = TensorBoard(log_dir=TENSORBOARD_LOG_DIR, write_graph=True, write_images=True)
     loss_plot = LossPlot(PLOT_PATH)
     return [best_ckpt, csv_logger, early_stopping, lr_scheduler, tensorboard, loss_plot]
