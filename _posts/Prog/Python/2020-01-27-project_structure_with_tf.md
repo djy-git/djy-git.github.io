@@ -1,6 +1,6 @@
 ---
 title: Project structure with Tensorflow
-tags: Python
+tags: ML_prog
 aside:
   toc: true
 ---

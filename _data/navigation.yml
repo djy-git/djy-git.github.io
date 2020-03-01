@@ -68,6 +68,8 @@ header:
 docs-en:
   - title:      Programming
     children:
+      - title:  Machine learning
+        url: /archive.html?tag=ML_prog
       - title:  Python
         url: /archive.html?tag=Python
       - title:  R
