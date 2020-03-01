@@ -20,7 +20,7 @@ from tensorflow.keras.callbacks import Callback, ModelCheckpoint, EarlyStopping,
 import matplotlib.pyplot as plt
 
 
-class PlotLoss(Callback):
+class LossPlot(Callback):
     def __init__(self, PLOT_PATH):
         self.PLOT_PATH = PLOT_PATH
     def on_train_begin(self, logs={}):
