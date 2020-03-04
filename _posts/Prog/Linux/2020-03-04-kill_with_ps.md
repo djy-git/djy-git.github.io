@@ -30,6 +30,8 @@ Process를 실행시킨 user의 정보를 함께 출력하기 위해서는 `-u` 
 $ ps -u
 ```
 
+1234
+
 그밖의 다양한 option들에 대한 정보는 `--help` 혹은 `man ps`에서 확인하실 수 있습니다.
 ```
 $ ps --help all
