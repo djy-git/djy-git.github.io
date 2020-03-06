@@ -10,8 +10,14 @@ tags: Python
     // Update all packages in {base}
     (base) $ conda update conda
 
-    // Create enviornment clonning base
+    // Create environment clonning base
     $ conda create -n {ENV_NAME} --clone {base}
+
+    // Create environment with initial state
+    $ conda create -n {ENV_NAME} anaconda
+
+    // Create environment specified python version
+    $ conda create -n {ENV_NAME} python=3.7
 
     // Remove environment
     $ conda env remove -n {ENV_NAME}
