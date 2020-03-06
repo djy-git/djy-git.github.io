@@ -19,7 +19,7 @@
   }
   & > .previous {
     float: left;
-    padding-right: map-get($spacers, 2);
+    padding-right: map-get($spacers, 5);  // 2
   }
   & > .next {
     float: right;
