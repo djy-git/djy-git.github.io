@@ -130,3 +130,6 @@ docs-en:
         url: /archive.html?tag=Job
       - title:  Etc
         url: /archive.html?tag=Etc
+      - title:  Stock
+        url: /archive.html?tag=Stock
+        
