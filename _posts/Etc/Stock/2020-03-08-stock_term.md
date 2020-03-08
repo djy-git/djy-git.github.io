@@ -1,6 +1,6 @@
 ---
-title: Stock basic terminology
-tags: Stock
+title: Finance basic terminology
+tags: Finance
 aside:
   toc: true
 ---
