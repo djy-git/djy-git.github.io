@@ -118,6 +118,8 @@ docs-en:
         url: /archive.html?tag=Papers_finance
   - title:      Etc
     children:
+      - title:  Finance
+        url: /archive.html?tag=Finance
       - title:  Diary
         url: /archive.html?tag=Diary
       - title:  Markdown / Latex
@@ -130,5 +132,3 @@ docs-en:
         url: /archive.html?tag=Job
       - title:  Etc
         url: /archive.html?tag=Etc
-      - title:  Finance
-        url: /archive.html?tag=Finance
