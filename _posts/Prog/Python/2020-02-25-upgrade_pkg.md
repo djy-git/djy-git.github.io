@@ -52,3 +52,4 @@ tags: Python
 ## 6. Upgrade selected package
 
     $ pip install --upgrade {PKG_NAME}
+    $ conda update {PKG_NAME}
