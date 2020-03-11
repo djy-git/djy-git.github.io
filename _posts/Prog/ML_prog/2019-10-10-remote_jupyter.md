@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Access remote jupyter-notebook
-tags: ML_prog
+tags: Prog_ML
 sidebar:
   nav: docs-en
 ---

@@ -69,7 +69,7 @@ docs-en:
   - title:      Programming
     children:
       - title:  Machine learning
-        url: /archive.html?tag=ML_prog
+        url: /archive.html?tag=Prog_ML
       - title:  Python
         url: /archive.html?tag=Python
       - title:  R
@@ -78,6 +78,8 @@ docs-en:
         url: /archive.html?tag=C/C++
       - title:  Visualization
         url: /archive.html?tag=Visualization
+      - title:  Finance
+        url: /archive.html?tag=Prog_Finance
       - title:  Linux
         url: /archive.html?tag=Linux
       - title:  Docker

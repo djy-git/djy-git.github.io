@@ -1,6 +1,6 @@
 ---
 title: Machine learning project structure
-tags: ML_prog
+tags: Prog_ML
 aside:
   toc: true
 ---

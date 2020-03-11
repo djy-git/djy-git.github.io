@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Tensorboard using remote server
-tags: ML_prog
+tags: Prog_ML
 sidebar:
   nav: docs-en
 ---
