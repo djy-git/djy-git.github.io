@@ -14,7 +14,7 @@ tags: Prog_Finance
 변동성은 시간에 따라 일정하게 유지되지 않고, 변동성이 높게 유지되는 구간과 변동성이 낮게 유지되는 구간이 존재하여 cluster를 이루는 현상을 말한다. 확률적으로 검증된 현상이라고 한다.
 
 ### Leverage Effect(레버리지 효과)
-Leverage effect란 차입금 등의 타인의 자본을 지렛대처럼 이용하여 자신의 수익률을 높이는 것으로 지렛대 효과라고도 한다.
+Leverage effect란 차입금 등의 타인의 자본을 지렛대처럼 이용하여 자신의 수익률을 높이는 것으로 지렛대 효과라고도 한다. ([https://1boon.kakao.com/zigbang/5ddcc4b6bcd34944b2b9a3d6](https://1boon.kakao.com/zigbang/5ddcc4b6bcd34944b2b9a3d6) 참고)
 
 
 다음의 예제는 독일 DAX 지수의 종가를 분석하여 volatility(로그 수익률의 표준편차)가 cluster를 이루는 것을 확인하고 시장과 volatility가 음의 상관관계를 가지는 것을 통해 레버리지 효과 가설을 확인한다(?).
