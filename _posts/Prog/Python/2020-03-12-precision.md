@@ -5,8 +5,10 @@ tags: Python
 
 <!--more-->
 
-내장함수 `Decimal()`을 사용하면 임의의 precision으로 숫자를 표현할 수 있다.  
+Python의 `float` type은 double precision이다.   
+내장함수 `Decimal()`을 사용하면 임의의 precision으로 분수의 형태로 숫자를 표현할 수 있다.  
 
+[https://stackoverflow.com/questions/6663272/double-precision-floating-values-in-python](https://stackoverflow.com/questions/6663272/double-precision-floating-values-in-python) 참조
 
 ```python
 import decimal
