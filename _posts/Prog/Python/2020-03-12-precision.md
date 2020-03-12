@@ -5,10 +5,14 @@ tags: Python
 
 <!--more-->
 
-Python의 `float` type은 double precision이다.   
+Python의 `int` type은 4Bytes로 $-2^{31} \sim 2^{31} - 1$ 의 범위의 정수형 자료를 나타낸다.  
+조금 더 넓은 범위의 수를 나타내는 데에는 `long` type을 사용하는데 타 언어와 달리 Python의 `long` type은 표현할 수 있는 범위가 무한대이다. 물론 그만큼 더 많은 개수의 bit가 필요하다.
+
+Python의 `float` type은 double precision이다.  
 내장함수 `Decimal()`을 사용하면 임의의 precision으로 분수의 형태로 숫자를 표현할 수 있다.  
 
 [https://stackoverflow.com/questions/6663272/double-precision-floating-values-in-python](https://stackoverflow.com/questions/6663272/double-precision-floating-values-in-python) 참조
+
 
 ```python
 import decimal
