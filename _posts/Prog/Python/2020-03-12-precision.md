@@ -5,6 +5,8 @@ tags: Python
 
 <!--more-->
 
+내장함수 `Decimal()`을 사용하면 임의의 precision으로 숫자를 표현할 수 있다.  
+
 
 ```python
 import decimal
