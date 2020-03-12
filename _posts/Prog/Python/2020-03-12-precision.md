@@ -1,0 +1,38 @@
+---
+title: Handling precision in Python
+tags: Python
+---
+
+<!--more-->
+
+
+```python
+import decimal
+from decimal import Decimal
+
+decimal.getcontext()
+```
+
+```
+Context(prec=28, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999, capitals=1, clamp=0, flags=[], traps=[InvalidOperation, DivisionByZero, Overflow])
+```
+
+
+```python
+a = Decimal(1) / Decimal(9);  print(f"prec({decimal.getcontext().prec}): {a}")
+
+decimal.getcontext().prec = 10
+b = Decimal(1) / Decimal(9);  print(f"prec({decimal.getcontext().prec}): {b}")
+
+decimal.getcontext().prec = 40
+c = Decimal(1) / Decimal(9);  print(f"prec({decimal.getcontext().prec}): {c}")
+
+d = a + b + c;  print("Sum     :", d)
+```
+
+```
+prec(28): 0.1111111111111111111111111111
+prec(10): 0.1111111111
+prec(40): 0.1111111111111111111111111111111111111111
+Sum     : 0.3333333333222222222222222222111111111111
+```
