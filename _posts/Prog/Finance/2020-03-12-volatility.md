@@ -17,7 +17,7 @@ tags: Prog_Finance
 Leverage effect란 차입금 등의 타인의 자본을 지렛대처럼 이용하여 자신의 수익률을 높이는 것으로 지렛대 효과라고도 한다.
 
 
-다음의 예제는 독일 DAX 지수의 종가를 분석하여 volatility(로그 수익률의 표준편차)가 cluster를 이루는 것을 확인하고 시장과 volatility가 음의 상관관계를 가지는 것을 통해 레버리지 효과 가설을 확인한다.
+다음의 예제는 독일 DAX 지수의 종가를 분석하여 volatility(로그 수익률의 표준편차)가 cluster를 이루는 것을 확인하고 시장과 volatility가 음의 상관관계를 가지는 것을 통해 레버리지 효과 가설을 확인한다(?).
 
 
 ```python
