@@ -1,5 +1,5 @@
 ---
-title: 마법공식(Joel Greenblatt, 주식시장을 이기는 작은책)
+title: 마법공식(Joel Greenblatt)
 tags: Finance
 aside:
   toc: true
