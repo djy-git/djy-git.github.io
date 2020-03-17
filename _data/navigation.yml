@@ -104,8 +104,8 @@ docs-en:
     children:
       - title:  Time Series Analysis
         url: /archive.html?tag=Study_TimeSeriesAnalysis
-      - title:  Bigdata Computing
-        url: /archive.html?tag=Study_BigdataComputing
+      - title:  Big Data Computing
+        url: /archive.html?tag=Study_BigDataComputing
   - title:      Projects
     children:
       - title:  Kaggle
