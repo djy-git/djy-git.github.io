@@ -106,6 +106,9 @@ docs-en:
         url: /archive.html?tag=Study_TimeSeriesAnalysis
       - title:  Big Data Computing
         url: /archive.html?tag=Study_BigDataComputing
+      - title:  Optimal Control Theory
+        url: /archive.html?tag=Study_OptimalControlTheory
+
   - title:      Projects
     children:
       - title:  Kaggle
