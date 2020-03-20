@@ -125,7 +125,7 @@ TODO
 - 유가증권시장본부  
 대형기업들과 채권 그리고 [EFT](https://djy-git.github.io/2020/03/08/terminology.html#etfexchange-traded-funds), [ETN](https://djy-git.github.io/2020/03/08/terminology.html#etnexchange-traded-notes) 등이 상장되어 있는 유가증권시장 운영을 위한 업무를 수행한다.
 - 코스닥시장본부  
-IT, BT 등 유망 벤처 중소기업에게 자금조달 기회를 제공하는 [코스닥시장]()과, 성장초기 단계에 있는 중소기업을 위한 전용 주식시장인 [코넥스시장]()을 관리한다.
+IT, BT 등 유망 벤처 중소기업에게 자금조달 기회를 제공하는 [코스닥시장](https://djy-git.github.io/2020/03/08/terminology.html#kosdaqkorea-securities-dealers-automated-quotation-%EC%BD%94%EC%8A%A4%EB%8B%A5)과, 성장초기 단계에 있는 중소기업을 위한 전용 주식시장인 [코넥스시장]()을 관리한다.
 - 파생상품시장본부  
 주가지수, 금리, 통화, 개별주식 및 일반상품을 기초자산으로 하는 선물 및 옵션 등을 거래하는 파생상품시장을 운영한다.
 
