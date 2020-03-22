@@ -1,5 +1,5 @@
 ---
-title: 마법공식(Joel Greenblatt, 주식시장을 이기는 작은책)
+title: 마법공식(Joel Greenblatt)
 tags: Finance
 aside:
   toc: true
@@ -39,7 +39,7 @@ $ROC = \frac{EBIT}{투입유형자본} = \frac{EBIT}{순운전자본 + 순고정
 일반적으로 EBIT는 우리나라 회계기준에서는 명확히 정의할 수 없는 다분히 미국적 회계기준에 준한 계정(計定)이다.  
 EBIT = Net Sales - Operating Expenses  
 (Capital costs를 포함하지 않은 일반적인 측정방법)
-{:.succss}
+{:.success}
 
 EBIT는 손익계산서상의 **영업이익(일반적으로 매출이익에서 판매 및 일반관리비를 차감한 것)**에서 **비영업활동으로 인한 손익**을 차감하고 **영업외손익**과 **특별손익** 중 **영업활동**으로 인해 발생한 손익의 **이자 및 세전이익**을 산출한 금액이다.  
 
