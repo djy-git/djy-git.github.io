@@ -3,6 +3,8 @@ title: Noise reduction
 tags: Etc
 ---
 
+<!--more-->
+
 ## 1. Audacity를 사용한 noise reduction 음성 파일 생성
 1. [Audacity](https://www.audacityteam.org/download/) 다운로드
 2. 만약 AAC 코덱을 사용하는 경우,  
