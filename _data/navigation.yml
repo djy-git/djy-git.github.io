@@ -104,6 +104,9 @@ docs-en:
     children:
       - title:  Time Series Analysis
         url: /archive.html?tag=Study_TimeSeriesAnalysis
+    children:
+      - title:  Investments
+        url: /archive.html?tag=Study_Investments
   - title:      Projects
     children:
       - title:  Kaggle
