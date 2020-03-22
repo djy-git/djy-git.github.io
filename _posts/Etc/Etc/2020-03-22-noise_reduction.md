@@ -8,7 +8,8 @@ tags: Etc
 ## 1. Audacity를 사용한 noise reduction 음성 파일 생성
 1. [Audacity](https://www.audacityteam.org/download/) 다운로드
 2. 만약 AAC 코덱을 사용하는 경우,  
-2.1. Audacity 실행 후 **Ctrl + P**로 `환경설정` 창을 띄우고 `라이브러리` 항목에서 `FFmpeg 라이브러리: 다운로드`를 눌러 다운로드 (Windows의 경우 다음 링크로 다운받을 수 있다. [FFmpeg library](https://lame.buanzo.org/ffmpeg-win-2.2.2.exe))  
+2.1. Audacity 실행 후 **Ctrl + P**로 `환경설정` 창을 띄우고 `라이브러리` 항목에서 `FFmpeg 라이브러리: 다운로드`를 눌러  
+다운로드 (Windows의 경우 다음 링크로 다운받을 수 있다. [FFmpeg library](https://lame.buanzo.org/ffmpeg-win-2.2.2.exe))  
 2.2. 기본 설정된 위치에 설치하면 자동으로 라이브러리를 잡아내기 때문에 `확인`을 눌러 `환경설정` 창에서 나온다.
 3. 노이즈가 포함된 음성파일 혹은 영상파일을 drag & drop하여 빈 창에 올려놓는다.
 4. 노이즈만 포함된 영역을 drag하여 선택한다.
