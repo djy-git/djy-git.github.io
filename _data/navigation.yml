@@ -110,7 +110,6 @@ docs-en:
     children:
       - title:  Investments
         url: /archive.html?tag=Study_Investments
-
   - title:      Projects
     children:
       - title:  Kaggle
