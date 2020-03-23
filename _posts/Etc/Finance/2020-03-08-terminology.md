@@ -161,6 +161,8 @@ Call option: 회사가 채권을 강제로 회수할 수 있는 옵션이다.
 
 옵션의 이론적인 가격을 산출하는 모형을 옵션가격결정모형(OPM, Option Pricing Model)이라고 하며 여러가지 모형들이 존재한다.
 - [Black-Scholes model(블랙-숄즈 모형)]()
+- 확실성 모형
+- 이항분포 모형
 
 
 ### Black-Scholes model(블랙-숄즈 혹은 블랙-숄즈-머튼 모형)
