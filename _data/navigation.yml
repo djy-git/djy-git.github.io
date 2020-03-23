@@ -104,10 +104,8 @@ docs-en:
     children:
       - title:  Time Series Analysis
         url: /archive.html?tag=Study_TimeSeriesAnalysis
-    children:
       - title:  Big Data Computing
         url: /archive.html?tag=Study_BigDataComputing
-    children:
       - title:  Investments
         url: /archive.html?tag=Study_Investments
   - title:      Projects
