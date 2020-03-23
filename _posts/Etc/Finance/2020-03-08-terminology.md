@@ -120,6 +120,9 @@ Call option: 회사가 채권을 강제로 회수할 수 있는 옵션이다.
 - **풋 옵션(put option)**
 만기일이나 만기일 이전에 특정 금융 상품을 정해진 가격에 매도할 수 있는 권리
 
+![](https://img.hankyung.com/photo/201605/01.11712515.1.jpg)
+https://www.hankyung.com/society/article/2016052079911
+
 [콜 옵션 / 풋 옵션 매도/매수 예제](https://ko.wikipedia.org/w/index.php?title=%EC%98%B5%EC%85%98_(%EA%B8%88%EC%9C%B5)&action=edit&section=1#%EA%B0%9C%EB%85%90)
 
 옵션 행사 방식에 따라 다음과 같이 분류된다.
