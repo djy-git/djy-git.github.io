@@ -38,7 +38,11 @@ aside:
 Observer pattern에서는 subject와 observer가 느슨하게 결합되어 있는 객체 디자인을 제공한다.
 {:.success}
 
+- **느슨한 결합(loose coupling)**: 상호작용을 하긴 하지만 서로에 대해 서로 잘 모른다는 것을 의미한다.  
+Subject가 observer에 대해 아는 것은 observer가 특정 interface(observer interface)를 구현한다는 것뿐이다.
+
 ## 디자인 원칙 4
 **서로 상호작용을 하는 객체 사이에서는 가능하면 느슨하게 결합하는 디자인을 사용해야 한다.**  
-- **느슨한 결합(loose coupling)**: 상호작용을 하긴 하지만 서로에 대해 서로 잘 모른다는 것을 의미한다.
+그러면 변경 사항이 생겨도 유연하게 처리할 수 있는 객체지향 시스템을 구축할 수 있다. 객체 사이의 상호의존성을 최소화하기 때문.
+
 
