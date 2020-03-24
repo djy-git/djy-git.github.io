@@ -76,6 +76,10 @@ docs-en:
         url: /archive.html?tag=R
       - title:  C/C++
         url: /archive.html?tag=C/C++
+      - title:  Design Patterns
+        url: /archive.html?tag=DesignPatterns
+      - title:  Machine learning
+        url: /archive.html?tag=Prog_ML
       - title:  Visualization
         url: /archive.html?tag=Visualization
       - title:  Finance
