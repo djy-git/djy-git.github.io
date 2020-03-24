@@ -34,6 +34,11 @@ aside:
 
 # 디자인 패턴 2: Observer Pattern
 **Observer Pattern**  
-한 객체의 상태가 바뀌면 그 객체에 의존하는 다른 객체들에게 연락이 가고 자동으로 내용이 갱신되는 방식으로 one-to-many 의존성을 정의한다.
+한 객체(subject)의 상태가 바뀌면 그 객체에 의존하는 다른 객체들(observer)에게 연락이 가고 자동으로 내용이 갱신되는 방식으로 one-to-many 의존성을 정의한다.  
+Observer pattern에서는 subject와 observer가 느슨하게 결합되어 있는 객체 디자인을 제공한다.
 {:.success}
+
+## 디자인 원칙 4
+**서로 상호작용을 하는 객체 사이에서는 가능하면 느슨하게 결합하는 디자인을 사용해야 한다.**  
+- **느슨한 결합(loose coupling)**: 상호작용을 하긴 하지만 서로에 대해 서로 잘 모른다는 것을 의미한다.
 
