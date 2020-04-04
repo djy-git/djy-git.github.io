@@ -28,7 +28,7 @@ tags: Python
     $ pip install ipykernel
 
     // Add kernel
-    $ python -m ipykernel install --user --name {ENV_NAME} --display-nem "{DISPLAY_NAME}"
+    $ python -m ipykernel install --user --name {ENV_NAME} --display-name "{DISPLAY_NAME}"
 
     // Remove kernel
     $ jupyter kernelspec uninstall {DISPLAY_NAME}
