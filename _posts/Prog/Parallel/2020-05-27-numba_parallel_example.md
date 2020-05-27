@@ -57,6 +57,14 @@ aside:
 6. **4, 7 비교**  
 `b`를 그대로 입력하고 broadcasting을 사용하지 않았다.
 
+## - 결론
+몇 가지 실험을 돌려본 결과 `numba`를 이용하여 `numpy`를 통해 구현했을 때보다 약 8배 정도 빠른 성능향상을 보여주었다. 이 문제에서 성능향상의 핵심은 2가지였다.  
+
+1. `numba.njit` 옵션 중 `parallel=True` 를 사용
+2. Broadcasting 대신 풀어 loop를 추가
+
+가능하다면 `guvectorize` 옵션도 사용하고 싶었지만 다음 기회에 해보기로하였다.
+
 
 # Code
 ## 0. Import libraries
