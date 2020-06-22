@@ -1,5 +1,5 @@
 ---
-title: 마법공식(Joel Greenblatt)
+title: 마법공식 계산방법 (Joel Greenblatt)
 tags: Finance
 aside:
   toc: true
