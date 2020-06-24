@@ -1,12 +1,12 @@
 ---
-title: 마법공식(Joel Greenblat)
+title: 마법공식(Joel Greenblatt)
 tags: Finance
 aside:
   toc: true
 ---
 
 # Remarks
-본 글은 [주식시장을 이기는 작은책](https://books.google.co.kr/books?id=mlY3DwAAQBAJ&printsec=frontcover&hl=ko&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false) 등의 내용을 정리 및 참고한 글입니다.
+본 글은 Joel Greenblatt의 [주식시장을 이기는 작은책](https://books.google.co.kr/books?id=mlY3DwAAQBAJ&printsec=frontcover&hl=ko&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false) 등을 정리 및 참고한 글입니다.
 
 <!--more-->
 
