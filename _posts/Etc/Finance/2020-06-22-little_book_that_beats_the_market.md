@@ -45,7 +45,8 @@ Joel Greenblatt은 가치투자로 유명한데 특히 저평가된 기업을 �
 
 최근 대부분의 금융회사들은 너나 할 것 없이 AI를 사용한 주가예측, 펀드구성, 유의미한 패턴탐색 등에 상당한 투자를 하고 있습니다. 그러나 아이러니하게도 실제로 AI를 사용한 예측 결과는 최종 판단에 일부 영향을 미치는 참고자료만 되거나, AI를 원하는 고객의 need를 충족시켜주기만 할 뿐 실질적으로 AI가 판단을 주도하고 있지 않다고 합니다.  
 
-흔히들 AI라고 하지만 GPU의 급성장을 앞세운 딥러닝을 의미하는 경우가 많은데요 딥러닝은 시대를 바꿀 정도로 굉장한 성과를 내고 있긴하지만 치명적인 약점이 있으니 바로 학습에 대한 이론적인 설명을 제외하곤 (보유한 데이터에 한정된) 훌륭한 결과에 대한 자세한 해석을 내놓기 힘들다는 점입니다.([Why do many research studies claim that deep learning is a black box?](https://www.quora.com/Why-do-many-research-studies-claim-that-deep-learning-is-a-black-box) 참조) 이러니 수백 수천억원이 한 순간에 잿더미가 되버릴지도 모르는 큰 프로젝트에 딥러닝 모델을 직접적으로 사용하기 힘든 것은 당연한 이야기겠죠. (이와 관련하여 최근 interpretable machine learning에 대한 연구가 활발히 진행되고 있습니다. [Interpretable Machine Learning](https://zzsza.github.io/data/2019/04/14/interpretable-ml-intro/) 참조)  
+흔히들 AI라고 하지만 GPU의 급성장을 앞세운 딥러닝을 의미하는 경우가 많은데요 딥러닝은 시대를 바꿀 정도로 굉장한 성과를 내고 있긴하지만 치명적인 약점이 있으니 바로 학습에 대한 이론적인 설명을 제외하곤 (보유한 데이터에 한정된) 훌륭한 결과에 대한 자세한 해석을 내놓기 힘들다는 점입니다.([Why do many research studies claim that deep learning is a black box?](https://www.quora.com/Why-do-many-research-studies-claim-that-deep-learning-is-a-black-box) 참조)  
+이러니 리스크에 특히나 민감한 금융권에서 수백 수천억원이 한 순간에 잿더미가 되버릴지도 모르는 큰 프로젝트에 딥러닝 모델을 직접적으로 사용하기 힘든 것은 당연한 이야기겠죠. (이와 관련하여 최근 interpretable machine learning에 대한 연구가 활발히 진행되고 있습니다. [Interpretable Machine Learning](https://zzsza.github.io/data/2019/04/14/interpretable-ml-intro/) 참조)  
 
 |![](https://w.namu.la/s/ce9d6ee43b9fa3b8bc5828cf7d36e040cf8f1a66796e2a28b2552e67cf3d02ee55ca57531f25eb3dc9aba3d0e6f4b3ddff62e515120538e0a56ec7daaea1ee951f11b7210707ff08b897a13f010db69442e684236c5b1154e39083a75200ed51)|
 |:--:|
