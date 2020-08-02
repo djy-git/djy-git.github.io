@@ -29,7 +29,7 @@ Accuracy 뿐만 아니라 여타 지표들도 마찬가지로 각각 제한된 �
 
 # 2. Precision
 **Precision (정밀도)** 은 true라고 예측$\color{green}{\textbf{(predictive true)}}$한 것들 중에서 실제로 true$\color{blue}{\textbf{(actual true)}}$인 sample들의 비율을 의미합니다. 양성 예측의 정확도라고 할 수 있습니다. <br><br>
-$$ \textbf{Prediction} = P(\color{blue}{\textbf{actual true }} | \color{green}{\textbf{ predictive true}}) $$
+$$ \textbf{Precision} = P(\color{blue}{\textbf{actual true }} | \color{green}{\textbf{ predictive true}}) $$
 <br>
 
 # 3. Recall
@@ -48,14 +48,37 @@ Precision은 다른 모든 양성 sample들(FN)을 무시하기 때문에 이들
 특히, 두 분류기를 비교할 때 precision과 recall을 하나의 지표로 만든 F$_1$ score를 편리하게 사용할 수 있습니다.
 <br>
 
-# 6. PR curve
+# 6. Micro / Macro average
+Class가 3개 이상인 multi classification의 경우 confusion matrix는 다음과 같습니다.  
+
+| | $P_1$ | $N_1$ | $P_2$ | $N_2$ | $P_3$ | $N_3$ |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| $\hat P_1$ | $TP_1$  | $FP_1$  |   |   |   |   |
+| $\hat N_1$ | $FN_1$  | $TN_1$  |   |   |   |   |
+| $\hat P_2$ |   |   | $TP_2$  | $FP_2$  |   |   |
+| $\hat N_2$ |   |   | $FN_2$  | $TN_2$  |   |   |
+| $\hat P_3$ |   |   |   |   | $TP_3$  | $FP_3$  |
+| $\hat N_3$ |   |   |   |   | $FN_3$  |  $TN_3$ |
+
+Multi classification에서 class 전체의 평균을 구하는 방법으로 **Micro average**와 **Macro average**를 사용할 수 있습니다.  
+
+## 1) Micro average
+$$ \textbf{Precision}_{micro} = \frac{TP_1 + TP_2 + TP_3}{TP_1 + FP_1 + TP_2 + FP_2 + TP_3 + FP_3} $$
+Micro average는 class를 나누지 않은 전체 성능의 양상을 알기에 적합합니다.
+
+## 2) Macro average
+$$ \textbf{Precision}_{macro} = \frac{Precision_1 + Precision_2 + Precision_3}{3} $$
+Class마다 데이터 수에 차이가 나는 경우 macro average를 사용하여 분포의 차이를 고려하여 성능을 평가할 수 있습니다.
+
+
+# 7. PR curve
 Precision-recall graph를 말합니다. <br>
 일반적으로 precision이 급격하게 줄어드는 하강점 직전을 threshold로 정하는 것이 좋습니다. 어떤 precision이 주어지더라도 만족시키는 분류기를 만들 순 있지만, recall이 너무 낮다면 사용할 수 없기 때문에 생성된 분류기의 성능을 고려해야 합니다.
 
 ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/prcurve.png){:.border}
 <br>
 
-# 7. ROC curve (Receiver Operating Characteristic curve)
+# 8. ROC curve (Receiver Operating Characteristic curve)
 또다른 평가곡선으로 FPR-TPR graph를 **ROC curve**라 부릅니다. <br>
 **FPR (False Positive Ratio, Type I error)** 은 실제로 false$\color{red}{\textbf{(actual false)}}$인 sample들 중 true라고 예측$\color{green}{\textbf{(predictive true)}}$한 비율을 의미하며, **TPR (True Positive Ratio, 1 - Type II error)** 은 recall과 동일한 값을 나타냅니다. 여기서도 TPR(recall)이 높을수록 FPR이 증가하는 tradeoff가 발생합니다. <br>
 점선은 완전한 random 분류기를 의미하며 성능이 좋은 분류기는 이 점선으로부터 최대한 많이 떨어져 있는 (0, 1)에 근접한 모양이 됩니다. Curve 아래의 면적인 **AUC(Area Under the Curve)** 를 통해 분류기들을 비교할 수 있는데 완벽한 분류기는 AUC=1 이고, random 분류기의 AUC=0.5 가 됩니다.
