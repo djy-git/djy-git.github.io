@@ -1,8 +1,6 @@
 ---
 title: Base structure for ML project
 tags: Project_Etc
-aside:
-  toc: True
 ---
 
 <!--more-->
