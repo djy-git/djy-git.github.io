@@ -112,10 +112,8 @@ docs-en:
         url: /archive.html?tag=Study_Investments
   - title:      Projects
     children:
-      - title:  Kaggle
-        url: /archive.html?tag=Kaggle
-      - title:  Anomaly detection
-        url: /archive.html?tag=Anomaly
+      - title:  Competition
+        url: /archive.html?tag=Competition
       - title:  Etc
         url: /archive.html?tag=Project_Etc
   - title:      Papers
