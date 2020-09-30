@@ -61,7 +61,6 @@ Source code는 [여기](https://github.com/djy-git/base-strcture-for-ML-project)
         │   ├── Logger.py
         │   ├── SignalHandler.py
         │   ├── __init__.py
-        │   ├── base_env.py
         │   ├── base_pkg.py
         │   ├── base_util.py
         │   └── env.py
