@@ -1,6 +1,8 @@
 ---
 title: Generate custom image
 tags: Docker
+aside:
+  toc: True
 ---
 
 <!--more-->
@@ -100,3 +102,12 @@ push된 image는 docker hub의 repository에서 확인할 수 있습니다.
     $ docker pull DOCKER_ID/DOCKER_REPOSITORY:TAGNAME
     
 Docker hub에 저장된 image를 불러올 수 있습니다.
+
+
+### Optional
+Docker image를 받아온 다음,  
+1. **Jupyter notebook 설정**
+[Access remote jupyter-notebook](https://djy-git.github.io/2019/10/10/remote_jupyter#gsc.tab=0) 참고
+
+2. **Rstudio-server 설정**
+[R, IRkernel, RStudio installation in Ubuntu](https://djy-git.github.io/2019/10/18/install.html#gsc.tab=0) 참고
