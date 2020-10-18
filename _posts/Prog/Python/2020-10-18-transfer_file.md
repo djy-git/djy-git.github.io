@@ -6,7 +6,7 @@ tags: Python
 <!--more-->
 
 Ubuntu에서 파일을 전송하기 위해 `scp` 명령어를 사용할 수 있습니다.  
-다음은 `A`(sender)가 `B`(receiver)에게 directory를 전송하는 코드입니다.  
+다음은 `SENDER`가 `RECEIVER`에게 directory를 전송하는 코드입니다.  
 
 
 ```py
