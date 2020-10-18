@@ -1,5 +1,5 @@
 ---
-title: Generate custom docker image (commit, push)
+title: Generate custom docker image (commit, push, pull)
 tags: Docker
 aside:
   toc: True
