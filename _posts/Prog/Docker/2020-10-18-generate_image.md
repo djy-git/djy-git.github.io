@@ -14,8 +14,8 @@ Server에서 container를 생성한다고 가정하겠습니다.
 ### 1. 초기 상태가 되는 docker image 받아오기
     $ docker pull rapidsai/rapidsai
 
-https://hub.docker.com/r/rapidsai/rapidsai/
-https://hub.docker.com/r/ufoym/deepo/
+[rapidsai](https://hub.docker.com/r/rapidsai/rapidsai/)  
+[deepo](https://hub.docker.com/r/ufoym/deepo/)
 등등
 
 원하는 docker hub로부터 image를 받아옵니다.
