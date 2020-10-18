@@ -7,7 +7,7 @@ aside:
 
 <!--more-->
 
-[RAPIDS](https://hub.docker.com/r/rapidsai/rapidsai/) image를 받아 나만의 image를 만들어 docker hub에 올리는 과정입니다.  
+초기 docker image로부터 나만의 image를 만들어 docker hub에 올리는 과정입니다.  
 Server에서 container를 생성한다고 가정하겠습니다.
 
 
