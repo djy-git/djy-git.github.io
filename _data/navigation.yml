@@ -104,6 +104,8 @@ docs-en:
         url: /archive.html?tag=Math
   - title:      Study
     children:
+      - title:  Fluent Python
+        url: /archive.html?tag=Study_FluentPython
       - title:  Time Series Analysis
         url: /archive.html?tag=Study_TimeSeriesAnalysis
       - title:  Big Data Computing
