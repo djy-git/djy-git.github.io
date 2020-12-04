@@ -1,54 +1,61 @@
 ---
-title: Numba CUDA errors
+title: Kernel launcher
 tags: Parallel
 ---
 
-`numba.cuda`를 사용하다보면 당연하게 사용하였던 코드가 문제가 되는 경우가 자주 발생합니다.  
-매번 어떻게든 꾸역꾸역 넘어가긴 했지만 이제부턴 발생한 상황과 해결방법 등을 기록해두고자 합니다.  
+<!--more-->
+
+`numba.cuda`의 kernel function은 default argument를 지원하지 않습니다.  
+그래서 여러 개의 고정된 parameter를 가진 함수를 여러 번 실행시킬 때 관리하기가 쉽지 않습니다.  
+특히 parameter가 특정 조건에 따라 변하거나 여러 개의 GPU를 사용해야 하는 경우라면 더더욱 그렇죠.  
+
+이런 경우 kernel function에 들어가는 parameter를 설정하고 kernel function을 실행시키는 class를 생성하여 parameter를 관리하면 편리합니다. 이러한 역할을 담당하는 class를 **kernel launcher**라고 명명했습니다.  
 
 
-## 1. `len()` → 상수
-### 1) Code
-```
-### Error code
+```py
+class KernelLauncher:
+    def __init__(self, *params):
+        self.fn, self.param, self.BPG, self.TPB = params
 
-a = cuda.to_device(np.array([range(20) for _ in range(16)]))
-b = cuda.device_array([32, 20])
+    def set_param(self, param):
+        self.param = param
 
-@cuda.jit
-def COPY(a, b):
-    tid = cuda.grid(1)
-    bid = cuda.blockIdx.x
-    
-    for i in range(len(a[bid])):  # Error with len(a[bid])
-        b[tid][i] = a[bid][i]
-
-COPY[16, 2](a, b)
-b.copy_to_host()
-```
-```
-CudaAPIError: [700] Call to cuMemcpyDtoH results in UNKNOWN_CUDA_ERROR
-```
-
-```
-### Resolution code
-
-a = cuda.to_device(np.array([range(20) for _ in range(16)]))
-b = cuda.device_array([32, 20])
-
-N = a.shape[1]
-
-@cuda.jit
-def COPY(a, b):
-    tid = cuda.grid(1)
-    bid = cuda.blockIdx.x
-    
-    for i in range(N):  # Error with len(a[bid])
-        b[tid][i] = a[bid][i]
-
-COPY[16, 2](a, b)
-b.copy_to_host()
+    def run(self, idx_gpu=-1):
+        if idx_gpu >= 0:
+            idx_param = []
+            for elem in self.param:
+                try:
+                    idx_param.append(elem[idx_gpu])
+                except:
+                    idx_param.append(elem)  # elem: scalar
+            self.fn[self.BPG, self.TPB](*idx_param)
+        else:
+            self.fn[self.BPG, self.TPB](*self.param)
 ```
 
-### 2) 원인
-`len()` 혹은 indexing 시 register를 많이 소모하여 메모리 문제가 발생한 것 같다.
+```py
+class A:
+  def __init__(self):
+    self.a   = None
+    self.b   = None
+    self.c   = None
+    self.BPG = None
+    self.TPB = None
+  
+  def get_kernel(self, flag):
+    if flag is None:
+      @cuda.jit
+      def fn(a, b, c):
+        pass
+      param = (self.a, self.b, self.c)
+      BPG, TPB = self.BPG, self.TPB
+    return fn, param, BPG, TPB
+
+  def initialize_kernel_launcher(self, flag=None):
+    self.kernel_launcher = KernelLauncher(*self.get_kernel(flag))
+
+  def run_kernel(self, idx_gpu):
+    self.kernel_launcher.run(idx_gpu)
+```
+
+Kernel 함수와 parameter, BPG(Block Per Grid), TPB(Thread Per Block)를 반환하는 함수를 호출하여 `KernelLauncher` instance를 생성하고 상황에 맞게 `run()`을 실행시키면 됩니다.
