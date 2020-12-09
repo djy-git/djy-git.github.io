@@ -1,43 +1,35 @@
 ---
-layout: article
-title: Ignore warnings
+title: Command execution
 tags: Python
-sidebar:
-  nav: docs-en
 ---
 
 <!--more-->
 
-# 1. 모든 warning들을 무시하고 싶은 경우
-실행하고자 하는 파일 안에서 다음과 같은 함수를 정의해줍니다.
+`python`에서 os의 명령어를 실행시키는 방법이 정말 다양합니다.  
+그 중에서도 자주 사용되는 방법으로 `os.system`과 `subprocess.call`이 있는데 [공식 문서](https://docs.python.org/ko/3.7/library/os.html#os.system)에선
+
+> subprocess 모듈은 새 프로세스를 생성하고 결과를 조회하는데, 더욱 강력한 기능을 제공합니다; 이 모듈을 사용하는 것이 이 함수들을 사용하는 것보다 더 바람직합니다.
+
+라고 하며 `subprocess.run`을 권장하고 있습니다.  
+`subprocess.call` 은 older API로 호환성을 위해 사용할 수 있습니다. 간단한 사용법은 `run`과 유사하니 [참](https://docs.python.org/ko/3.7/library/subprocess.html#subprocess.run)[고](https://docs.python.org/ko/3.7/library/subprocess.html#subprocess.run)하세요.
+
 
 {% highlight python linenos %}
-import warnings
+from os import system
+from subprocess import run
+import sys
 
-def warn(*args, **kwargs):
-  pass
 
-# 저는 아래와 같이 사용합니다
-# warn = lambda *args, **kwargs: None
-
-warnings.warn = warn
-
-# 혹은
-
-import warnings
-warnings.filterwarnings(action='ignore')
-{% endhighlight %}[^1]
-
-<br>
-# 2. 특정 warning들만 무시하고 싶은 경우
-{% highlight python linenos %}
-import warnings
-from sklearn.exceptions import DataConversionWarning
-
-warnings.filterwarnings(action='ignore', category=DataConversionWarning)
-{% endhighlight %}[^2]
-
----
-
-[^1]: [https://stackoverflow.com/a/33616192/9002438](https://stackoverflow.com/a/33616192/9002438)
-[^2]: [https://stackoverflow.com/a/47749756/9002438](https://stackoverflow.com/a/47749756/9002438)
+try:
+    # All the same
+    retcode = system("mycmd" + " myarg")
+    retcode = run("mycmd" + " myarg", shell=True, cwd=".")
+    retcode = run(["mycmd" + "myarg"], shell=True, cwd=".")
+    
+    if retcode < 0:
+        print("Child was terminated by signal", -retcode, file=sys.stderr)
+    else:
+        print("Child returned", retcode, file=sys.stderr)
+except OSError as e:
+    print("Execution failed:", e, file=sys.stderr)
+{% endhighlight %}
