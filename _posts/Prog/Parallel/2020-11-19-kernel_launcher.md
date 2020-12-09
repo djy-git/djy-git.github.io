@@ -3,7 +3,12 @@ title: Kernel launcher
 tags: Parallel
 ---
 
+# Remarks
+이 글은 `numba.cuda`를 기반으로 작성되었습니다.
+
 <!--more-->
+
+---
 
 `numba.cuda`의 kernel function은 default argument를 지원하지 않습니다.  
 그래서 여러 개의 고정된 parameter를 가진 함수를 여러 번 실행시킬 때 관리하기가 쉽지 않습니다.  
@@ -12,7 +17,7 @@ tags: Parallel
 이런 경우 kernel function에 들어가는 parameter를 설정하고 kernel function을 실행시키는 class를 생성하여 parameter를 관리하면 편리합니다. 이러한 역할을 담당하는 class를 **kernel launcher**라고 명명했습니다.  
 
 
-```py
+{% highlight python linenos %}
 class KernelLauncher:
     def __init__(self, *params):
         self.fn, self.param, self.BPG, self.TPB = params
@@ -31,9 +36,9 @@ class KernelLauncher:
             self.fn[self.BPG, self.TPB](*idx_param)
         else:
             self.fn[self.BPG, self.TPB](*self.param)
-```
+{% endhighlight %}
 
-```py
+{% highlight python linenos %}
 class A:
   def __init__(self):
     self.a   = None
@@ -56,6 +61,6 @@ class A:
 
   def run_kernel(self, idx_gpu):
     self.kernel_launcher.run(idx_gpu)
-```
+{% endhighlight %}
 
 Kernel 함수와 parameter, BPG(Block Per Grid), TPB(Thread Per Block)를 반환하는 함수를 호출하여 `KernelLauncher` instance를 생성하고 상황에 맞게 `run()`을 실행시키면 됩니다.
