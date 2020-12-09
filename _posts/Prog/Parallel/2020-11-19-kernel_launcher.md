@@ -14,7 +14,7 @@ tags: Parallel
 그래서 여러 개의 고정된 parameter를 가진 함수를 여러 번 실행시킬 때 관리하기가 쉽지 않습니다.  
 특히 parameter가 특정 조건에 따라 변하거나 여러 개의 GPU를 사용해야 하는 경우라면 더더욱 그렇죠.  
 
-이런 경우 kernel function에 들어가는 parameter를 설정하고 kernel function을 실행시키는 class를 생성하여 parameter를 관리하면 편리합니다. 이러한 역할을 담당하는 class를 **kernel launcher**라고 명명했습니다.  
+이런 경우 kernel function에 들어가는 parameter를 설정하고 kernel function을 실행시키는 class를 생성하여 parameter를 관리하면 편리합니다. 이러한 역할을 담당하는 class를 **KernelLauncher**라고 명명했습니다.  
 
 
 {% highlight python linenos %}
