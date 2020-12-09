@@ -19,45 +19,43 @@ Source code는 [여기](https://github.com/djy-git/base-strcture-for-ML-project)
 
     ROOT
     ├── README.md
+    │
     ├── algorithm
     │   ├── README.md
     │   └── dummy.algo
+    │
     ├── doc-sphinx
-    │   ├── Makefile
-    │   ├── README.md
-    │   ├── make.bat
-    │   └── source
-    │       ├── _static
-    │       ├── _templates
-    │       ├── conf.py
-    │       ├── configs.rst
-    │       ├── envs.rst
-    │       ├── index.rst
-    │       ├── main.rst
-    │       └── modules.rst
+    │   └── ...
+    │
     ├── etc
-    │   └── dummy
+    │   └── ...
+    │
     ├── input
-    │   └── dummy
+    │   └── ...
+    │
     ├── log
-    │   └── dummy
+    │   └── ...
+    │
     ├── output
-    │   └── dummy
+    │   └── ...
+    │
     ├── playground
     │   ├── env.py
     │   ├── playground.ipynb
     │   └── playground.py
+    │
     ├── setup.py
+    │
     └── src
         ├── configs
         │   ├── __init__.py
         │   ├── config.py
         │   └── config_user.py
         ├── envs
-        │   ├── Logger.py
-        │   ├── SignalHandler.py
         │   ├── __init__.py
-        │   ├── base_pkg.py
-        │   ├── base_util.py
+        │   ├── SignalHandler.py
+        │   ├── Logger.py
+        │   ├── base_env.py
+        │   ├── util.py
         │   └── env.py
         └── main.py
