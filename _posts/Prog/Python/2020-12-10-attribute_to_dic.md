@@ -1,5 +1,5 @@
 ---
-title: Class attribute to dictionary
+title: Class attributes to dictionary
 tags: Python
 ---
 
