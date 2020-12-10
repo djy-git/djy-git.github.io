@@ -15,7 +15,8 @@ tags: Parallel
 
 {% highlight python linenos %}
 from numba import cuda, int32
-from numba.cuda.random import create_xoroshiro128p_states, xoroshiro128p_uniform_float32, xoroshiro128p_uniform_float64
+from numba.cuda.random import create_xoroshiro128p_states
+from numba.cuda.random import xoroshiro128p_uniform_float32, xoroshiro128p_uniform_float64
 
 
 # Parmaeters
