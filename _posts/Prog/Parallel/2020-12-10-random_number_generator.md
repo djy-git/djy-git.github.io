@@ -10,7 +10,7 @@ tags: Parallel
 
 --- 
 
-`numpy`에서 `seed`를 통해 생성되는 periods를 통해 난수를 생성하는 것처럼 `cuda` 역시 `seed`를 입력받아 난수를 생성합니다.
+`numpy`에서 `seed`를 통해 난수를 생성하는 것처럼 `cuda`도 `seed`를 입력받아 먼저 periods(random states)를 생성하고 그로부터 직접 하나씩 난수를 뽑습니다.
 
 
 {% highlight python linenos %}
