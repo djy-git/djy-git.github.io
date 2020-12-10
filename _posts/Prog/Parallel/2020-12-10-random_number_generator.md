@@ -27,6 +27,7 @@ SEED = 42
 # Data
 num_overflows = cuda.pinned_array(N, dtype=np.int32)
 
+
 # 1. Generate random states
 rng_states = create_xoroshiro128p_states(N, seed=SEED)
 
