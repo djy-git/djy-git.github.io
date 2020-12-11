@@ -23,4 +23,4 @@ class G:
 
 dic = {key: val for key, val in vars(G).items()
   if not key.startswith('__') and 'function' not in type(val).__name__ and 'method' not in type(val).__name__}
-{% endhighlight %}[^1]
+{% endhighlight %}
