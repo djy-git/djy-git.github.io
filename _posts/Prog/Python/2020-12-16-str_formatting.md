@@ -11,10 +11,5 @@ tags: Python
 
 ```Python
 a = 0.11111
-rst = str(f"{a:.3f}")  # 0.111
-```
-
-```python
-a = 1111.1111
-rst = str(f"{a:.3f}")  # 1111.111
+rst = str(round(a, 3))  # 0.111
 ```
