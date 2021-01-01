@@ -95,7 +95,9 @@ $$
 <br>
 
 Quadratic program를 풀기 위해서 먼저 해야할 일은 문제를 [quadratic form](https://djy-git.github.io/2020/01/16/quadratic_form.html#gsc.tab=0)으로 변형시키는 것입니다.  
-구체적으로 위의 식의 $P, q, G, h, A, b$ 를 구하는 일이죠. 물론, 제약조건 여부에 따라 $G, h, A, b$ 를 사용하지 않고 $P, q$ 만 가지고 있어도 됩니다.  
+구체적으론 위의 식의 $P, q, G, h, A, b$ 를 구하는 일이죠.
+
+물론, 제약조건 여부에 따라 $G, h, A, b$ 를 사용하지 않고 $P, q$ 만 가지고 있어도 됩니다.  
 Data는 double type(`np.float64` or `np.double`)의 `cvxopt.matrix()` 형태로 입력해야 합니다.  
 
 간단한 linear regression 예제를 통해 사용방법을 알아봅시다!
