@@ -30,8 +30,6 @@ Python에서 Quadratic programming 혹은 convex optimization을 위한 solver�
 | $b$ | Equality constraint constant vector | $(p, 1)$ |
 
 
-
-
 $$
 \text{minimize }
 \begin{aligned}
@@ -94,6 +92,7 @@ $$
 $$
 <br>
 
+
 Quadratic program를 풀기 위해서 먼저 해야할 일은 문제를 [quadratic form](https://djy-git.github.io/2020/01/16/quadratic_form.html#gsc.tab=0)으로 변형시키는 것입니다.  
 구체적으론 위의 식의 $P, q, G, h, A, b$ 를 구하는 일이죠.
 
@@ -121,7 +120,6 @@ import numpy as np
 from cvxopt import matrix, solvers
 
 
-N = 200
 K = 15
 T = 60
 
