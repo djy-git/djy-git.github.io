@@ -102,19 +102,19 @@ Data는 double type(`np.float64` or `np.double`)의 `cvxopt.matrix()` 형태로 
 
 간단한 linear regression 예제를 통해 사용방법을 알아봅시다!
 
-$
+$$
  min \ \frac{1}{2}|| S'w - y ||^2  \\
  s.t. \sum_t w_t = 1  \\
  \quad \ \ \ \forall_t w_t \geq 0
-$
+$$
 
 위 식을 풀어보면 아래와 같이 표현할 수 있습니다.
 
-$
+$$
  min \ \frac{1}{2} w'(SS')w + (-Sy)'w  \\
  s.t. -Iw \leq 0 \\
  \quad \ \ \ \mathbf{1}w = 1
-$
+$$
 
 {% highlight python linenos %}
 import numpy as np
