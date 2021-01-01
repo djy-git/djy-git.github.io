@@ -111,7 +111,7 @@ $$
 
 $$
  min \ \frac{1}{2} w'(SS')w + (-Sy)'w  \\
- s.t. -Iw \leq 0 \\
+ s.t. -Iw \leq \mathbf{0} \\
  \quad \ \ \ \mathbf{1}w = 1
 $$
 
