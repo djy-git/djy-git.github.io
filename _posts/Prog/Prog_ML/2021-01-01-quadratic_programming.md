@@ -89,7 +89,7 @@ $$
 \begin{pmatrix}
     b_1 \\
     \vdots \\
-    b_m \\
+    b_p \\
 \end{pmatrix}
 $$
 <br>
