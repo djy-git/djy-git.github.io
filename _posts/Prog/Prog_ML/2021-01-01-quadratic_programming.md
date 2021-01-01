@@ -120,17 +120,17 @@ import numpy as np
 from cvxopt import matrix, solvers
 
 
-K = 15
+n = 15
 T = 60
 
-S = np.random.rand(K, T)
+S = np.random.rand(n, T)
 y = np.random.rand(T)
 
 P = matrix(S @ S.T)
 q = matrix(-S @ y)
-G = matrix(-1 * np.identity(K))
-h = matrix(np.zeros(K))
-A = matrix(np.ones(K).reshape(1, K))
+G = matrix(-1 * np.identity(n))
+h = matrix(np.zeros(n))
+A = matrix(np.ones(n).reshape(1, n))
 b = matrix(1.0)
 
 solvers.options['show_progress'] = False  # verbose=False
