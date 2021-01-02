@@ -122,20 +122,18 @@ docs-en:
     children:
       - title:  Papers
         url: /archive.html?tag=Papers
-      - title:  Finance
-        url: /archive.html?tag=Papers_finance
   - title:      Etc
     children:
-      - title:  Finance
-        url: /archive.html?tag=Finance
-      - title:  Diary
-        url: /archive.html?tag=Diary
       - title:  Markdown / Latex
         url: /2019/07/15/md_latex.html
-      - title:  Github
-        url: /archive.html?tag=Github
+      - title:  Diary
+        url: /archive.html?tag=Diary
       - title:  Music
         url: /archive.html?tag=Music
+      - title:  Finance
+        url: /archive.html?tag=Finance
+      - title:  Github
+        url: /archive.html?tag=Github
       - title:  Job
         url: /archive.html?tag=Job
       - title:  Etc
