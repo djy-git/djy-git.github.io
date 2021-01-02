@@ -33,6 +33,22 @@ header:
       ko-KR   : *KO
     url: /about.html
   - titles:
+      en      : &EN       Diary
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  Diary
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  Diary
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       Diary
+      ko-KR   : *KO
+    url: https://djy-git.github.io/archive.html?tag=Diary
+  - titles:
       en      : &EN       Github
       en-GB   : *EN
       en-US   : *EN
@@ -49,21 +65,21 @@ header:
       ko-KR   : *KO
     url: https://github.com/djy-git/djy-git.github.io
   - titles:
-      en      : &EN       Goal
+      en      : &EN       Cheetsheet
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  Goal
+      zh-Hans : &ZH_HANS  Cheetsheet
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  Goal
+      zh-Hant : &ZH_HANT  Cheetsheet
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       Goal
+      ko      : &KO       Cheetsheet
       ko-KR   : *KO
-    url: https://djy-git.github.io/2019/12/30/goal.html
+    url: https://djy-git.github.io/2019/07/15/md_latex.html
 
 docs-en:
   - title:      Programming
