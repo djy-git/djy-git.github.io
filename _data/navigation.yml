@@ -140,10 +140,6 @@ docs-en:
         url: /archive.html?tag=Papers
   - title:      Etc
     children:
-      - title:  Markdown / Latex
-        url: /2019/07/15/md_latex.html
-      - title:  Diary
-        url: /archive.html?tag=Diary
       - title:  Music
         url: /archive.html?tag=Music
       - title:  Finance
